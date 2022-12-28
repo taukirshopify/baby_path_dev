@@ -1,0 +1,45 @@
+<div class="container-fluid">
+
+  <div class="slider-wrapper">
+    <section class="splide" aria-label="Splide Basic HTML Example">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">Slide 01</li>
+          <li class="splide__slide">Slide 02</li>
+          <li class="splide__slide">Slide 03</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+
+</div>
+
+<script>
+
+  var splide = new Splide('.splide');
+  splide.mount();
+</script>
+
+
+{% schema %}
+
+  {
+    "name": "Hero Banner",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "Slider",
+        "name": "Add Slider",
+        "settings": []
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hero Banner",
+        "blocks": []
+      }
+    ]
+  }
+{%endschema%}
