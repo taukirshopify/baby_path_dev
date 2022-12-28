@@ -68,6 +68,8 @@
         "text"
       ],
       "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
         "padding_top": 40,
@@ -79,15 +81,22 @@
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
+        "full_width": false,
         "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
         "color_scheme": "background-1",
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "enable_quick_add": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 28,
@@ -127,6 +136,7 @@
         "heading_size": "h2",
         "desktop_layout": "left",
         "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
         "color_scheme": "background-1",
         "padding_top": 36,
         "padding_bottom": 36
@@ -147,6 +157,7 @@
     },
     "multicolumn": {
       "type": "multicolumn",
+      "disabled": true,
       "blocks": {
         "column1": {
           "type": "column",
@@ -197,6 +208,39 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "461abebe-f5f0-46fb-9a14-f698fa6bbbd1": {
+      "type": "Hero-banner",
+      "blocks": {
+        "3169657f-7c0b-45e2-be2e-90bbc0586010": {
+          "type": "Slider",
+          "settings": {
+          }
+        },
+        "a7550a33-8df9-4b56-9948-96ee794eb185": {
+          "type": "Slider",
+          "settings": {
+          }
+        },
+        "2e0fb289-3289-4d0c-904b-05c8ebaf98be": {
+          "type": "Slider",
+          "settings": {
+          }
+        },
+        "a8a1d93b-6d4f-4cbd-937d-fb9418e50fa8": {
+          "type": "Slider",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "3169657f-7c0b-45e2-be2e-90bbc0586010",
+        "a7550a33-8df9-4b56-9948-96ee794eb185",
+        "2e0fb289-3289-4d0c-904b-05c8ebaf98be",
+        "a8a1d93b-6d4f-4cbd-937d-fb9418e50fa8"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -205,6 +249,7 @@
     "featured_collection",
     "collage",
     "video",
-    "multicolumn"
+    "multicolumn",
+    "461abebe-f5f0-46fb-9a14-f698fa6bbbd1"
   ]
 }
