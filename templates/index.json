@@ -241,6 +241,16 @@
       ],
       "settings": {
       }
+    },
+    "5dcba72b-f26f-4d88-904b-8242f7407f14": {
+      "type": "header-global",
+      "settings": {
+        "how_work_banner_bg": "shopify:\/\/shop_images\/22SS_PNA_Baby-Phat_July-Group_1529_1.png",
+        "how_work_banner_title": "Title of this Banner",
+        "how_work_banner_subtitle": "Sub Title of this Banner",
+        "how_work_banner_url": "",
+        "how_work_inner_section_button_url": ""
+      }
     }
   },
   "order": [
@@ -250,6 +260,7 @@
     "collage",
     "video",
     "multicolumn",
-    "461abebe-f5f0-46fb-9a14-f698fa6bbbd1"
+    "461abebe-f5f0-46fb-9a14-f698fa6bbbd1",
+    "5dcba72b-f26f-4d88-904b-8242f7407f14"
   ]
 }
