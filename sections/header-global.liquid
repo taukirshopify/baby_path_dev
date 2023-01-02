@@ -1,0 +1,51 @@
+<h1>
+    Header
+</h1>
+
+{% schema %}
+  {
+    "name": "Header Global",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "how_work_banner_bg",
+        "label": "Banner Image Upload"
+      },
+      {
+        "type": "text",
+        "id": "how_work_banner_title",
+        "label": "Banner Title",
+        "default": "Title of this Banner"
+      },
+      {
+        "type": "text",
+        "id": "how_work_banner_subtitle",
+        "label": "Banner Sub Title",
+        "default": "Sub Title of this Banner"
+      },
+       {
+        "type": "url",
+        "id": "how_work_banner_url",
+        "label": "Banner Button URL"
+      },
+      {
+        "type": "url",
+        "id": "how_work_inner_section_button_url",
+        "label": "Main section Button URL"
+      }
+    ],
+    "presets": [
+            {
+                "name": "Header Global",
+                "category": "header"
+            }
+        ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
