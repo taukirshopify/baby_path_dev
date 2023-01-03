@@ -1,6 +1,110 @@
-<h1>
-    Header
-</h1>
+<!-- header area strat --> 
+<header class="fast-header-area">  
+  <div class="container"> 
+      <div class="fast-header-item"> 
+          <div class="main-logo">
+              <a class="logo" href="{{ routes.root_url }}"><img src="{{ section.settings.header_logo_desktop | img_url: 'master' }}" alt="Logo"></a>  
+              <a class="logo-991" href="{{ routes.root_url }}"><img src="{{ section.settings.header_logo_mobile | img_url: 'master' }}" alt="Logo"></a> 
+          </div> 
+          <div class="mobile-menu fast-mobile-menu"> 
+              <div class="remove-one mobile-remove-one"><i class="fal fa-times"></i></div> 
+              <ul class="fast-header-menu">  
+
+                  <li class="dropdown"><a class="menu-item" href="index.html">ALL <i class="fal fa-angle-down"></i></a>
+                      <ul class="dropdown-pges-ul dropdown-menu"> 
+                          <li><a href="javascprit:void(0)">protection v1</a></li>
+                          <li><a href="javascprit:void(0)">protection v2</a></li> 
+                      </ul>
+                  </li>  
+                  <li><a class="menu-item" href="javascprit:void(0)">ACCESSORIES</a></li> 
+                  <li><a class="menu-item" href="javascprit:void(0)">SHIRTS</a></li>
+                  <li><a class="menu-item" href="javascprit:void(0)">OUTEWEAR</a></li>
+                  <li><a class="menu-item" href="javascprit:void(0)">BOTTOMS</a></li>
+                  <li class="dropdown">
+                    <a class="menu-item" href="javascprit:void(0)">
+                      COLLABORATIONS <i class="fal fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown-pges-ul dropdown-menu"> 
+                      <li><a href="javascprit:void(0)">COLLABORATIONS v1</a></li>
+                      <li><a href="javascprit:void(0)">COLLABORATIONS v2</a></li> 
+                    </ul>
+                  </li> 
+              </ul> 
+          </div>  
+          <ul class="header-sigin-btn"> 
+              <li class="currency-switcher-li">  
+                  <div class="currency-switcher">
+                      <div class="dropdown">
+                        <div class="caption">
+                          <div class="n-flag">
+                              <img src="{{'n-flag.png' | asset_url }}" alt="">
+                          </div> 
+                              USA
+                        </div>
+                        <div class="list">
+                          <div class="item selected" data-item="RUB">
+                              <div class="n-flag">
+                                <img src="{{'n-flag.png' | asset_url }}" alt="">
+                              </div>  
+                                  USA
+                          </div>
+                          <div class="item" data-item="RUB">
+                              <div class="n-flag">
+                                <img src="{{'n-flag.png' | asset_url }}" alt="">
+                              </div>
+                            Россия
+                            <!-- <span>RUB</span> -->
+                          </div>
+                          <div class="item" data-item="UAH">
+                              <div class="n-flag">
+                                <img src="{{'n-flag.png' | asset_url }}" alt="">
+                              </div>
+                            Украина
+                            <!-- <span>UAH</span> -->
+                          </div>
+                          <div class="item" data-item="USD">
+                              <div class="n-flag">
+                                <img src="{{'n-flag.png' | asset_url }}" alt="">
+                              </div>
+                          Россия
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </li> 
+              <li>
+                  <div class="search-option">
+                      <!-- Search elament -->
+                      <div class="navigation-bar">
+                          <button type="submit" class="search-btn navigation-bar-btn js-search-dropdown-toggle"  >
+                          <i class="fas fa-search"></i>    
+                          </button>
+                      </div> 
+                      <div class="mnmd-search-full">
+                        <form action="{{ routes.search_url }}" method="get" role="search" class="search">
+                              <input class="form-control" autocomplete="off" placeholder="Enter your keywords" type="search" name="q" value="{{ search.terms | escape }}">
+                              <span id="mnmd-search-remove"><i class="fal fa-times"></i></span>
+                          </form>
+                      </div>
+                  </div> 
+              </li> 
+              <li class="header-user-991"><a href="#"><i class="fal fa-user"></i></a></li>
+              <li class="header-bag-991"><a href="#"><i class="fal fa-shopping-bag"></i></a></li>
+          </ul>
+          <div class="header-r-991">
+              <form class="header-search-991" action="{{ routes.search_url }}" method="get">
+                <input class="form-control" autocomplete="off" placeholder="Enter your keywords" type="search" name="q" value="{{ search.terms | escape }}">
+                  <span id="mnmd-search-remove"><i class="fal fa-search"></i></span>
+              </form>
+              <ul>
+                  <li class="header-bag-991"><a href="javascprit:void(0)"><i class="fal fa-shopping-bag"></i></a></li>
+              </ul> 
+              <a  class="menu-oparetor sidebar-menu" id="menu-opener" ><i class="fas fa-bars"></i></a>  
+          </div> 
+      </div> 
+  </div>
+</header>  
+<!-- header area end --> 
 
 {% schema %}
   {
@@ -8,8 +112,13 @@
     "settings": [
       {
         "type": "image_picker",
-        "id": "how_work_banner_bg",
-        "label": "Banner Image Upload"
+        "id": "header_logo_desktop",
+        "label": "Desktop Logo"
+      },
+      {
+        "type": "image_picker",
+        "id": "header_logo_mobile",
+        "label": "Mobile Logo"
       },
       {
         "type": "text",
@@ -33,13 +142,7 @@
         "id": "how_work_inner_section_button_url",
         "label": "Main section Button URL"
       }
-    ],
-    "presets": [
-        {
-            "name": "Header Global",
-            "category": "header"
-        }
-      ]
+    ]
   }
 {% endschema %}
 
