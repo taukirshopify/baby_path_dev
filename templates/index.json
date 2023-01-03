@@ -1,5 +1,26 @@
 {
   "sections": {
+    "094b5fd8-471d-48db-bdaf-311f742106b9": {
+      "type": "hero-slider",
+      "blocks": {
+        "d26faf3e-e689-42ae-9c12-5b23bd38328b": {
+          "type": "slide",
+          "settings": {
+            "slider_desktop_image": "shopify:\/\/shop_images\/fast-hero-bg-2.png",
+            "slider_mobile_image": "shopify:\/\/shop_images\/22SS_PNA_Baby-Phat_July-Group_1529_1.png",
+            "slider_title": "The Lounge Shop",
+            "slider_subtitle": "Ultra-comfy silhouettes the whole family will love",
+            "slider_cta_title": "Shop Now",
+            "slider_cta_url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "d26faf3e-e689-42ae-9c12-5b23bd38328b"
+      ],
+      "settings": {
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -244,6 +265,7 @@
     }
   },
   "order": [
+    "094b5fd8-471d-48db-bdaf-311f742106b9",
     "image_banner",
     "rich_text",
     "featured_collection",
