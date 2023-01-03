@@ -1,18 +1,11 @@
 ;(function($) {
-    "use strict"; 
-    AOS.init({
-        duration: 1000,
-
-    }); 
-
-
+    "use strict";
     // niceSelect============
     $(document).ready(function() {
         $('select').niceSelect();
           $("html").niceScroll();	
           $(".list").niceScroll();
           $('.xyz').on('click',function(){
-              
               event();
           });
     }); 
@@ -246,11 +239,6 @@
           $(this).tab('show');
         });
     });
-
-
-
-
-
 
     /*Function Calls*/  
     scrollToTop();
