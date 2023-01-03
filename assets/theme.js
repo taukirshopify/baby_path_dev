@@ -11,7 +11,7 @@
     }); 
     //* Navbar Fixed  
     function navbarFixed(){
-        if ( $('.fast-header-area').length ){ 
+        if ( $('.fast-header-area').length ){
             $(window).on('scroll', function() {
                 var scroll = $(window).scrollTop();   
                 if (scroll >=90) {
