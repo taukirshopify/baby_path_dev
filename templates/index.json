@@ -1,49 +1,71 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "094b5fd8-471d-48db-bdaf-311f742106b9": {
+      "type": "hero-slider",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "d26faf3e-e689-42ae-9c12-5b23bd38328b": {
+          "type": "slide",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "slider_desktop_image": "shopify:\/\/shop_images\/fast-hero-bg-2.png",
+            "slider_mobile_image": "shopify:\/\/shop_images\/22SS_PNA_Baby-Phat_July-Group_1529_1.png",
+            "slider_title": "The Lounge Shop",
+            "slider_subtitle": "Ultra-comfy silhouettes the whole family will love",
+            "slider_cta_title": "Shop Now",
+            "slider_cta_url": "#"
           }
         },
-        "text": {
-          "type": "text",
+        "e203f74b-954e-4fe9-8793-96c89a41ee31": {
+          "type": "slide",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "slider_desktop_image": "shopify:\/\/shop_images\/fast-hero-bg.png",
+            "slider_mobile_image": "shopify:\/\/shop_images\/22SS_PNA_Baby-Phat_July-Group_1529_2.png",
+            "slider_title": "The Lounge Shop",
+            "slider_subtitle": "Ultra-comfy silhouettes the whole family will love",
+            "slider_cta_title": "Shop Now",
+            "slider_cta_url": "#"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "d26faf3e-e689-42ae-9c12-5b23bd38328b",
+        "e203f74b-954e-4fe9-8793-96c89a41ee31"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+      }
+    },
+    "98ee248a-d7e9-41e0-8d0b-ee1e8ac51671": {
+      "type": "product-slider-tab",
+      "blocks": {
+        "3d8a258f-7b99-4039-b548-471c9f83a1b8": {
+          "type": "slide",
+          "settings": {
+            "tab_name": "JUST IN",
+            "tab_collection": "frontpage"
+          }
+        },
+        "d140f215-cd20-4b6d-9a0b-f1e2d8a741a3": {
+          "type": "slide",
+          "settings": {
+            "tab_name": "TRENDING",
+            "tab_collection": "frontpage"
+          }
+        }
+      },
+      "block_order": [
+        "3d8a258f-7b99-4039-b548-471c9f83a1b8",
+        "d140f215-cd20-4b6d-9a0b-f1e2d8a741a3"
+      ],
+      "settings": {
+      }
+    },
+    "b0f3a8d9-9b46-4838-940b-648b9749ead9": {
+      "type": "image-background-banner",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/fast-hero-bg-2.png",
+        "banner_title": "3 PANTIES FOR $36",
+        "banner_subtitle": "Shop our best-selling styles at special pricing",
+        "banner_cta_title": "SHOP NOW",
+        "banner_cta_url": "#"
       }
     },
     "rich_text": {
@@ -244,7 +266,9 @@
     }
   },
   "order": [
-    "image_banner",
+    "094b5fd8-471d-48db-bdaf-311f742106b9",
+    "98ee248a-d7e9-41e0-8d0b-ee1e8ac51671",
+    "b0f3a8d9-9b46-4838-940b-648b9749ead9",
     "rich_text",
     "featured_collection",
     "collage",
