@@ -1,0 +1,63 @@
+ <!-- justin-area strAT --> 
+ <section class="justin-area justin-one">
+    <div class="justin-container">
+        <ul class="justin-title nav nav-tabs">
+            {% for block in section.blocks %}  
+            <li><a class="justin-togol {% if forloop.index == 1 %}active {% endif %}" href="#menu{{ forloop.index }}">{{ block.settings.tab_name }}</a></li>
+            {% endfor %}
+        </ul>
+        <div class="tab-content">
+            {% for block in section.blocks %}  
+            <div class="splide justin-slider {% if forloop.index == 1 %}tab-pane active {% else %} tab-pane fade {% endif %}" id="#menu{{ forloop.index }}">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        {% for product in collections[block.settings.tab_collection].products %}
+                            {% render 'product-slide-item' %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+    </div>
+</section> 
+<!-- justin-area end -->
+{% schema %}
+    {
+      "name": "Product Tab Slider",
+      "settings": [
+      ],
+      "blocks": [
+      {
+        "name": "Product Tab Slider",
+        "type": "slide",
+        "settings": [
+        {
+          "type": "text",
+          "id": "tab_name",
+          "label": "Tab Or Collection Title"
+        },
+        {
+        "type": "collection",
+        "id": "tab_collection",
+        "label": "Pick Collection"
+        }
+        ]
+      }
+    ],
+    "presets": [
+    {
+      "name": "Product Tab Slider",
+      "category": "section"
+    }
+  ]
+    }
+  {% endschema %}
+  
+  {% stylesheet %}
+  
+  {% endstylesheet %}
+  
+  {% javascript %}
+  {% endjavascript %}
