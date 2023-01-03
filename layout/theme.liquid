@@ -430,6 +430,11 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+    {{ 'splide.min.css' | asset_url | stylesheet_tag }}
+    {{ 'bootstrap.min.css' | asset_url | stylesheet_tag }}
+    {{ 'main.css' | asset_url | stylesheet_tag }}
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
+    {{ 'style.css' | asset_url | stylesheet_tag }}
   </head>
 
   <body class="gradient">
@@ -491,6 +496,11 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    {{ 'jquery-3.6.0.min.js' | asset_url | script_tag }}
+    {{ 'popper.min.js' | asset_url | script_tag }}
+    {{ 'bootstrap.min.js' | asset_url | script_tag }}
     {{ 'splide.min.js' | asset_url | script_tag }}
+    {{ 'theme.js' | asset_url | script_tag }}
   </body>
 </html>

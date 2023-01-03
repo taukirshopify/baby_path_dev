@@ -1,0 +1,48 @@
+html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative
+  }
+.f-hero-container {
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.slider_content_wrapper {
+    position: relative;
+}
+
+.slider_content_image img {
+    width: 100%;
+    max-height: 760px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.container.slider_text_container {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    bottom: 0;
+}
+
+.panties-area .f-hero-container {
+    padding: 432px 0px 40px 300px;
+}
+.mobileOnly{
+    display: none;
+}
+@media screen and (max-width:767px){
+   .hideMobile{
+        display: none;
+    }
+    .mobileOnly{
+        display: block;
+    }
+    .free-shop-slider {
+        margin: 0px 45px;
+    }
+}
