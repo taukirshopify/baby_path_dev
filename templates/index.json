@@ -192,6 +192,13 @@
       "settings": {
         "section_title": "BELIEVE THE HYPE\nOUR COLLECTIONS HAVE OVER 26,000 FIVE STAR\nREVIEWS, AND COUNTING!"
       }
+    },
+    "9c4a98fc-38bb-4135-8335-49839ca8b343": {
+      "type": "prodcut-grid",
+      "settings": {
+        "product_grid_name": "For you",
+        "product_grid_collection": "featured"
+      }
     }
   },
   "order": [
@@ -203,6 +210,7 @@
     "461abebe-f5f0-46fb-9a14-f698fa6bbbd1",
     "d0fb9fe1-d671-4f3d-abda-e8b29ff9b093",
     "86ec624e-0517-47f0-b514-a6bf92502189",
-    "7a3daecf-2b44-4375-8c98-596c7f6aeb64"
+    "7a3daecf-2b44-4375-8c98-596c7f6aeb64",
+    "9c4a98fc-38bb-4135-8335-49839ca8b343"
   ]
 }
