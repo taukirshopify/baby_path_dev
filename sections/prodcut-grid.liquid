@@ -1,0 +1,50 @@
+<!-- justin-area strAT -->  
+<section class="justin-area">
+    <div class="justin-container">
+        <ul class="justin-title nav nav-tabs">
+            <li><a class="justin-togol active">{{ section.settings.product_grid_name }}</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="splide justin-slider trending tab-pane active" id="#menu1">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        {% for product in collections[block.settings.product_grid_collection].products %}
+                            {% render 'product-slide-item' %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div> 
+    </div>
+</section>  
+<!-- justin-area end -->
+{% schema %}
+    {
+      "name": "Simple Product Grid",
+      "settings": [
+        {
+          "type": "text",
+          "id": "product_grid_name",
+          "label": "Product Grid Section Name"
+        },
+        {
+        "type": "collection",
+        "id": "product_grid_collection",
+        "label": "Pick Collection"
+        }
+      ],
+    "presets": [
+    {
+      "name": "Simple Product Grid",
+      "category": "section"
+    }
+  ]
+    }
+  {% endschema %}
+  
+  {% stylesheet %}
+  
+  {% endstylesheet %}
+  
+  {% javascript %}
+  {% endjavascript %}
