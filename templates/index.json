@@ -180,6 +180,12 @@
       ],
       "settings": {
       }
+    },
+    "86ec624e-0517-47f0-b514-a6bf92502189": {
+      "type": "customer-reviews",
+      "settings": {
+        "section_title": "OUR CUSTOMERS SAY..."
+      }
     }
   },
   "order": [
@@ -189,6 +195,7 @@
     "d03cce9e-2841-44b5-a243-6609d92df8f8",
     "multicolumn",
     "461abebe-f5f0-46fb-9a14-f698fa6bbbd1",
-    "d0fb9fe1-d671-4f3d-abda-e8b29ff9b093"
+    "d0fb9fe1-d671-4f3d-abda-e8b29ff9b093",
+    "86ec624e-0517-47f0-b514-a6bf92502189"
   ]
 }
