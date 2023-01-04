@@ -160,6 +160,11 @@
       ],
       "settings": {
       }
+    },
+    "d0fb9fe1-d671-4f3d-abda-e8b29ff9b093": {
+      "type": "shop-range-mobile",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -168,6 +173,7 @@
     "b0f3a8d9-9b46-4838-940b-648b9749ead9",
     "d03cce9e-2841-44b5-a243-6609d92df8f8",
     "multicolumn",
-    "461abebe-f5f0-46fb-9a14-f698fa6bbbd1"
+    "461abebe-f5f0-46fb-9a14-f698fa6bbbd1",
+    "d0fb9fe1-d671-4f3d-abda-e8b29ff9b093"
   ]
 }
