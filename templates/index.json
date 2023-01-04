@@ -74,60 +74,6 @@
         "section_title": "FEATURED COLLECTIONS"
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
-      "disabled": true,
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "461abebe-f5f0-46fb-9a14-f698fa6bbbd1": {
       "type": "Hero-banner",
       "blocks": {
@@ -206,7 +152,6 @@
     "98ee248a-d7e9-41e0-8d0b-ee1e8ac51671",
     "b0f3a8d9-9b46-4838-940b-648b9749ead9",
     "d03cce9e-2841-44b5-a243-6609d92df8f8",
-    "multicolumn",
     "461abebe-f5f0-46fb-9a14-f698fa6bbbd1",
     "d0fb9fe1-d671-4f3d-abda-e8b29ff9b093",
     "86ec624e-0517-47f0-b514-a6bf92502189",
