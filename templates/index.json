@@ -186,6 +186,12 @@
       "settings": {
         "section_title": "OUR CUSTOMERS SAY..."
       }
+    },
+    "7a3daecf-2b44-4375-8c98-596c7f6aeb64": {
+      "type": "collection-lists-bottom",
+      "settings": {
+        "section_title": "BELIEVE THE HYPE\nOUR COLLECTIONS HAVE OVER 26,000 FIVE STAR\nREVIEWS, AND COUNTING!"
+      }
     }
   },
   "order": [
@@ -196,6 +202,7 @@
     "multicolumn",
     "461abebe-f5f0-46fb-9a14-f698fa6bbbd1",
     "d0fb9fe1-d671-4f3d-abda-e8b29ff9b093",
-    "86ec624e-0517-47f0-b514-a6bf92502189"
+    "86ec624e-0517-47f0-b514-a6bf92502189",
+    "7a3daecf-2b44-4375-8c98-596c7f6aeb64"
   ]
 }
