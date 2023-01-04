@@ -163,6 +163,21 @@
     },
     "d0fb9fe1-d671-4f3d-abda-e8b29ff9b093": {
       "type": "shop-range-mobile",
+      "blocks": {
+        "0afd0c39-debb-4058-beb9-5b91d0f4c8bd": {
+          "type": "slide",
+          "settings": {
+            "shop_range_image": "shopify:\/\/shop_images\/featured-gift-4.png",
+            "shop_range_title": "GIFTS UNDER $100",
+            "shop_range_subtitle": "",
+            "shop_range_cta_title": "Shop Now",
+            "shop_range_cta_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "0afd0c39-debb-4058-beb9-5b91d0f4c8bd"
+      ],
       "settings": {
       }
     }
