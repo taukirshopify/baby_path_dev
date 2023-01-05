@@ -134,10 +134,21 @@
             "shop_range_cta_title": "Shop Now",
             "shop_range_cta_url": ""
           }
+        },
+        "b5f5629c-ef2e-4a3a-b416-50c721ffe5ec": {
+          "type": "slide",
+          "settings": {
+            "shop_range_image": "shopify:\/\/shop_images\/fast-hero-bg.png",
+            "shop_range_title": "",
+            "shop_range_subtitle": "",
+            "shop_range_cta_title": "Shop Now",
+            "shop_range_cta_url": ""
+          }
         }
       },
       "block_order": [
-        "0afd0c39-debb-4058-beb9-5b91d0f4c8bd"
+        "0afd0c39-debb-4058-beb9-5b91d0f4c8bd",
+        "b5f5629c-ef2e-4a3a-b416-50c721ffe5ec"
       ],
       "settings": {
       }
@@ -153,10 +164,40 @@
             "customer_review_text": "BELIEVE THE HYPE OUR COLLECTIONS HAVE OVER 26,000 FIVE STAR REVIEWS, AND COUNTING!",
             "customer_shop_url": ""
           }
+        },
+        "1cc7fd87-4b95-4021-8df2-8533bb60e040": {
+          "type": "slide",
+          "settings": {
+            "customer_image": "shopify:\/\/shop_images\/featured-collection-2.png",
+            "customer_name": "RAMBO",
+            "customer_review_text": "BELIEVE THE HYPE OUR COLLECTIONS HAVE OVER 26,000 FIVE STAR REVIEWS, AND COUNTING!",
+            "customer_shop_url": ""
+          }
+        },
+        "5c9f5ec8-c428-4941-8669-a3eb7ba9aafe": {
+          "type": "slide",
+          "settings": {
+            "customer_image": "shopify:\/\/shop_images\/featured-collection-3.png",
+            "customer_name": "MONICA",
+            "customer_review_text": "BELIEVE THE HYPE OUR COLLECTIONS HAVE OVER 26,000 FIVE STAR REVIEWS, AND COUNTING!",
+            "customer_shop_url": ""
+          }
+        },
+        "688a5178-369b-42e6-ba38-7886000093b5": {
+          "type": "slide",
+          "settings": {
+            "customer_image": "shopify:\/\/shop_images\/featured-collection-2.png",
+            "customer_name": "PHOTON",
+            "customer_review_text": "BELIEVE THE HYPE OUR COLLECTIONS HAVE OVER 26,000 FIVE STAR REVIEWS, AND COUNTING!",
+            "customer_shop_url": ""
+          }
         }
       },
       "block_order": [
-        "011fc58a-0312-4d66-b3bb-8b0a56a13615"
+        "011fc58a-0312-4d66-b3bb-8b0a56a13615",
+        "1cc7fd87-4b95-4021-8df2-8533bb60e040",
+        "5c9f5ec8-c428-4941-8669-a3eb7ba9aafe",
+        "688a5178-369b-42e6-ba38-7886000093b5"
       ],
       "settings": {
         "section_title": "OUR CUSTOMERS SAY..."
