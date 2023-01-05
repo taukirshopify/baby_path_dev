@@ -90,11 +90,33 @@
             "collection_cta_title": "Shop Now",
             "collection_cta_url": ""
           }
+        },
+        "f8a71ebb-fe9b-44ac-840c-473b14c08f2a": {
+          "type": "slide",
+          "settings": {
+            "collection_image": "shopify:\/\/shop_images\/22SS_PNA_Baby-Phat_July-Group_1529_1.png",
+            "collection_title": "Best deal",
+            "collection_subtitle": "",
+            "collection_cta_title": "Shop Now",
+            "collection_cta_url": ""
+          }
+        },
+        "7e4464d9-422c-456b-9ef1-38cc3a6c3572": {
+          "type": "slide",
+          "settings": {
+            "collection_image": "shopify:\/\/shop_images\/featured-gift-4.png",
+            "collection_title": "Great deal",
+            "collection_subtitle": "",
+            "collection_cta_title": "Shop Now",
+            "collection_cta_url": ""
+          }
         }
       },
       "block_order": [
         "cc9769d2-72b6-45ee-b65b-c3247c7e00fe",
-        "e7dac34a-1a28-4bc8-9af3-fbd4afee5c75"
+        "e7dac34a-1a28-4bc8-9af3-fbd4afee5c75",
+        "f8a71ebb-fe9b-44ac-840c-473b14c08f2a",
+        "7e4464d9-422c-456b-9ef1-38cc3a6c3572"
       ],
       "settings": {
         "section_title": "FEATURED COLLECTIONS"
@@ -155,6 +177,20 @@
     },
     "86ec624e-0517-47f0-b514-a6bf92502189": {
       "type": "customer-reviews",
+      "blocks": {
+        "011fc58a-0312-4d66-b3bb-8b0a56a13615": {
+          "type": "slide",
+          "settings": {
+            "customer_image": "shopify:\/\/shop_images\/featured-collection-4.png",
+            "customer_name": "MOnica",
+            "customer_review_text": "BELIEVE THE HYPE OUR COLLECTIONS HAVE OVER 26,000 FIVE STAR REVIEWS, AND COUNTING!",
+            "customer_shop_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "011fc58a-0312-4d66-b3bb-8b0a56a13615"
+      ],
       "settings": {
         "section_title": "OUR CUSTOMERS SAY..."
       }
