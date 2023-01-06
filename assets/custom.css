@@ -55,7 +55,7 @@ html, body {
 }
 .justin-items:hover .secondImage{
     transition: .2s linear all;
-    opacity: 0;
+    opacity: 1;
 }
 @media screen and (max-width:767px){
    .hideMobile{
