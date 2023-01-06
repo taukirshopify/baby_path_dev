@@ -83,28 +83,11 @@
           <div class="search-option">
             <!-- Search elament -->
             <div class="navigation-bar">
-              <button type="submit" class="search-btn navigation-bar-btn js-search-dropdown-toggle">
+              <button type="button" class="simple-icon searchBoxToggler">
                 <img src="{{'Search.svg' | asset_url  }}" alt="search">
               </button>
             </div>
-            <div class="mnmd-search-full">
-              <form
-                action="{{ routes.search_url }}"
-                method="get"
-                role="search"
-                class="search">
-                <input
-                  class="form-control"
-                  autocomplete="off"
-                  placeholder="Enter your keywords"
-                  type="search"
-                  name="q"
-                  value="{{ search.terms | escape }}">
-                <span id="mnmd-search-remove">
-                  &close;
-                </span>
-              </form>
-            </div>
+
           </div>
         </li>
         <li class="header-user-991">
@@ -115,49 +98,34 @@
         </li>
       </ul>
       <div class="header-r-991">
-        <form
-          class="header-search-991"
-          action="{{ routes.search_url }}"
-          method="get">
-          <input
-            class="form-control"
-            autocomplete="off"
-            placeholder="Enter your keywords"
-            type="search"
-            name="q"
-            value="{{ search.terms | escape }}">
-          <span id="mnmd-search-remove">
-            &close;
-          </span>
-        </span>
-      </form>
-      <ul>
-        <li class="header-bag-991">
-          <a href="/cart"><img src="{{'Shopping2.svg' | asset_url  }}" alt="My cart"></a>
-        </li>
-      </ul>
-      <button class="menu-oparetor sidebar-menu" id="menu-opener">
-        <img src="{{'Menu Bar.svg' | asset_url  }}" alt="My cart">
-      </button>
+        <ul>
+          <li class="header-bag-991">
+            <a href="/cart"><img src="{{'Shopping2.svg' | asset_url  }}" alt="My cart"></a>
+          </li>
+        </ul>
+        <button class="menu-oparetor sidebar-menu" id="menu-opener">
+          <img src="{{'Menu Bar.svg' | asset_url  }}" alt="My cart">
+        </button>
+      </div>
     </div>
   </div>
-</div>
-</header><!-- header area end -->{% schema %}{
-  "name": "Header Global",
-  "settings": [
-    {
-      "type": "image_picker",
-      "id": "header_logo_desktop",
-      "label": "Desktop Logo"
-    }, {
-      "type": "image_picker",
-      "id": "header_logo_mobile",
-      "label": "Mobile Logo"
-    }, {
-      "type": "link_list",
-      "id": "header_menu",
-      "label": "Header Menu"
-    }
-  ]
-}
+</header><!-- header area end -->{% schema %}
+  {
+    "name": "Header Global",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "header_logo_desktop",
+        "label": "Desktop Logo"
+      }, {
+        "type": "image_picker",
+        "id": "header_logo_mobile",
+        "label": "Mobile Logo"
+      }, {
+        "type": "link_list",
+        "id": "header_menu",
+        "label": "Header Menu"
+      }
+    ]
+  }
 {% endschema %}
