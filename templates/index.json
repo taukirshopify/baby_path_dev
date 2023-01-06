@@ -224,6 +224,15 @@
         "product_grid_name": "For you",
         "product_grid_collection": "winter-collection"
       }
+    },
+    "7f28b300-5f5c-4dae-af34-56e21cba1acc": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"free-shop-bottom-heading\">\n        <h2>SKIMS IS A SOLUTIONS ORIENTED BRAND CREATING THE NEXT GENERATION OF UNDERWEAR, LOUNGEWEAR AND SHAPEWEAR.<\/h2>\n    <\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -233,6 +242,7 @@
     "d03cce9e-2841-44b5-a243-6609d92df8f8",
     "86ec624e-0517-47f0-b514-a6bf92502189",
     "7a3daecf-2b44-4375-8c98-596c7f6aeb64",
-    "9c4a98fc-38bb-4135-8335-49839ca8b343"
+    "9c4a98fc-38bb-4135-8335-49839ca8b343",
+    "7f28b300-5f5c-4dae-af34-56e21cba1acc"
   ]
 }
