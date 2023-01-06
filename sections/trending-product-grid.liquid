@@ -32,10 +32,9 @@
                                   {%- endunless -%}
                                   <span class="visually-hidden visually-hidden--inline">{{ products.product.price.sale_pricet }}</span>
                                   <span class="price-item price-item--sale price-item--last">
-                                    {{ money_price }}
+                                    {{ product.price  | money}}
                                   </span>
                                 </div>
-                                <p class="product-item-text">{{ product.price | money }}</p>
                               </div>
                             </a>
                           </li>
