@@ -59,7 +59,7 @@
           <ul class="header-sigin-btn"> 
               <li class="currency-switcher-li">  
                   <div class="currency-switcher">
-                    {% form 'localization' %}
+                    {% comment %} {% form 'localization' %}
                       <select name="country_code">
                         {% for country in localization.available_countries %}
                           <option value="{{ country.iso_code }}"
@@ -71,7 +71,7 @@
                       </select>
                     
                       <input type="submit" value="Update">
-                    {% endform %}
+                    {% endform %} {% endcomment %}
                       <div class="dropdown">
                         <div class="caption">
                           <div class="n-flag">
