@@ -1,23 +1,23 @@
 <!-- justin-area strAT -->  
-<section class="justin-area">
-    <div class="justin-container">
-        <ul class="justin-title nav nav-tabs">
-            <li><a class="justin-togol active">{{ section.settings.product_grid_name }}</a></li>
+<section class="product-area">
+    <div class="product-container">
+        <ul class="product-title nav nav-tabs">
+            <li><a class="product-toggle active">{{ section.settings.product_grid_name }}</a></li>
         </ul>
         <div class="tab-content">
-          <div class="splide justin-slider trending tab-pane active" id="#menu1">
+          <div class="splide product-slider" id="#{{ section.id }}">
                 <div class="splide__track">
                     <ul class="splide__list">
                       {% for product in collections[section.settings.product_grid_collection].products %}
                           <li class="splide__slide">
-                            <a class="justin-items" href="{{ product.url }}">
+                            <a class="product-items" href="{{ product.url }}">
                               <img
-                                class="justin-item-img"
+                                class="product-item-img"
                                 src="{{ product.featured_image | img_url: 'medium' }}"
                                 alt="{{ product.title }}">
-                              <div class="justin-item-p-text">
-                                <p class="justin-item-text">{{ product.title }}</p>
-                                <p class="justin-item-text">{{ product.price | money }}</p>
+                              <div class="product-item-p-text">
+                                <p class="product-item-text">{{ product.title }}</p>
+                                <p class="product-item-text">{{ product.price | money }}</p>
                               </div>
                             </a>
                           </li>
@@ -27,19 +27,7 @@
             </div>
         </div> 
     </div>
-</section>  
-{% for product in collections[block.settings.product_grid_collection].products %}
- 
-      <img
-        class="justin-item-img"
-        src="{{ product.featured_image | img_url: 'medium' }}"
-        alt="{{ product.title }}">
-      <div class="justin-item-p-text">
-        <p class="justin-item-text">{{ product.title }}</p>
-        <p class="justin-item-text">{{ product.price | money }}</p>
-      </div>
-
-{% endfor %}
+</section>
 <!-- justin-area end -->
 {% schema %}
     {

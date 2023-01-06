@@ -49,11 +49,11 @@ html, body {
 .firstImage{
     transition: .15s linear all;
 }
-.justin-items:hover .firstImage{
+.product-items:hover .firstImage{
     transition: .2s linear all;
     opacity: 0;
 }
-.justin-items:hover .secondImage{
+.product-items:hover .secondImage{
     transition: .2s linear all;
     opacity: 1;
 }

@@ -1031,29 +1031,29 @@ section {
 }
 
 /*----------------------------------------------------*/
-.justin-area {
+.product-area {
   padding: 20px 0 67px;
   display: block;
 }
-.justin-area .nav-tabs {
+.product-area .nav-tabs {
   border-bottom: none;
 }
-.justin-area .nav-tabs li .active {
+.product-area .nav-tabs li .active {
   border-bottom: 1px solid #000;
 }
 
-.justin-container {
+.product-container {
   max-width: 1090px;
   display: block;
   margin: 0 auto;
 }
 
-.justin-title {
+.product-title {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.justin-title .justin-togol {
+.product-title .product-toggle {
   text-align: center;
   font-weight: 900;
   font-size: 24px;
@@ -1065,7 +1065,7 @@ section {
   display: block;
   padding: 10px 40px;
 }
-.justin-title .tab-active {
+.product-title .tab-active {
   border-bottom: 1px solid #000000;
 }
 
@@ -1073,16 +1073,16 @@ section {
   margin-bottom: 40px;
 }
 
-.justin-slider, .justin-sliders {
+.product-slider, .product-sliders {
   margin-top: 45px;
 }
 
-.justin-item-img {
+.product-item-img {
   width: 100%;
   height: auto;
 }
 
-.justin-item-text {
+.product-item-text {
   text-align: center;
   font-weight: 900;
   font-size: 12px;
@@ -1092,7 +1092,7 @@ section {
   text-transform: uppercase;
 }
 
-.justin-item-p-text {
+.product-item-p-text {
   padding-top: 40px;
 }
 
@@ -2520,11 +2520,11 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
     left: -20px;
   }
 
-  .justin-one {
+  .product-one {
     margin-top: 40px;
   }
 
-  .justin-slider, .justin-sliders {
+  .product-slider, .product-sliders {
     margin-top: 30px;
   }
 
@@ -2611,22 +2611,22 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
     padding: 10px 30px;
   }
 
-  .justin-title .justin-togol {
+  .product-title .product-toggle {
     font-size: 16px;
     line-height: 20px;
     padding: 5px 0;
     margin: 0 30px;
   }
 
-  .justin-slider {
+  .product-slider {
     margin-top: 30px;
   }
 
-  .justin-item-p-text {
+  .product-item-p-text {
     padding-top: 20px;
   }
 
-  .justin-area {
+  .product-area {
     padding: 0px 0 40px;
     display: block;
   }
@@ -2754,7 +2754,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
     display: none;
   }
 
-  .justin-one .justin-title li a {
+  .product-one .product-title li a {
     margin: 0 10px;
   }
 
@@ -2854,7 +2854,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
     display: none;
   }
 
-  .justin-one {
+  .product-one {
     margin-top: 55px;
   }
 
@@ -2862,11 +2862,11 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
     padding: 0 45px;
   }
 
-  .justin-title {
+  .product-title {
     justify-content: center;
     margin: 0 45px;
   }
-  .justin-title .justin-togol {
+  .product-title .product-toggle {
     padding: 5px 25px;
   }
 

@@ -130,7 +130,7 @@
     splide1.mount();
     
     // justin-slider tab strat =============
-    var splide2 = new Splide( '.justin-slider', {
+    var splide2 = new Splide( '.product-slider', {
         perPage: 4,
         gap    : '10px',
         type: 'loop', 
@@ -150,7 +150,7 @@
     } );
     splide2.mount(); 
 
-    var splide4 = new Splide( '.justin-sliders', {
+    var splide4 = new Splide( '.product-sliders', {
         perPage: 4,
         gap    : '10px',
         type: 'loop', 
@@ -235,7 +235,7 @@
 
     // home page justin slider tab js======
     $(document).ready(function(){
-        $(".nav-tabs a").click(function(){
+        $(".nav-tabs button").click(function(){
           $(this).tab('show');
         });
     });

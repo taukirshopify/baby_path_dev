@@ -1,32 +1,31 @@
  <!-- justin-area strAT --> 
- <section class="justin-area justin-one">
-    <div class="justin-container">
-        <ul class="justin-title nav nav-tabs">
+ <section class="product-area product-one">
+    <div class="product-container">
+        <ul class="product-title nav nav-tabs">
             {% for block in section.blocks %}  
-            <li><a class="justin-togol {% if forloop.index == 1 %}active {% endif %}" href="#menu{{ forloop.index }}">{{ block.settings.tab_name }}</a></li>
+            <li><a class="product-toggle {% if forloop.index == 1 %}active {% endif %}" data-bs-toggle="tab" data-bs-target="#nav-tab{{ forloop.index }}" type="button" role="tab" aria-controls="nav-home" aria-selected="{% if forloop.index == 1 %}true {% else %} false{% endif %}"  href="#nav-tab{{ forloop.index }}">{{ block.settings.tab_name }}</a></li>
             {% endfor %}
         </ul>
         <div class="tab-content">
             {% for block in section.blocks %}  
-            <div class="splide justin-slider {% if forloop.index == 1 %}tab-pane active {% else %} tab-pane fade {% endif %}" id="#menu{{ forloop.index }}">
+            <div class="splide product-slider {% if forloop.index == 1 %}tab-pane show active {% else %} tab-pane fade {% endif %}" id="#nav-tab{{ forloop.index }}">
                 <div class="splide__track">
                     <ul class="splide__list">
                         {% for product in collections[block.settings.tab_collection].products %}
                           <li class="splide__slide">
-                            <a class="justin-items" href="{{ product.url }}">
+                            <a class="product-items" href="{{ product.url }}">
                               <div class="product_image_wrapper">
                                 <img
-                                class="justin-item-img firstImage"
+                                class="product-item-img firstImage"
                                 src="{{ product.featured_image | img_url: 'medium' }}"
                                 alt="{{ product.title }}">
                                 {% if product.images[1] %}
-                                <img class="justin-item-img secondImage" src="{{ product.images[1] | product_img_url: 'medium' }}" alt="{{ product.title }}">
+                                <img class="product-item-img secondImage" src="{{ product.images[1] | product_img_url: 'medium' }}" alt="{{ product.title }}">
                               {% endif %}
                               </div>
-                              
-                              <div class="justin-item-p-text">
-                                <p class="justin-item-text">{{ product.title }}</p>
-                                <p class="justin-item-text">{{ product.price | money }}</p>
+                              <div class="product-item-p-text">
+                                <p class="product-item-text">{{ product.title }}</p>
+                                <p class="product-item-text">{{ product.price | money }}</p>
                               </div>
                             </a>
                           </li>
