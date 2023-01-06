@@ -43,7 +43,7 @@
 <!-- justin-area end -->
 {% schema %}
     {
-      "name": "Simple Product Grid",
+      "name": "Tranding Product Grid",
       "settings": [
         {
           "type": "text",
@@ -58,7 +58,7 @@
       ],
     "presets": [
     {
-      "name": "Simple Product Grid",
+      "name": "Tranding Product Grid",
       "category": "section"
     }
   ]
@@ -71,7 +71,7 @@
   <script>
   
 
- new Splide( '.trending', {
+ {% comment %} new Splide( '.trending', {
       perPage: 4,
       gap    : '27px',
       type: 'loop', 
@@ -88,6 +88,6 @@
       //     perPage: 1, 
       //   },
       },
-  }).mount(); 
+  }).mount();  {% endcomment %}
 
   </script>
