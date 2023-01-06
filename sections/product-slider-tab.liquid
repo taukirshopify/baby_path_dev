@@ -8,7 +8,7 @@
         </ul>
         <div class="tab-content">
             {% for block in section.blocks %}  
-            <div class="splide product-slider {% if forloop.index == 1 %}tab-pane show active {% else %} tab-pane fade {% endif %}" id="#nav-tab{{ forloop.index }}">
+            <div class="splide product-slider {% if forloop.index == 1 %}tab-pane active {% else %} tab-pane fade {% endif %}" id="#nav-tab{{ forloop.index }}">
                 <div class="splide__track">
                     <ul class="splide__list">
                         {% for product in collections[block.settings.tab_collection].products %}
