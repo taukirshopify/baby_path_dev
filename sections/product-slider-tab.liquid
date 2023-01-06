@@ -14,10 +14,16 @@
                         {% for product in collections[block.settings.tab_collection].products %}
                           <li class="splide__slide">
                             <a class="justin-items" href="{{ product.url }}">
-                              <img
-                                class="justin-item-img"
+                              <div class="product_image_wrapper">
+                                <img
+                                class="justin-item-img firstImage"
                                 src="{{ product.featured_image | img_url: 'medium' }}"
                                 alt="{{ product.title }}">
+                                {% if product.images[1] %}
+                                <img class="justin-item-img secondImage" src="{{ product.images[1] | product_img_url: 'medium' }}" alt="{{ product.title }}">
+                              {% endif %}
+                              </div>
+                              
                               <div class="justin-item-p-text">
                                 <p class="justin-item-text">{{ product.title }}</p>
                                 <p class="justin-item-text">{{ product.price | money }}</p>
