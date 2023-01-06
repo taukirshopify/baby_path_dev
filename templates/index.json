@@ -284,7 +284,7 @@
       "type": "trending-product-grid",
       "settings": {
         "product_grid_name": "tranding",
-        "product_grid_collection": ""
+        "product_grid_collection": "frontpage"
       }
     }
   },
