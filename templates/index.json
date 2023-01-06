@@ -35,6 +35,7 @@
     },
     "98ee248a-d7e9-41e0-8d0b-ee1e8ac51671": {
       "type": "product-slider-tab",
+      "disabled": true,
       "blocks": {
         "3d8a258f-7b99-4039-b548-471c9f83a1b8": {
           "type": "slide",
