@@ -435,6 +435,39 @@
     {{ 'main.css' | asset_url | stylesheet_tag }}
     {{ 'custom.css' | asset_url | stylesheet_tag }}
     {{ 'style.css' | asset_url | stylesheet_tag }}
+
+    <style>
+      @font-face {
+        font-family: 'T-Star Pro';
+        src: url("{{ 'TStarProLight.woff' | asset_url }}") format("woff");
+        font-weight: 300;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'T-Star Pro';
+        src: url("{{ 'TStarProRegular.woff' | asset_url }}") format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'T-Star Pro';
+        src: url("{{ 'TStarProMedium.woff' | asset_url }}") format("woff");
+        font-weight: 500;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'T-Star Pro';
+        src: url("{{ 'TStarProBold.woff' | asset_url }}") format("woff");
+        font-weight: 700;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'T-Star Pro';
+        src: url("{{ 'TStarProHeavy.woff' | asset_url }}") format("woff");
+        font-weight: 900;
+        font-style: normal;
+      }
+    </style>
   </head>
 
   <body class="gradient">

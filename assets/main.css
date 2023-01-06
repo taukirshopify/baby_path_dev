@@ -3036,34 +3036,3 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
 /* Icon CSS */
 /* Extra Plugins CSS */
 /*google font-family*/
-@font-face {
-  font-family: 'T-Star Pro';
-  src: url("../fonts/TStarProLight.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'T-Star Pro';
-  src: url("../fonts/TStarProRegular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'T-Star Pro';
-  src: url("../fonts/TStarProMedium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'T-Star Pro';
-  src: url("../fonts/TStarProBold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'T-Star Pro';
-  src: url("../fonts/TStarProHeavy.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-}
-
