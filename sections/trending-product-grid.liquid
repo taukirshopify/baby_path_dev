@@ -17,24 +17,15 @@
                                 alt="{{ product.title }}">
                               <div class="product-item-p-text">
                                 <p class="product-item-text">{{ product.title }}</p>
-                                <div class="price__sale">
-                                  {%- unless product.price_varies == false and product.compare_at_price_varies %}
-                                    <span class="visually-hidden visually-hidden--inline">{{ products.product.price.regular_price }}</span>
-                                    <span>
-                                      <s class="price-item price-item--regular">
-                                        {% if settings.currency_code_enabled %}
-                                          {{ compare_at_price | money_with_currency }}
-                                        {% else %}
-                                          {{ compare_at_price | money }}
-                                        {% endif %}
-                                      </s>
-                                    </span>
-                                  {%- endunless -%}
-                                  <span class="visually-hidden visually-hidden--inline">{{ products.product.price.sale_pricet }}</span>
-                                  <span class="price-item price-item--sale price-item--last">
-                                    {{ product.price  | money}}
-                                  </span>
-                                </div>
+                                
+                                <p class="product-item-text product_price">
+                                  {% if product.compare_at_price > product.price %}
+                                  <span class="sale-price">{{ product.price | money }}</span>
+                                  <span class="regular-price">{{ product.compare_at_price | money }}</span>
+                                  {% else %}
+                                    <span class="regular-price">{{ product.price | money }}</span>
+                                  {% endif %}
+                                </p>
                               </div>
                             </a>
                           </li>
