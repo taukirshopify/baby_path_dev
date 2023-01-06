@@ -59,37 +59,50 @@
           <ul class="header-sigin-btn"> 
               <li class="currency-switcher-li">  
                   <div class="currency-switcher">
+                    {% form 'localization' %}
+                      <select name="country_code">
+                        {% for country in localization.available_countries %}
+                          <option value="{{ country.iso_code }}"
+                            {%- if country == localization.country %} selected="selected"{% endif %}
+                          >
+                            {{ country.name }} ({{ country.iso_code }}) - {{ country.currency.symbol }}
+                          </option>
+                        {% endfor %}
+                      </select>
+                    
+                      <input type="submit" value="Update">
+                    {% endform %}
                       <div class="dropdown">
                         <div class="caption">
                           <div class="n-flag">
-                              <img src="{{'n-flag.png' | asset_img_url  }}" alt="">
+                              <img src="{{'n-flag.png' | asset_url  }}" alt="">
                           </div> 
                               USA
                         </div>
                         <div class="list">
                           <div class="item selected" data-item="RUB">
                               <div class="n-flag">
-                                <img src="{{'n-flag.png' | asset_img_url }}" alt="">
+                                <img src="{{'n-flag.png' | asset_url }}" alt="">
                               </div>  
                                   USA
                           </div>
                           <div class="item" data-item="RUB">
                               <div class="n-flag">
-                                <img src="{{'n-flag.png' | asset_img_url }}" alt="">
+                                <img src="{{'n-flag.png' | asset_url }}" alt="">
                               </div>
                             Россия
                             <!-- <span>RUB</span> -->
                           </div>
                           <div class="item" data-item="UAH">
                               <div class="n-flag">
-                                <img src="{{'n-flag.png' | asset_img_url }}" alt="">
+                                <img src="{{'n-flag.png' | asset_url }}" alt="">
                               </div>
                             Украина
                             <!-- <span>UAH</span> -->
                           </div>
                           <div class="item" data-item="USD">
                               <div class="n-flag">
-                                <img src="{{'n-flag.png' | asset_img_url }}" alt="">
+                                <img src="{{'n-flag.png' | asset_url }}" alt="">
                               </div>
                           Россия
                           </div>
