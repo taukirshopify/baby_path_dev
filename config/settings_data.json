@@ -209,19 +209,24 @@
         "settings": {
           "header_logo_desktop": "shopify:\/\/shop_images\/logo-991.png",
           "header_logo_mobile": "shopify:\/\/shop_images\/logo-991.png",
-          "how_work_banner_title": "Title of this Banner",
-          "how_work_banner_subtitle": "Sub Title of this Banner",
-          "how_work_banner_url": "",
-          "how_work_inner_section_button_url": ""
+          "header_menu": "main-menu"
         }
       },
       "footer-global": {
         "type": "footer-global",
         "settings": {
-          "how_work_banner_title": "Title of this Banner",
-          "how_work_banner_subtitle": "Sub Title of this Banner",
-          "how_work_banner_url": "",
-          "how_work_inner_section_button_url": ""
+          "footer_first_menu": "",
+          "footer_first_menu_title": "",
+          "footer_second_menu": "",
+          "footer_second_menu_title": "",
+          "footer_privacy_menu": "",
+          "show_social": false,
+          "show_newsletter": false,
+          "newsletter_title": "",
+          "newsletter_text": "",
+          "newsletter_subscribe_text": "",
+          "newsletter_sms_text": "",
+          "newsletter_footer_text": ""
         }
       }
     },
