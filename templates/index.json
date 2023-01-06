@@ -271,13 +271,6 @@
         "section_title": "BELIEVE THE HYPE\nOUR COLLECTIONS HAVE OVER 26,000 FIVE STAR\nREVIEWS, AND COUNTING!"
       }
     },
-    "9c4a98fc-38bb-4135-8335-49839ca8b343": {
-      "type": "prodcut-grid",
-      "settings": {
-        "product_grid_name": "For you",
-        "product_grid_collection": "frontpage"
-      }
-    },
     "7f28b300-5f5c-4dae-af34-56e21cba1acc": {
       "type": "custom-liquid",
       "settings": {
@@ -296,7 +289,6 @@
     "e7d131da-0d09-4641-bc84-5bb60f5dd31a",
     "86ec624e-0517-47f0-b514-a6bf92502189",
     "7a3daecf-2b44-4375-8c98-596c7f6aeb64",
-    "9c4a98fc-38bb-4135-8335-49839ca8b343",
     "7f28b300-5f5c-4dae-af34-56e21cba1acc"
   ]
 }
