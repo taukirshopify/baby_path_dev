@@ -207,7 +207,7 @@
       "header-global": {
         "type": "header-global",
         "settings": {
-          "header_logo_desktop": "shopify:\/\/shop_images\/logo-991.png",
+          "header_logo_desktop": "shopify:\/\/shop_images\/header-logo.png",
           "header_logo_mobile": "shopify:\/\/shop_images\/logo-991.png",
           "header_menu": "main-menu"
         }
