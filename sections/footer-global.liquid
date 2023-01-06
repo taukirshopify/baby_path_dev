@@ -3,51 +3,146 @@
     <div class="footer-container">
         <div class="fooetr-top-items">
             <div class="footer-help-item f-item-one">
-                <h3>help</h3>
+                <h3>{{ section.settings.footer_first_menu_title }}</h3>
                 <ul>
-                    <li><a href="javascprit:void(0)">return policy</a></li>
-                    <li><a href="javascprit:void(0)">start a return</a></li>
-                    <li><a href="javascprit:void(0)">track order</a></li>
-                    <li><a href="javascprit:void(0)">size guides</a></li>
-                    <li><a href="javascprit:void(0)">bra calculator</a></li>
-                    <li><a href="javascprit:void(0)">ordering</a></li>
-                    <li><a href="javascprit:void(0)">shipping</a></li>
-                    <li><a href="javascprit:void(0)">international</a></li>
-                    <li><a href="javascprit:void(0)">FAQs</a></li>
-                    <li><a href="javascprit:void(0)">careers</a></li>
+                    {% for link in section.settings.footer_first_menu.links %}
+                        <li>
+                            <a href="{{ link.url }}" class="cl-label-title ftps-a">{{ link.title }}</a>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="footer-help-item">
-                <h3>STAY IN THE KNOW</h3>
-                <p>Be the first one to receive new releases, special offers, and more</p>
+                {%- if section.settings.show_newsletter -%}
+                <h3>{{ section.settings.newsletter_title }}</h3>
+                <p>{{ section.settings.newsletter_text }}</p>
 
-                <form class="subscribe_form footer-form">
+                {%- form 'customer', id: 'ContactFooter', class: 'subscribe_form footer-form' -%}
+                    <input type="hidden" name="contact[tags]" value="newsletter">
                     <div class="input-group">
-                       <input type="email" class="form-control" name="email" placeholder="Your email">
-                       <span class="input-group-btn">
-                            <button class="btn btn-default" type="button"><i class="fal fa-chevron-right"></i></button>
-                       </span>
+                        <input
+                          id="NewsletterForm--{{ section.id }}"
+                          type="email"
+                          name="contact[email]"
+                          class="form-control"
+                          value="{{ form.email }}"
+                          aria-required="true"
+                          autocorrect="off"
+                          autocapitalize="off"
+                          autocomplete="email"
+                          {% if form.errors %}
+                            autofocus
+                            aria-invalid="true"
+                            aria-describedby="ContactFooter-error"
+                          {% elsif form.posted_successfully? %}
+                            aria-describedby="ContactFooter-success"
+                          {% endif %}
+                          placeholder="Your Email"
+                          required
+                        >
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-default" name="commit" id="Subscribe" aria-label="newsletter">
+                            {% render 'icon-arrow' %}
+                            </button>
+                        </span>
                     </div>
-                </form>
-                <small>By signing up you agree to receive recurring automated marketing message from SKIMS. View Terms & Privacy</small>
-                <h4 class="sb-text"> <p>Text</p> SKIMS <p> to </p> 68805 <p> to never miss a drop!</p></h4>
-                <small>By signing up via text, you agree to receive recurring automated promotional and personalized marketing text messages (e.g. cart reminders) from SKIMS at the cell number used when signing up. Consent is not a condition of any purchase. Reply HELP for help and STOP to cancel. Msg frequency varies. Msg & data rates may apply. View Terms & Privacy.
+                    <div class="form_extra">
+                      {%- if form.errors -%}
+                        <small class="newsletter-form__message form__message" id="ContactFooter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                      {%- endif -%}
+                    {%- if form.posted_successfully? -%}
+                      <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>{% render 'icon-success' %}{{ newsletter.success }}</h3>
+                    {%- endif -%}
+                    </div>
+                  {%- endform -%}
+                <small>{{ section.settings.newsletter_subscribe_text }}</small>
+                <h4 class="sb-text">{{ section.settings.newsletter_sms_text }}</h4>
+                <small>
+                    {{ section.settings.newsletter_footer_text }}
                 </small>
-
-                <ul class="footer-socil-item">
-                    <li><a href="javascprit:void(0)"><i class="fab fa-instagram"></i></a></li> 
-                    <li><a href="javascprit:void(0)"><i class="fab fa-twitter"></i></a></li> 
-                    <li><a href="javascprit:void(0)"><i class="fab fa-facebook-f"></i></a></li> 
-                    <li><a href="javascprit:void(0)"><i class="fab fa-pinterest-p"></i></a></li> 
-                    <li><a href="javascprit:void(0)"><i class="fab fa-youtube"></i></a></li> 
-                    <li><a href="javascprit:void(0)"><i class="fab fa-tiktok"></i></a></li>  
-                </ul>
-
+                {%- endif -%}
+                {%- if section.settings.show_social -%}
+                    <ul class="footer-socil-item" role="list">
+                        {%- if settings.social_twitter_link != blank -%}
+                        <li>
+                            <a href="{{ settings.social_twitter_link }}" class="link list-social__link" >
+                            {%- render 'icon-twitter' -%}
+                            <span class="visually-hidden">{{ general.social.links.twitter }}</span>
+                            </a>
+                        </li>
+                        {%- endif -%}
+                        {%- if settings.social_facebook_link != blank -%}
+                        <li>
+                            <a href="{{ settings.social_facebook_link }}" class="link list-social__link" >
+                            {%- render 'icon-facebook' -%}
+                            <span class="visually-hidden">{{ general.social.links.facebook }}</span>
+                            </a>
+                        </li>
+                        {%- endif -%}
+                        {%- if settings.social_pinterest_link != blank -%}
+                        <li>
+                            <a href="{{ settings.social_pinterest_link }}" class="link list-social__link" >
+                            {%- render 'icon-pinterest' -%}
+                            <span class="visually-hidden">{{ general.social.links.pinterest }}</span>
+                            </a>
+                        </li>
+                        {%- endif -%}
+                        {%- if settings.social_instagram_link != blank -%}
+                        <li>
+                            <a href="{{ settings.social_instagram_link }}" class="link list-social__link" >
+                            {%- render 'icon-instagram' -%}
+                            <span class="visually-hidden">{{ general.social.links.instagram }}</span>
+                            </a>
+                        </li>
+                        {%- endif -%}
+                        {%- if settings.social_tiktok_link != blank -%}
+                        <li>
+                            <a href="{{ settings.social_tiktok_link }}" class="link list-social__link" >
+                            {%- render 'icon-tiktok' -%}
+                            <span class="visually-hidden">{{ general.social.links.tiktok }}</span>
+                            </a>
+                        </li>
+                        {%- endif -%}
+                        {%- if settings.social_tumblr_link != blank -%}
+                        <li>
+                            <a href="{{ settings.social_tumblr_link }}" class="link list-social__link" >
+                            {%- render 'icon-tumblr' -%}
+                            <span class="visually-hidden">{{ general.social.links.tumblr }}</span>
+                            </a>
+                        </li>
+                        {%- endif -%}
+                        {%- if settings.social_snapchat_link != blank -%}
+                        <li>
+                            <a href="{{ settings.social_snapchat_link }}" class="link list-social__link" >
+                            {%- render 'icon-snapchat' -%}
+                            <span class="visually-hidden">{{ general.social.links.snapchat }}</span>
+                            </a>
+                        </li>
+                        {%- endif -%}
+                        {%- if settings.social_youtube_link != blank -%}
+                        <li>
+                            <a href="{{ settings.social_youtube_link }}" class="link list-social__link" >
+                            {%- render 'icon-youtube' -%}
+                            <span class="visually-hidden">{{ general.social.links.youtube }}</span>
+                            </a>
+                        </li>
+                        {%- endif -%}
+                        {%- if settings.social_vimeo_link != blank -%}
+                        <li>
+                            <a href="{{ settings.social_vimeo_link }}" class="link list-social__link" >
+                            {%- render 'icon-vimeo' -%}
+                            <span class="visually-hidden">{{ general.social.links.vimeo }}</span>
+                            </a>
+                        </li>
+                        {%- endif -%}
+                    </ul>
+                {%- endif -%}
+                
                 <!-- footer help & more -->
                 <ul class="cl-start-wrap help-571">
                     <li class="cl-item f-help-m">
                         <div class="cl-label-wrap">
-                            <span class="cl-label-title">HELP</span> 
+                            <span class="cl-label-title">{{ section.settings.footer_first_menu_title }}</span> 
                             <span class="cl-label-tools">
                                 <a href="javascprit:void(0)"><i class="fa fa-plus"></i></a>
                             </span>
@@ -55,22 +150,16 @@
                         <ul class="ftps-ul">
                             <li class="cl-item">
                                 <div class="cl-label-wrap">
-                                    <a href="javascprit:void(0)" class="cl-label-title ftps-a">return policy</a>  
-                                    <a href="javascprit:void(0)" class="cl-label-title ftps-a">start a return</a>  
-                                    <a href="javascprit:void(0)" class="cl-label-title ftps-a">track order</a>  
-                                    <a href="javascprit:void(0)" class="cl-label-title ftps-a">size guides</a>  
-                                    <a href="javascprit:void(0)" class="cl-label-title ftps-a">bra calculator</a>  
-                                    <a href="javascprit:void(0)" class="cl-label-title ftps-a">ordering</a>  
-                                    <a href="javascprit:void(0)" class="cl-label-title ftps-a">shipping</a>  
-                                    <a href="javascprit:void(0)" class="cl-label-title ftps-a">FAQs</a>  
-                                    <a href="javascprit:void(0)" class="cl-label-title ftps-a">careers</a> 
+                                    {% for link in section.settings.footer_first_menu.links %}
+                                        <a href="{{ link.url }}" class="cl-label-title ftps-a">{{ link.title }}</a>
+                                    {% endfor %}
                                 </div> 
                             </li> 
                         </ul>
                     </li> 
                     <li class="cl-item f-help-m">
                         <div class="cl-label-wrap">
-                            <span class="cl-label-title">MORE</span> 
+                            <span class="cl-label-title">{{ section.settings.footer_second_menu_title }}</span> 
                             <span class="cl-label-tools">
                                 <a href="javascprit:void(0)"><i class="fa fa-plus"></i></a>
                             </span>
@@ -78,12 +167,9 @@
                         <ul class="ftps-ul">
                             <li class="cl-item">
                                 <div class="cl-label-wrap">
-                                    <a href="javascprit:void(0)" class="cl-label-title ftps-a">about</a>  
-                                    <a href="javascprit:void(0)" class="cl-label-title ftps-a">influencers</a>  
-                                    <a href="javascprit:void(0)" class="cl-label-title ftps-a">stockists</a>  
-                                    <a href="javascprit:void(0)" class="cl-label-title ftps-a">resources</a>  
-                                    <a href="javascprit:void(0)" class="cl-label-title ftps-a">e-gift card</a>  
-                                    <a href="javascprit:void(0)" class="cl-label-title ftps-a">contact us</a>   
+                                    {% for link in section.settings.footer_second_menu.links %}
+                                        <a href="{{ link.url }}" class="cl-label-title ftps-a">{{ link.title }}</a>
+                                    {% endfor %}
                                 </div> 
                             </li> 
                         </ul>
@@ -91,14 +177,13 @@
                 </ul>
             </div> 
             <div class="footer-help-item f-item-one">
-                <h3>MORE</h3>
+                <h3>{{ section.settings.footer_second_menu_title }}</h3>
                 <ul>
-                    <li><a href="javascprit:void(0)">about</a></li>
-                    <li><a href="javascprit:void(0)">influencers</a></li>
-                    <li><a href="javascprit:void(0)">stockists</a></li>
-                    <li><a href="javascprit:void(0)">resources</a></li>
-                    <li><a href="javascprit:void(0)">e-gift card</a></li>
-                    <li><a href="javascprit:void(0)">contact us</a></li> 
+                    {% for link in section.settings.footer_second_menu.links %}
+                        <li>
+                            <a href="{{ link.url }}" class="cl-label-title ftps-a">{{ link.title }}</a>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -146,9 +231,11 @@
                 </li>  
             </ul>
             <ul class="footer-bottom-act">
-                <li><a href="javascprit:void(0)">Acessibility</a></li>
-                <li><a href="javascprit:void(0)">Privacy</a></li>
-                <li><a href="javascprit:void(0)">Terms</a></li>
+                {% for link in section.settings.footer_privacy_menu.links %}
+                    <li>
+                        <a href="{{ link.url }}">{{ link.title }}</a>
+                    </li>
+                {% endfor %}
             </ul>
         </div>
     </div>
@@ -171,26 +258,70 @@
         "label": "Mobile Logo"
       },
       {
-        "type": "text",
-        "id": "how_work_banner_title",
-        "label": "Banner Title",
-        "default": "Title of this Banner"
+        "type": "link_list",
+        "id": "footer_first_menu",
+        "label": "Footer First Menu"
       },
       {
         "type": "text",
-        "id": "how_work_banner_subtitle",
-        "label": "Banner Sub Title",
-        "default": "Sub Title of this Banner"
-      },
-       {
-        "type": "url",
-        "id": "how_work_banner_url",
-        "label": "Banner Button URL"
+        "id": "footer_first_menu_title",
+        "label": "Footer First Menu Title"
       },
       {
-        "type": "url",
-        "id": "how_work_inner_section_button_url",
-        "label": "Main section Button URL"
+        "type": "link_list",
+        "id": "footer_second_menu",
+        "label": "Footer Second Menu"
+      },
+      {
+        "type": "text",
+        "id": "footer_second_menu_title",
+        "label": "Footer Second Menu Title"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_privacy_menu",
+        "label": "Footer Privacy Menu"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_social",
+        "default": false,
+        "label": "Display Social Links"
+    },
+    {
+        "type": "header",
+        "content": "Newsletter Settings"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_newsletter",
+        "default": false,
+        "label": "Display Newsletter"
+    },
+    {
+        "type": "text",
+        "id": "newsletter_title",
+        "label": "Newsletter Title"
+      }, 
+      {
+        "type": "text",
+        "id": "newsletter_text",
+        "label": "Newsletter text"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_subscribe_text",
+        "label": "Newsletter Subscribe text"
+      },
+      {
+        "type": "html",
+        "id": "newsletter_sms_text",
+        "label": "Newsletter SMS text"
+      },
+      {
+        "type": "textarea",
+        "id": "newsletter_footer_text",
+        "label": "Newsletter Footer text"
       }
     ]
   }

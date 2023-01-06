@@ -9,8 +9,33 @@
           <div class="mobile-menu fast-mobile-menu"> 
               <div class="remove-one mobile-remove-one"><i class="fal fa-times"></i></div> 
               <ul class="fast-header-menu">  
-
-                  <li class="dropdown"><a class="menu-item" href="index.html">ALL <i class="fal fa-angle-down"></i></a>
+                {% for link in section.settings.header_menu.links %}
+                  <li class="menu-link">
+                    <a href="{{ link.url }}" class="menu-item">{{ link.title }}</a>
+              
+                    {% if link.links.size > 0 %}
+                      <ul class="dropdown-pges-ul dropdown-menu menu dropdown-child">
+                        {% for child_link in link.links %}
+                          <li class="menu-link">
+                            <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+              
+                            {% if child_link.links.size > 0 %}
+                              <ul class="menu dropdown-grandchild">
+                                {% for grandchild_link in child_link.links %}
+                                  <li class="menu-link">
+                                    <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                                  </li>
+                                {% endfor %}
+                              </ul>
+                            {% endif %}
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+                  {% comment %} <li class="dropdown">
+                    <a class="menu-item" href="index.html">ALL <i class="fal fa-angle-down"></i></a>
                       <ul class="dropdown-pges-ul dropdown-menu"> 
                           <li><a href="javascprit:void(0)">protection v1</a></li>
                           <li><a href="javascprit:void(0)">protection v2</a></li> 
@@ -28,7 +53,7 @@
                       <li><a href="javascprit:void(0)">COLLABORATIONS v1</a></li>
                       <li><a href="javascprit:void(0)">COLLABORATIONS v2</a></li> 
                     </ul>
-                  </li> 
+                  </li>  {% endcomment %}
               </ul> 
           </div>  
           <ul class="header-sigin-btn"> 
@@ -121,26 +146,9 @@
         "label": "Mobile Logo"
       },
       {
-        "type": "text",
-        "id": "how_work_banner_title",
-        "label": "Banner Title",
-        "default": "Title of this Banner"
-      },
-      {
-        "type": "text",
-        "id": "how_work_banner_subtitle",
-        "label": "Banner Sub Title",
-        "default": "Sub Title of this Banner"
-      },
-       {
-        "type": "url",
-        "id": "how_work_banner_url",
-        "label": "Banner Button URL"
-      },
-      {
-        "type": "url",
-        "id": "how_work_inner_section_button_url",
-        "label": "Main section Button URL"
+        "type": "link_list",
+        "id": "header_menu",
+        "label": "Header Menu"
       }
     ]
   }

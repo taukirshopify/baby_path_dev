@@ -9,7 +9,18 @@
                 <div class="splide__track">
                     <ul class="splide__list">
                         {% for product in collections[block.settings.product_grid_collection].products %}
-                            {% render 'product-slide-item' %}
+                          <li class="splide__slide">
+                            <a class="justin-items" href="{{ product.url }}">
+                              <img
+                                class="justin-item-img"
+                                src="{{ product.featured_image | img_url: 'medium' }}"
+                                alt="{{ product.title }}">
+                              <div class="justin-item-p-text">
+                                <p class="justin-item-text">{{ product.title }}</p>
+                                <p class="justin-item-text">{{ product.price | money }}</p>
+                              </div>
+                            </a>
+                          </li>
                         {% endfor %}
                     </ul>
                 </div>
