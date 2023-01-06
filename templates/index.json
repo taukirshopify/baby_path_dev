@@ -271,13 +271,6 @@
         "section_title": "BELIEVE THE HYPE\nOUR COLLECTIONS HAVE OVER 26,000 FIVE STAR\nREVIEWS, AND COUNTING!"
       }
     },
-    "779d2bef-8ff8-446f-b98d-def2d571f332": {
-      "type": "product-grid",
-      "settings": {
-        "product_grid_name": "For you",
-        "product_grid_collection": "winter-collection"
-      }
-    },
     "7f28b300-5f5c-4dae-af34-56e21cba1acc": {
       "type": "custom-liquid",
       "settings": {
@@ -285,6 +278,13 @@
         "color_scheme": "background-1",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "0a2b3531-5ba6-4435-8457-4384dfeb7124": {
+      "type": "trending-product-grid",
+      "settings": {
+        "product_grid_name": "tranding",
+        "product_grid_collection": ""
       }
     }
   },
@@ -296,7 +296,7 @@
     "e7d131da-0d09-4641-bc84-5bb60f5dd31a",
     "86ec624e-0517-47f0-b514-a6bf92502189",
     "7a3daecf-2b44-4375-8c98-596c7f6aeb64",
-    "779d2bef-8ff8-446f-b98d-def2d571f332",
-    "7f28b300-5f5c-4dae-af34-56e21cba1acc"
+    "7f28b300-5f5c-4dae-af34-56e21cba1acc",
+    "0a2b3531-5ba6-4435-8457-4384dfeb7124"
   ]
 }
