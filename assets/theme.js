@@ -129,74 +129,93 @@
     } ); 
     splide1.mount();
     
-    // // justin-slider tab strat =============
-    // var splide2 = new Splide( '.justin-slider', {
-    //     perPage: 4,
-    //     gap    : '10px',
-    //     type: 'loop', 
-    //     perMove: 1,
-    //     pagination: false, 
-    //     breakpoints: {
-    //       1024: {
-    //         perPage: 3, 
-    //       },
-    //       640: {
-    //         perPage: 2, 
-    //       },
-    //     //   480: {
-    //     //     perPage: 1, 
-    //     //   },
-    //     },
-    // } );
-    // splide2.mount(); 
+    // justin-slider tab strat =============
+    var splide2 = new Splide( '.justin-slider', {
+        perPage: 4,
+        gap    : '10px',
+        type: 'loop', 
+        perMove: 1,
+        pagination: false, 
+        breakpoints: {
+          1024: {
+            perPage: 3, 
+          },
+          640: {
+            perPage: 2, 
+          },
+        //   480: {
+        //     perPage: 1, 
+        //   },
+        },
+    } );
+    splide2.mount(); 
 
-    // var splide4 = new Splide( '.justin-sliders', {
-    //     perPage: 4,
-    //     gap    : '10px',
-    //     type: 'loop', 
-    //     perMove: 1,
-    //     pagination: false, 
-    //     breakpoints: {
-    //       1024: {
-    //         perPage: 3, 
-    //       },
-    //       640: {
-    //         perPage: 2, 
-    //       },
-    //     //   480: {
-    //     //     perPage: 1, 
-    //     //   },
-    //     },
-    // } );
-    // splide4.mount(); 
-    // // justin-slider tab end ==============
+    var splide4 = new Splide( '.justin-sliders', {
+        perPage: 4,
+        gap    : '10px',
+        type: 'loop', 
+        perMove: 1,
+        pagination: false, 
+        breakpoints: {
+          1024: {
+            perPage: 3, 
+          },
+          640: {
+            perPage: 2, 
+          },
+        //   480: {
+        //     perPage: 1, 
+        //   },
+        },
+    } );
+    splide4.mount(); 
+    // justin-slider tab end ==============
 
+    var splide3 = new Splide( '.trending', {
+        perPage: 4,
+        gap    : '27px',
+        type: 'loop', 
+        perMove: 1,
+        pagination: false, 
+        breakpoints: {
+          1024: {
+            perPage: 3, 
+          },
+          640: {
+            perPage: 2, 
+          },
+        //   480: {
+        //     perPage: 1, 
+        //   },
+        },
+    } );
+    splide3.mount(); 
 
-    // // free-shop-slider====
-    // var splide5 = new Splide( '.free-shop-slider', {
-    //     perPage: 5,
-    //     gap    : '20px',
-    //     type: 'loop',  
-    //     perMove: 1,
-    //     arrows: false, 
-    //     pagination: false, 
-    //     breakpoints: {
-    //       1024: {
-    //         perPage: 4,
-    //         arrows: false, 
-    //       },
-    //       640: {
-    //         perPage: 3,
-    //         arrows: false, 
-    //       },
-    //       570: {
-    //         perPage: 1, 
-    //         arrows: true,
-    //         gap    : '10px', 
-    //       },
-    //     },
-    // } );
-    // splide5.mount(); 
+    // free-shop-slider====
+    var splide5 = new Splide( '.free-shop-slider', {
+        perPage: 5,
+        gap    : '20px',
+        type: 'loop',  
+        perMove: 1,
+        arrows: false, 
+        pagination: false, 
+        breakpoints: {
+          1024: {
+            perPage: 4,
+            arrows: false, 
+          },
+          640: {
+            perPage: 3,
+            arrows: false, 
+          },
+          570: {
+            perPage: 1, 
+            arrows: true,
+            gap    : '10px', 
+          },
+        },
+    } );
+    splide5.mount(); 
 
   
     // footer collapse======

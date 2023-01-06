@@ -8,7 +8,7 @@
           <div class="splide justin-slider trending tab-pane active" id="#menu1">
                 <div class="splide__track">
                     <ul class="splide__list">
-                      {% for product in collections[block.settings.product_grid_collection].products %}
+                      {% for product in collections[section.settings.product_grid_collection].products %}
                           <li class="splide__slide">
                             <a class="justin-items" href="{{ product.url }}">
                               <img
@@ -43,7 +43,7 @@
 <!-- justin-area end -->
 {% schema %}
     {
-      "name": "Tranding Product Grid",
+      "name": "Simple Product Grid",
       "settings": [
         {
           "type": "text",
@@ -58,7 +58,7 @@
       ],
     "presets": [
     {
-      "name": "Tranding Product Grid",
+      "name": "Simple Product Grid",
       "category": "section"
     }
   ]
@@ -68,26 +68,6 @@
   {% stylesheet %}
   
   {% endstylesheet %}
-  <script>
   
-
- {% comment %} new Splide( '.trending', {
-      perPage: 4,
-      gap    : '27px',
-      type: 'loop', 
-      perMove: 1,
-      pagination: false, 
-      breakpoints: {
-        1024: {
-          perPage: 3, 
-        },
-        640: {
-          perPage: 2, 
-        },
-      //   480: {
-      //     perPage: 1, 
-      //   },
-      },
-  }).mount();  {% endcomment %}
-
-  </script>
+  {% javascript %}
+  {% endjavascript %}
