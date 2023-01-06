@@ -171,25 +171,6 @@
     splide4.mount(); 
     // justin-slider tab end ==============
 
-    var splide3 = new Splide( '.trending', {
-        perPage: 4,
-        gap    : '27px',
-        type: 'loop', 
-        perMove: 1,
-        pagination: false, 
-        breakpoints: {
-          1024: {
-            perPage: 3, 
-          },
-          640: {
-            perPage: 2, 
-          },
-        //   480: {
-        //     perPage: 1, 
-        //   },
-        },
-    } );
-    splide3.mount(); 
 
     // free-shop-slider====
     var splide5 = new Splide( '.free-shop-slider', {

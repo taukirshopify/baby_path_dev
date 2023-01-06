@@ -28,6 +28,18 @@
         </div> 
     </div>
 </section>  
+{% for product in collections[block.settings.product_grid_collection].products %}
+ 
+      <img
+        class="justin-item-img"
+        src="{{ product.featured_image | img_url: 'medium' }}"
+        alt="{{ product.title }}">
+      <div class="justin-item-p-text">
+        <p class="justin-item-text">{{ product.title }}</p>
+        <p class="justin-item-text">{{ product.price | money }}</p>
+      </div>
+
+{% endfor %}
 <!-- justin-area end -->
 {% schema %}
     {
@@ -56,6 +68,26 @@
   {% stylesheet %}
   
   {% endstylesheet %}
+  <script>
   
-  {% javascript %}
-  {% endjavascript %}
+
+ new Splide( '.trending', {
+      perPage: 4,
+      gap    : '27px',
+      type: 'loop', 
+      perMove: 1,
+      pagination: false, 
+      breakpoints: {
+        1024: {
+          perPage: 3, 
+        },
+        640: {
+          perPage: 2, 
+        },
+      //   480: {
+      //     perPage: 1, 
+      //   },
+      },
+  }).mount(); 
+
+  </script>
