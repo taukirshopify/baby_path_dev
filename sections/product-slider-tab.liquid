@@ -28,7 +28,7 @@
                                 <p class="product-item-text product_price">
                                   {% if product.compare_at_price > product.price %}
                                   <span class="sale-price">{{ product.price | money }}</span>
-                                  <span class="regular-price">{{ product.compare_at_price | money }}</span>
+                                  <span class="regular-price compare_at_price"><del>{{ product.compare_at_price | money }}</del></span>
                                   {% else %}
                                     <span class="regular-price">{{ product.price | money }}</span>
                                   {% endif %}
