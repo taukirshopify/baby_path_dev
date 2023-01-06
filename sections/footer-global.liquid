@@ -251,10 +251,9 @@
         </form>
     </div> {% endcomment %}
 
-    <div class="popup-search-box">
+    <div div class="popup-search-box d-none d-lg-block">
         <button class="searchClose border-theme text-theme"><i class="fal fa-times"></i></button>
-        
-      
+
       <div class="all-serach-wrpper">
         <predictive-search>
           <form action="/search" method="get" role="search" class="custome-serach-new">
@@ -273,12 +272,13 @@
                 autocomplete="off"
                 autocapitalize="off"
                 spellcheck="false">
-            <input name="options[prefix]" type="hidden" value="last"><div id="predictive-search" tabindex="-1"></div></form>
-        </predictive-search></div>
+            <input name="options[prefix]" type="hidden" value="last">
+            <div id="predictive-search" tabindex="-1"></div>
+            </form>
+        </predictive-search>
+        </div>
       
       </div>
-      
-      
       
       <script>
         class PredictiveSearch extends HTMLElement {
@@ -343,10 +343,8 @@
           }
         }
         customElements.define('predictive-search', PredictiveSearch);
-      </script>
+    </script>
       
-
-
 {% schema %}
   {
     "name": "Footer Global",
