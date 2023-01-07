@@ -85,6 +85,11 @@ span.regular-price.compare_at_price del {
 .theme-btn:hover, .theme-btn:focus {
     color: #fff !important;
 }
+.simple-icon.searchBoxToggler {
+    background: transparent;
+    border: 0;
+    padding: 0;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;
