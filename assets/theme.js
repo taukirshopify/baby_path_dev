@@ -23,8 +23,8 @@
         };
     };  
     // Mobile menu/
-    $("#menu-opener").on('click', function () {
-        $(".sidebar-menus").toggleClass("active");
+    $("button#menu-opener").on('click', function () {
+        $(".sidebar-menus").addClass("active");
     });
     $(".remove-one").on('click', function () {
         $(".sidebar-menus").removeClass("active");
