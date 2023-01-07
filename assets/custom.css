@@ -90,6 +90,53 @@ span.regular-price.compare_at_price del {
     border: 0;
     padding: 0;
 }
+
+.popup-search-box form input {
+    font-size: 18px;
+    height: 70px;
+    width: 100%;
+    border: 2px solid #fff;
+    border-color: #fff !important;
+    background-color: transparent;
+    padding-left: 30px;
+    color: #fff;
+    border-radius: 50px;
+}
+form.custome-serach-new label {
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+}
+
+.predictive-search__item-content--centered * {
+    color: #fff;
+    font-size: 24px;
+}
+button.predictive-search__item.predictive-search__item--term.link.link--text.h5.animate-arrow {
+    background: #fff;
+    
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 2rem;
+    word-break: break-all;
+    line-height: 40px;
+    position: relative;
+    display: flex;
+    padding: .8rem 2rem;
+    text-align: left;
+    text-decoration: none;
+    width: 100%;
+}
+button.searchClose.border-theme.text-theme {
+    border-color: #fff !important;
+    color: #fff !important;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;

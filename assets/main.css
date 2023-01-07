@@ -1,5 +1,10 @@
+/* ------------------------------------------------------  
+This file contains the styling for the actual theme, this
+is the file you need to edit to change the look of the
+theme.
+------------------------------------------------------- */
 /* ======================================================
-@Template Name: BabyPhat
+@Template Name: Babypath
 @Author:  Shopify
 @Default Styles 
 //  
@@ -20,6 +25,10 @@
   color: #FFFFFF;
   text-transform: uppercase;
   padding: 7px 0;
+}
+
+.sidebar-menus {
+  display: none;
 }
 
 .fast-header-area {
@@ -320,16 +329,8 @@
   background: #fff;
 }
 
-.mobile-menu .dropdown-btn {
-  display: none;
-}
-
 .mobil-menu {
-  display: none;
-}
-
-.remove-one {
-  display: none;
+  display: block;
 }
 
 .fast-header-menu .dropdown-pges-ul li {
@@ -367,6 +368,19 @@
   }
 }
 @media (max-width: 991px) {
+  .fa-plus:before {
+    content: "\f067";
+    position: absolute;
+    right: 5px;
+    top: 9px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .sidebar-menus {
+    display: block;
+  }
+
   .logo-991 {
     display: block;
   }
@@ -669,18 +683,9 @@
 
   .dropdown-btn {
     display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
     height: 40px;
-    width: 50px;
-    text-align: center;
+    width: 100%;
     line-height: 47px;
-    border-left: 1px solid #48a0f1;
-  }
-  .dropdown-btn span {
-    font-size: 20px;
-    font-weight: 400;
   }
 
   .header-nav-item .top-nav-area li .nav-menu {
@@ -701,20 +706,6 @@
     display: none;
   }
 
-  .mobile-remove-one {
-    display: block;
-    top: 20px;
-    left: 10px;
-    position: absolute;
-    font-size: 20px;
-    padding: 0 5px !important;
-    z-index: 2;
-    border: 1px solid #48a0f1;
-    border-radius: 4px;
-    z-index: 1;
-    color: #48a0f1;
-  }
-
   .fast-header-menu .dropdown-pges-ul {
     display: none;
     position: unset;
@@ -729,6 +720,146 @@
   .top-menu-flaxe {
     display: block;
   }
+
+  .sidebar-menus {
+    padding: 60px 20px 0 20px;
+    width: 390px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    z-index: 9999999;
+    opacity: 1;
+    transition: .4s;
+    background: #fff;
+  }
+  .sidebar-menus .remove-one {
+    color: #000;
+    font-weight: 600;
+    font-size: 17px;
+    padding: 5px;
+    line-height: 0px;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+  .sidebar-menus.active {
+    right: 0;
+  }
+  .sidebar-menus .header-menu-item {
+    display: inline-block;
+    width: 100%;
+  }
+  .sidebar-menus .header-menu-item li {
+    transition: 0.5s;
+    display: inline-block;
+    width: 100% !important;
+    position: relative;
+  }
+  .sidebar-menus .header-menu-item li a {
+    display: block;
+    transition: 0.5s;
+    text-align-last: start;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    padding: 10px 0;
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  .sidebar-menus .header-menu-item li ul {
+    z-index: 99;
+  }
+  .sidebar-menus .header-menu-item li ul li {
+    display: block;
+  }
+  .sidebar-menus .header-menu-item li ul li a {
+    display: inline-block;
+    padding: 12px 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13.1097px;
+    line-height: 130%;
+    color: #000000;
+    padding-left: 30px;
+  }
+  .sidebar-menus .header-menu-item li ul li .featured {
+    padding-left: 20px;
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 130%;
+    text-transform: uppercase;
+  }
+
+  .mobile-menu ul li ul {
+    display: none;
+    position: unset;
+  }
+
+  .dropdown-btn.d-btn-active .fa-plus::before {
+    content: "\f068";
+  }
+
+  .mobile-menu-logins {
+    margin-top: 60px;
+  }
+  .mobile-menu-logins a {
+    display: block;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 13.1097px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #000000;
+    padding-bottom: 24px;
+  }
+  .mobile-menu-logins p {
+    display: block;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 13.1097px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #000000;
+    padding-bottom: 24px;
+  }
+  .mobile-menu-logins p span {
+    padding-left: 10px;
+  }
+
+  .mm-help {
+    display: block !important;
+    margin-top: 70px;
+  }
+  .mm-help .f-help-m {
+    margin-bottom: 2px;
+    background: #000;
+  }
+  .mm-help .f-help-m .cl-label-wrap {
+    padding: 15px 20px;
+    margin-top: 0;
+  }
+  .mm-help .f-help-m .cl-label-wrap .cl-label-title {
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .mm-help .f-help-m .cl-label-wrap .cl-label-tools a {
+    position: relative;
+    top: -10px;
+  }
 }
 @media (max-width: 768px) {
   .search-option .mnmd-search-full form {
@@ -736,6 +867,10 @@
   }
 }
 @media (max-width: 575px) {
+  .sidebar-menus {
+    width: 100%;
+  }
+
   .header-r-991 .header-search-991 {
     max-width: 125px;
     margin-right: 10px;
@@ -1031,29 +1166,29 @@ section {
 }
 
 /*----------------------------------------------------*/
-.product-area {
+.justin-area {
   padding: 20px 0 67px;
   display: block;
 }
-.product-area .nav-tabs {
+.justin-area .nav-tabs {
   border-bottom: none;
 }
-.product-area .nav-tabs li .active {
+.justin-area .nav-tabs li .active {
   border-bottom: 1px solid #000;
 }
 
-.product-container {
+.justin-container {
   max-width: 1090px;
   display: block;
   margin: 0 auto;
 }
 
-.product-title {
+.justin-title {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.product-title .product-toggle {
+.justin-title .justin-togol {
   text-align: center;
   font-weight: 900;
   font-size: 24px;
@@ -1065,7 +1200,7 @@ section {
   display: block;
   padding: 10px 40px;
 }
-.product-title .tab-active {
+.justin-title .tab-active {
   border-bottom: 1px solid #000000;
 }
 
@@ -1073,16 +1208,16 @@ section {
   margin-bottom: 40px;
 }
 
-.product-slider, .product-sliders {
+.justin-slider, .justin-sliders {
   margin-top: 45px;
 }
 
-.product-item-img {
+.justin-item-img {
   width: 100%;
   height: auto;
 }
 
-.product-item-text {
+.justin-item-text {
   text-align: center;
   font-weight: 900;
   font-size: 12px;
@@ -1092,7 +1227,7 @@ section {
   text-transform: uppercase;
 }
 
-.product-item-p-text {
+.justin-item-p-text {
   padding-top: 40px;
 }
 
@@ -2104,6 +2239,195 @@ section {
 }
 
 /*----------------------------------------------------*/
+.main-card-area {
+  display: block;
+  overflow: hidden;
+  background: #FFFFFF;
+  padding-top: 42px;
+}
+
+.main-card-container {
+  max-width: 486px;
+  display: block;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.main-card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 31px 25px;
+}
+.main-card-title h3 {
+  font-family: 'T-Star Pro';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+.main-card-title a {
+  display: block;
+  color: #000;
+  font-size: 22px;
+  font-weight: 400;
+  padding: 3px;
+}
+.main-card-title a i:hover {
+  color: #48a0f1;
+}
+
+.main-card-wraper {
+  border-top: 1px solid #000000;
+  padding: 22px 31px 42px;
+}
+
+.main-card-wraper-items {
+  display: flex;
+  align-items: flex-start;
+}
+
+.main-cart-img {
+  display: block;
+  margin-right: 13px;
+}
+.main-cart-img img {
+  width: 150px;
+  height: 176px;
+}
+
+.main-cart-texts-item h3 {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 100%;
+  text-transform: uppercase;
+  max-width: 241px;
+  padding-bottom: 6px;
+  padding-top: 5px;
+}
+.main-cart-texts-item h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.main-card-sizing-counte {
+  padding-top: 37px;
+  max-width: 243px;
+}
+.main-card-sizing-counte .size-xs {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: capitalize;
+  margin-bottom: 6px;
+}
+
+.color-remove {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.color-remove h6 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: capitalize;
+}
+.color-remove a {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  text-decoration-line: underline;
+  font-family: 'Inter';
+}
+
+.main-cari-quantity {
+  margin-top: 14px;
+}
+.main-cari-quantity .quantity-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 243px;
+  margin: 0 auto;
+  padding: 5px 15px;
+  background: #D9D9D9;
+  border-radius: 2px;
+  margin: 0;
+}
+.main-cari-quantity .quantity-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0px 8px;
+  cursor: pointer;
+}
+.main-cari-quantity .quantity-btn span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  position: relative;
+  top: -3px;
+}
+.main-cari-quantity .quantity-input {
+  outline: none;
+  user-select: none;
+  text-align: center;
+  width: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.main-cari-quantity .quantity-input::-webkit-inner-spin-button,
+.main-cari-quantity .quantity-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.main-card-btn {
+  font-family: 'T-Star Pro';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+  background: #000000;
+  border-radius: 3px;
+  width: 97%;
+  display: block;
+  margin-top: 41px;
+}
+
+@media (max-width: 470px) {
+  .main-card-sizing-counte {
+    padding-top: 17px;
+  }
+
+  .main-card-btn {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 360px) {
+  .main-cart-texts-item h3 {
+    font-size: 17px;
+  }
+
+  .main-card-btn {
+    margin: 20px auto;
+  }
+}
+/*----------------------------------------------------*/
 .footer-area {
   background: #000000;
   margin-top: 50px;
@@ -2520,11 +2844,11 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
     left: -20px;
   }
 
-  .product-one {
+  .justin-one {
     margin-top: 40px;
   }
 
-  .product-slider, .product-sliders {
+  .justin-slider, .justin-sliders {
     margin-top: 30px;
   }
 
@@ -2611,22 +2935,22 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
     padding: 10px 30px;
   }
 
-  .product-title .product-toggle {
+  .justin-title .justin-togol {
     font-size: 16px;
     line-height: 20px;
     padding: 5px 0;
     margin: 0 30px;
   }
 
-  .product-slider {
+  .justin-slider {
     margin-top: 30px;
   }
 
-  .product-item-p-text {
+  .justin-item-p-text {
     padding-top: 20px;
   }
 
-  .product-area {
+  .justin-area {
     padding: 0px 0 40px;
     display: block;
   }
@@ -2727,6 +3051,15 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
   .recommendtion-img-items img {
     width: 200px;
   }
+
+  .mobile-menu ul li ul {
+    display: none;
+    position: unset;
+  }
+
+  .dropdown-btn.d-btn-active .fa-plus::before {
+    content: "\f068";
+  }
 }
 @media (max-width: 771px) {
   .featured-collection-items img {
@@ -2754,7 +3087,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
     display: none;
   }
 
-  .product-one .product-title li a {
+  .justin-one .justin-title li a {
     margin: 0 10px;
   }
 
@@ -2854,7 +3187,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
     display: none;
   }
 
-  .product-one {
+  .justin-one {
     margin-top: 55px;
   }
 
@@ -2862,11 +3195,11 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
     padding: 0 45px;
   }
 
-  .product-title {
+  .justin-title {
     justify-content: center;
     margin: 0 45px;
   }
-  .product-title .product-toggle {
+  .justin-title .justin-togol {
     padding: 5px 25px;
   }
 
@@ -3030,9 +3363,3 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
     grid-template-columns: repeat(auto-fit, minmax(156px, 1fr));
   }
 }
-/*----------------------------------------------------*/
-/*All CSS call*/
-/* Bootstrap CSS */
-/* Icon CSS */
-/* Extra Plugins CSS */
-/*google font-family*/

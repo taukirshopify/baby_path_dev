@@ -32,7 +32,7 @@
     $(" button.simple-icon.searchBoxToggler").on('click', function () {
         $(".popup-search-box").addClass("show");
     });
-    
+
     if($('.mobile-menu li.dropdown ul').length){
         $('.mobile-menu li.dropdown').append('<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div>');
         $('.mobile-menu li.dropdown .dropdown-btn').on('click', function() {
@@ -122,6 +122,14 @@
         }
     });
 
+
+    // // sidebar_menu All Page/
+    $("#menu-opener").on('click', function () {
+        $(".sidebar-menus").toggleClass("active");
+    });
+    $("section, .remove-one").on('click', function () {
+        $(".sidebar-menus, .remove-one").removeClass("active");
+    });
     // index hero slider
     var splide1 = new Splide( '.index-slider', {
         type  : 'fade', 
