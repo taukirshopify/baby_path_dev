@@ -71,8 +71,8 @@
      $(".js-search-dropdown-toggle").on("click", function () {
         $(".mnmd-search-full").toggleClass("On");
     });
-    $("#mnmd-search-remove").on("click", function () {
-        $(".mnmd-search-full").removeClass("On");
+    $("button.searchClose").on("click", function () {
+        $("div#popupfooter").removeClass("show");
     });
      
      
