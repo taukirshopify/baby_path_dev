@@ -130,6 +130,15 @@
     $("section, .remove-one").on('click', function () {
         $(".sidebar-menus, .remove-one").removeClass("active");
     });
+    
+    if($('.mobile-menu li.dropdown ul').length){
+        $('.mobile-menu li.dropdown').append('<div class="dropdown-btn">+</div>');
+        $('.mobile-menu li.dropdown .dropdown-btn').on('click', function() {
+            $(this).prev('ul').slideToggle(500);
+            $(this).toggleClass('d-btn-active');
+        });
+    } 
+    
     // index hero slider
     var splide1 = new Splide( '.index-slider', {
         type  : 'fade', 
