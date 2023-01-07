@@ -24,10 +24,10 @@
     };  
     // Mobile menu/
     $("#menu-opener").on('click', function () {
-        $(".mobile-menu").toggleClass("active");
+        $(".sidebar-menus").toggleClass("active");
     });
     $(".remove-one").on('click', function () {
-        $(".mobile-menu").removeClass("active");
+        $(".sidebar-menus").removeClass("active");
     });
     $(" button.simple-icon.searchBoxToggler").on('click', function () {
         $(".popup-search-box").addClass("show");

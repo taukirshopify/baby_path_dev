@@ -6,10 +6,7 @@
         <a class="logo" href="{{ routes.root_url }}"><img src="{{ section.settings.header_logo_desktop | img_url: 'master' }}" alt="Logo"></a>
         <a class="logo-991" href="{{ routes.root_url }}"><img src="{{ section.settings.header_logo_mobile | img_url: 'master' }}" alt="Logo"></a>
       </div>
-      <div class="mobile-menu fast-mobile-menu">
-        <div class="remove-one mobile-remove-one">
-          <i class="fal fa-times"></i>
-        </div>
+      <div class="fast-mobile-menu">
         <ul class="fast-header-menu">
           {% for link in section.settings.header_menu.links %}
             <li class="menu-link">
