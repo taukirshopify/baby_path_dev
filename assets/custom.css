@@ -250,6 +250,10 @@ span.cart-drawer__total-amount span {
     margin-bottom: 12px;
     margin-top: -18px;
 }
+.main-card-remove {
+    font-size: 34px;
+    cursor: pointer;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;
