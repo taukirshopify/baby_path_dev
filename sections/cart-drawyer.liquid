@@ -14,9 +14,9 @@
             <div class="empty_cart_msg">Your Cart is Empty!</div>
         {% endif %}
         <h3>my bag ({{ cart.item_count }})</h3>
-        <button class="main-card-remove">
+        <div class="main-card-remove">
           ×
-        </button>
+        </div>
       </div>
       <div class="main-card-wraper">
         {% for item in cart.items %}
