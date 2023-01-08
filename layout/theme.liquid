@@ -534,7 +534,7 @@
     {{ 'popper.min.js' | asset_url | script_tag }}
     {{ 'bootstrap.min.js' | asset_url | script_tag }}
     {{ 'splide.min.js' | asset_url | script_tag }}
-    {{ 'theme.js' | asset_url | script_tag }}
+    {% comment %} {{ 'theme.js' | asset_url | script_tag }} {% endcomment %}
 
     <script>
       jQuery('.cart_icon').click(function() {
