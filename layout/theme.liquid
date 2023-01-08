@@ -475,12 +475,14 @@
       {{ "accessibility.skip_to_text" | t }}
     </a>
 
-    {%- if settings.cart_type == 'drawer' -%}
-      {%- render 'cart-drawer' -%}
-    {%- endif -%}
+    {% comment %} {%- if settings.cart_type == 'drawer' -%}
+    {%- render 'cart-drawer' -%}
+    {%- endif -%} {% endcomment %}
 
     {% section 'announcement-bar' %}
     {% section 'header-global' %}
+    {% section 'cart-drawyer' %}
+    <div class="drawer-overlap"></div>
     <main
       id="MainContent"
       class="content-for-layout focus-none"

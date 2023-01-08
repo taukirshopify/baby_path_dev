@@ -140,6 +140,53 @@ button.searchClose.border-theme.text-theme {
 .popup-search-box form input {
     border: 3px solid #fff;
 }
+
+input.addcart__buttonwrap {
+    background: #000000;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    display: block;
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 0;
+    position: relative;
+    border: 1px solid transparent;
+    margin-bottom: 10px;
+}
+.product-item-p-text {
+    padding-top: 25px;
+}
+
+.addcart__buttonwrap:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-color: transparent;
+    background: #fff;
+    border-radius: 2px;
+    color: #000;
+    transform-origin: bottom right;
+    transform: scale(0);
+    transition: transform .6s cubic-bezier(.4,0,.2,1);
+    z-index: -1;
+    border: 1px solid #000;
+}
+
+.addcart__buttonwrap:hover:before, .addcart__buttonwrap:focus:before {
+    transform-origin: left top;
+    transform: scale(1);
+    border-radius: 2px;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;

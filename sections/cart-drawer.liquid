@@ -1,1 +1,53 @@
-{%- render 'cart-drawer' -%}
+{% comment %} {%- render 'cart-drawer' -%} {% endcomment %}
+
+<!-- add bag btn card  -->
+  <div class="main-card-area"> <div class="main-card-container">
+    <div class="main-card-title">
+      <h3>my bag (1)</h3>
+      <button class="main-card-remove">
+        ×
+      </button>
+    </div>
+    <div class="main-card-wraper">
+      <div class="main-card-wraper-items">
+        <div class="main-cart-img">
+          <img src="img/single-product-slider-img-4.png" alt="">
+        </div>
+        <div class="main-card-wraper-flax">
+          <div class="main-cart-texts-item">
+            <h3>plus size baby phat jacket</h3>
+            <h5>$39</h5>
+          </div>
+          <div class="main-card-sizing-counte">
+            <h6 class="size-xs">Size: XS</h6>
+            <div class="color-remove">
+              <h6>Color: Blue</h6>
+              <a href="#">remove</a>
+            </div>
+            <div class="main-cari-quantity">
+              <div class="quantity-control" data-quantity="">
+                <button class="quantity-btn" data-quantity-minus="">
+                  <span>-</span>
+                </button>
+                <input
+                  type="number"
+                  class="quantity-input"
+                  data-quantity-target=""
+                  value="1"
+                  step="1"
+                  min="1"
+                  max=""
+                  name="quantity">
+                <button class="quantity-btn" data-quantity-plus="">
+                  <span>+</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="theme-btn main-card-btn" href="javascprit:void(0)">$39 - checkout</a>
+    </div>
+
+  </div>
+</div>
