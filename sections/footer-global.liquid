@@ -343,6 +343,106 @@
         }
         customElements.define('predictive-search', PredictiveSearch);
     </script>
+
+
+     <!-- add bag btn card  -->
+     <div class="main-card-area">
+      <div class="main-card-container">
+          <div class="main-card-title">
+              <h3>my bag (1)</h3>
+              <a class="main-card-remove" href="#"><i class="fal fa-times"></i></a>
+          </div>
+          <div class="main-card-wraper"> 
+              <div class="main-card-wraper-items">
+                  <div class="main-cart-img">
+                      <img src="img/single-product-slider-img-4.png" alt="">
+                  </div>
+                  <div class="main-card-wraper-flax">
+                      <div class="main-cart-texts-item">
+                          <h3>plus size baby phat jacket</h3>
+                          <h5>$39</h5>
+                      </div>
+                      <div class="main-card-sizing-counte">
+                          <h6 class="size-xs">Size: XS</h6>
+                          <div class="color-remove">
+                              <h6>Color: Blue</h6>
+                              <a href="#">remove</a>
+                          </div>
+                          <div class="main-cari-quantity">  
+                              <div class="quantity-control" data-quantity="">
+                                <button class="quantity-btn" data-quantity-minus=""> 
+                                      <span>-</span>
+                                  </button>
+                                <input type="number" class="quantity-input" data-quantity-target="" value="1" step="1" min="1" max="" name="quantity">
+                                <button class="quantity-btn" data-quantity-plus=""> 
+                                      <span>+</span>
+                                </button>
+                              </div> 
+                          </div> 
+                      </div>  
+                  </div> 
+              </div> 
+              <a class="theme-btn main-card-btn" href="javascprit:void(0)">$39 - checkout</a>
+          </div> 
+          
+      </div> 
+  </div>
+
+  <script>
+        (function () {
+        "use strict";
+        var jQueryPlugin = (window.jQueryPlugin = function (ident, func) {
+            return function (arg) {
+            if (this.length > 1) {
+                this.each(function () {
+                var $this = $(this);
+
+                if (!$this.data(ident)) {
+                    $this.data(ident, func($this, arg));
+                }
+                });
+
+                return this;
+            } else if (this.length === 1) {
+                if (!this.data(ident)) {
+                this.data(ident, func(this, arg));
+                }
+
+                return this.data(ident);
+            }
+            };
+        });
+        })();
+
+        (function () {
+        "use strict";
+        function Guantity($root) {
+            const element = $root;
+            const quantity = $root.first("data-quantity");
+            const quantity_target = $root.find("[data-quantity-target]");
+            const quantity_minus = $root.find("[data-quantity-minus]");
+            const quantity_plus = $root.find("[data-quantity-plus]");
+            var quantity_ = quantity_target.val();
+            $(quantity_minus).click(function () {
+            quantity_target.val(--quantity_);
+            });
+            $(quantity_plus).click(function () {
+            quantity_target.val(++quantity_);
+            });
+        }
+        $.fn.Guantity = jQueryPlugin("Guantity", Guantity);
+        $("[data-quantity]").Guantity();
+        })();    
+    </script>
+    <script>
+        // sidebar_menu All Page/
+        $(".sidebar-card").on('click', function () {
+            $(".main-card-area").toggleClass("active");
+        });
+        $(".main-card-remove").on('click', function () {
+            $(".main-card-area").removeClass("active");
+        });
+    </script>
       
 {% schema %}
   {

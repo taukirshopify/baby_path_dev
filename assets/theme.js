@@ -124,9 +124,7 @@
 
 
     // // sidebar_menu All Page/
-    $("#menu-opener").on('click', function () {
-        $(".sidebar-menus").toggleClass("active");
-    });
+
     $("section, .remove-one").on('click', function () {
         $(".sidebar-menus, .remove-one").removeClass("active");
     });
