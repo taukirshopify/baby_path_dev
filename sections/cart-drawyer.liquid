@@ -2,52 +2,75 @@
 
 <!-- add bag btn card  -->
   <div class="main-card-area"> <div class="main-card-container">
-    <div class="main-card-title">
-      <h3>my bag (1)</h3>
-      <button class="main-card-remove">
-        ×
-      </button>
-    </div>
-    <div class="main-card-wraper">
-      <div class="main-card-wraper-items">
-        <div class="main-cart-img">
-          <img src="img/single-product-slider-img-4.png" alt="">
-        </div>
-        <div class="main-card-wraper-flax">
-          <div class="main-cart-texts-item">
-            <h3>plus size baby phat jacket</h3>
-            <h5>$39</h5>
-          </div>
-          <div class="main-card-sizing-counte">
-            <h6 class="size-xs">Size: XS</h6>
-            <div class="color-remove">
-              <h6>Color: Blue</h6>
-              <a href="#">remove</a>
+    <form
+      action="/cart"
+      method="post"
+      class="drawer_form"
+      id="cart_form">
+      <div class="main-card-title">
+        <h3>my bag (1)</h3>
+        <button class="main-card-remove">
+          ×
+        </button>
+      </div>
+      <div class="main-card-wraper">
+        {% for item in cart.items %}
+          <div class="main-card-wraper-items" data-id="{{ item.key }}">
+            <div class="main-cart-img">
+              <img src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}" />
             </div>
-            <div class="main-cari-quantity">
-              <div class="quantity-control" data-quantity="">
-                <button class="quantity-btn" data-quantity-minus="">
-                  <span>-</span>
-                </button>
-                <input
-                  type="number"
-                  class="quantity-input"
-                  data-quantity-target=""
-                  value="1"
-                  step="1"
-                  min="1"
-                  max=""
-                  name="quantity">
-                <button class="quantity-btn" data-quantity-plus="">
-                  <span>+</span>
-                </button>
+            <div class="main-card-wraper-flax">
+              <div class="main-cart-texts-item">
+                <h3>
+                  <a class="cart-drawer__url" href="{{ item.url }}">{{ item.product.title }}
+                  </a>
+                </h3>
+                <h5 class="cart-drawer__price" data-id="{{ item.key }}">
+                  {% if item.original_line_price != item.line_price %}
+                    {{ item.original_line_price | money }}{% endif %}
+                  {{ item.line_price | money }}
+                  {% for discount in item.discounts %}
+                    {{ discount.title }}{% endfor %}
+                </h5>
+              </div>
+              <div class="main-card-sizing-counte">
+                <h6 class="size-xs">Size: {{ item.variant.title }}</h6>
+                <div class="color-remove">
+                  <h6>Color: {{ item.variant.title }}</h6>
+                  <a
+                    href="/cart/change?line={{ forloop.index }}&amp;quantity=0"
+                    class="cart-drawer__remove-url"
+                    data-id="{{ item.id }}">
+                    <i class="icon-x" aria-hidden="true">X</i>
+                  </a>
+                </div>
+                <div class="main-cari-quantity">
+                  <div class="quantity-control" data-quantity="">
+                    <button class="quantity-btn" data-quantity-minus="">
+                      <span>-</span>
+                    </button>
+                    <input
+                      type="number"
+                      class="quantity-input"
+                      data-id="{{ item.key }}"
+                      name="updates[]"
+                      id="updates_{{ item.key }}"
+                      value="{{ item.quantity }}"
+                      min="1"
+                      aria-label="Quantity" />
+
+                    <button class="quantity-btn" data-quantity-plus="">
+                      <span>+</span>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        {% endfor %}
+        <a class="theme-btn main-card-btn" href="/checkout">{{ cart.total_price | money }} - checkout</a>
       </div>
-      <a class="theme-btn main-card-btn" href="javascprit:void(0)">$39 - checkout</a>
-    </div>
+    </form>
   </div>
 </div>
 
