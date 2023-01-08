@@ -5,37 +5,33 @@
             <li><a class="product-toggle active">{{ section.settings.product_grid_name }}</a></li>
         </ul>
         <div class="tab-content">
-          <div class="splide product-slider" id="#{{ section.id }}">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                      {% for product in collections[section.settings.product_grid_collection].products %}
-                          <li class="splide__slide">
-                            <a class="product-items" href="{{ product.url }}">
-                              <img
-                                class="product-item-img"
-                                src="{{ product.featured_image | img_url: 'medium' }}"
-                                alt="{{ product.title }}">
-                              <div class="product-item-p-text">
-                                <form method="post" action="/cart/add" class="add_to_cart_form">
-                                  <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-                                  <input type="submit" class="addcart__buttonwrap theme-btn shape-btn bg-black" value="Add to cart">
-                                </form> 
-                                <p class="product-item-text">{{ product.title }}</p>
-                                
-                                <p class="product-item-text product_price">
-                                  {% if product.compare_at_price > product.price %}
-                                  <span class="sale-price">{{ product.price | money }}</span>
-                                  <span class="regular-price compare_at_price"><del>{{ product.compare_at_price | money }}</del></span>
-                                  {% else %}
-                                    <span class="regular-price">{{ product.price | money }}</span>
-                                  {% endif %}
-                                </p>
-                              </div>
-                            </a>
-                          </li>
-                        {% endfor %}
-                    </ul>
+          <div class="collection_grid row">
+              <div class="col-md-3">
+                <div class="collection_item">
+                  <a class="product-items" href="{{ product.url }}">
+                        <img
+                          class="product-item-img"
+                          src="{{ product.featured_image | img_url: 'medium' }}"
+                          alt="{{ product.title }}">
+                        <div class="product-item-p-text">
+                          <form method="post" action="/cart/add" class="add_to_cart_form">
+                            <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+                            <input type="submit" class="addcart__buttonwrap theme-btn shape-btn bg-black" value="Add to cart">
+                          </form> 
+                          <p class="product-item-text">{{ product.title }}</p>
+                          
+                          <p class="product-item-text product_price">
+                            {% if product.compare_at_price > product.price %}
+                            <span class="sale-price">{{ product.price | money }}</span>
+                            <span class="regular-price compare_at_price"><del>{{ product.compare_at_price | money }}</del></span>
+                            {% else %}
+                              <span class="regular-price">{{ product.price | money }}</span>
+                            {% endif %}
+                          </p>
+                        </div>
+                      </a>
                 </div>
+              </div>
             </div>
         </div> 
     </div>
