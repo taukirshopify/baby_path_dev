@@ -190,6 +190,20 @@ input.addcart__buttonwrap {
 .collection_item {
     margin-bottom: 30px;
 }
+
+.main-card-container {
+    max-width: 486px;
+    display: block;
+    /* height: 100vh; */
+    background: #faf9f9;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* height: 100%; */
+    overflow-y: auto;
+    width: 100%;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;

@@ -311,11 +311,72 @@
     $.fn.Guantity = jQueryPlugin("Guantity", Guantity);
     $("[data-quantity]").Guantity();
     })();
-    
+
     // sidebar_menu All Page/
     $(".sidebar-card").on('click', function () {
-        $(".main-card-area").toggleClass("active");
+        $(".main-card-area").addClass("active");
     });
     $(".main-card-remove").on('click', function () {
         $(".main-card-area").removeClass("active");
     });
+
+
+
+    jQuery('.cart_icon').click(function(){
+        jQuery('body').addClass('drawer-open');
+      });
+      
+      jQuery('.main-card-remove,.drawer-overlap').click(function(){
+        jQuery('body').removeClass('drawer-open');
+      });
+      
+      
+      $('.product__addtocart_wrapper').click(function(e){
+        e.preventDefault();
+        $.ajax({
+          type: 'POST',
+          url: '/cart/add.js',
+          dataType: 'json',
+          data: $(this).find('.collection_form').serialize(),
+          success: function(data){
+            get_cart_details();
+          },
+          error: 'addToCartFail'
+        });
+      });
+      
+      
+      $('.addcart__buttonwrap').click(function(e){
+        e.preventDefault();
+        console.log('Cart Added');
+        $.ajax({
+          type: 'POST',
+          url: '/cart/add.js',
+          dataType: 'json',
+          data: $('.add_to_cart_form').serialize(),
+          success: function(data){
+            get_cart_details();
+          },
+          error: 'addToCartFail'
+        });
+      });
+      
+      
+      function get_cart_details() {
+        fetch("/?section_id=cart-drawyer")
+            .then((response) => response.text())
+            .then((cartData) => {
+              var cart_html = $(cartData);
+              var cart_items = $(".product_items_subwrapper", cart_html);
+              var cart_count = $(".cart-drawer__count", cart_html);
+              var cart_subtotal = $(".cart-drawer__total-amount", cart_html);
+              $(".cart-drawer__content").replaceWith(cart_items);
+              $('.cart-drawer__count').replaceWith(cart_count);
+              $('.cart-drawer__total-amount').replaceWith(cart_subtotal);
+              jQuery('body').addClass('drawer-open');
+          });
+      };
+
+
+
+

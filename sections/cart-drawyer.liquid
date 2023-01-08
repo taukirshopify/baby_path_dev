@@ -2,7 +2,6 @@
 
 <!-- add bag btn card  -->
   <div class="main-card-area"> <div class="main-card-container">
-
     <form
       action="/cart"
       method="post"
@@ -13,7 +12,7 @@
           {% else %}
             <div class="empty_cart_msg">Your Cart is Empty!</div>
         {% endif %}
-        <h3>my bag ({{ cart.item_count }})</h3>
+        <h3>my bag (<span class="cart-drawer__count">{{ cart.item_count }}</span>)</h3>
         <div class="main-card-remove">
           ×
         </div>
@@ -75,7 +74,12 @@
             </div>
           {% endfor %}
         </div>
-        <a class="theme-btn main-card-btn" href="/checkout">{{ cart.total_price | money }} - checkout</a>
+        <a class="theme-btn main-card-btn" href="/checkout">
+          <span class="cart-drawer__total-amount">
+            <span>{{ cart.total_price | money }}</span>
+          </span>
+          - checkout
+        </a>
       </div>
     </form>
   </div>
