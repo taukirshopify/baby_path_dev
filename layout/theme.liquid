@@ -43,7 +43,7 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-
+    {{ 'jquery-3.6.0.min.js' | asset_url | script_tag }}
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
 
@@ -475,9 +475,9 @@
       {{ "accessibility.skip_to_text" | t }}
     </a>
 
-    {%- if settings.cart_type == 'drawer' -%}
-      {%- render 'cart-drawer' -%}
-    {%- endif -%}
+    {% comment %} {%- if settings.cart_type == 'drawer' -%}
+    {%- render 'cart-drawer' -%}
+    {%- endif -%} {% endcomment %}
 
     {% section 'announcement-bar' %}
     {% section 'header-global' %}
@@ -488,7 +488,7 @@
       tabindex="-1">
       {{ content_for_layout }}
     </main>
-
+    {% section 'cart-drawyer' %}
     {% section 'footer-global' %}
 
     <ul hidden>
@@ -530,10 +530,12 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    {{ 'jquery-3.6.0.min.js' | asset_url | script_tag }}
+
     {{ 'popper.min.js' | asset_url | script_tag }}
     {{ 'bootstrap.min.js' | asset_url | script_tag }}
     {{ 'splide.min.js' | asset_url | script_tag }}
     {{ 'theme.js' | asset_url | script_tag }}
+
+
   </body>
 </html>

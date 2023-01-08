@@ -1,45 +1,101 @@
 <!-- justin-area strAT -->  
-<section class="justin-area">
-    <div class="justin-container">
-        <ul class="justin-title nav nav-tabs">
-            <li><a class="justin-togol active">{{ section.settings.product_grid_name }}</a></li>
+<section class="product-area">
+    <div class="product-container">
+        <ul class="product-title nav nav-tabs pb-5">
+            <li><a class="product-toggle active">{{ section.settings.product_grid_name }}</a></li>
         </ul>
         <div class="tab-content">
-          <div class="splide justin-slider trending tab-pane active" id="#menu1">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                      {% for product in collections[section.settings.product_grid_collection].products %}
-                          <li class="splide__slide">
-                            <a class="justin-items" href="{{ product.url }}">
-                              <img
-                                class="justin-item-img"
-                                src="{{ product.featured_image | img_url: 'medium' }}"
-                                alt="{{ product.title }}">
-                              <div class="justin-item-p-text">
-                                <p class="justin-item-text">{{ product.title }}</p>
-                                <p class="justin-item-text">{{ product.price | money }}</p>
-                              </div>
-                            </a>
-                          </li>
-                        {% endfor %}
-                    </ul>
+          <div class="collection_grid row pt-4">
+            {% for product in collections[section.settings.product_grid_collection].products limit:8 %}
+              <div class="col-md-3">
+                <div class="collection_item">
+                  <a class="product-items" href="{{ product.url }}">
+                    <div class="product_image_wrapper">
+                      <img
+                      class="product-item-img firstImage"
+                      src="{{ product.featured_image | img_url: 'medium' }}"
+                      alt="{{ product.title }}">
+                      {% if product.images[1] %}
+                      <img class="product-item-img secondImage" src="{{ product.images[1] | product_img_url: 'medium' }}" alt="{{ product.title }}">
+                   
+                    {% endif %}
+                     </a>
+                       </div>
+                      <div class="product-item-p-text">
+                        <form method="post" action="/cart/add" class="add_to_cart_form">
+                          <input type="hidden"  name="id" value="{{ product.first_available_variant.id }}" />
+                          <input type="submit"  class="addcart__buttonwrap theme-btn shape-btn bg-black" data-id="{{ product.first_available_variant.id }}"  value="Add to cart" />
+                        </form> 
+                        <p class="product-item-text">{{ product.title }}</p>
+                        <p class="product-item-text product_price">
+                          {% if product.compare_at_price > product.price %}
+                          <span class="sale-price">{{ product.price | money }}</span>
+                          <span class="regular-price compare_at_price"><del>{{ product.compare_at_price | money }}</del></span>
+                          {% else %}
+                            <span class="regular-price">{{ product.price | money }}</span>
+                          {% endif %}
+                        </p>
+                      </div>
+                    {% unless product.available %}<strong class="product__badge_soldout">sold out</strong>{% endunless %}
+        
                 </div>
+              </div>
+              {% endfor %}
             </div>
         </div> 
     </div>
-</section>  
-{% for product in collections[block.settings.product_grid_collection].products %}
- 
-      <img
-        class="justin-item-img"
-        src="{{ product.featured_image | img_url: 'medium' }}"
-        alt="{{ product.title }}">
-      <div class="justin-item-p-text">
-        <p class="justin-item-text">{{ product.title }}</p>
-        <p class="justin-item-text">{{ product.price | money }}</p>
-      </div>
+</section>
 
-{% endfor %}
+<script>
+  $('.cart_icon').click(function() {
+    $('body').addClass('drawer-open');
+  });
+
+  $('.main-card-remove,.drawer-overlap').click(function() {
+    $('body').removeClass('drawer-open');
+  });
+
+
+  $('.add_to_cart_form').on('submit', function(e){
+
+    e.preventDefault();
+    $.ajax({
+      type: 'POST',
+      url: '/cart/add.js',
+      dataType: 'json',
+      data: {
+        quantity: 1,
+        id: $(this).find('.addcart__buttonwrap').data("id")
+      },
+      success: function(data) {
+       
+          get_cart_details();
+      },
+      error: function(data) {
+        console.log("No data is found");
+         
+     }
+    });
+
+  });
+
+
+  function get_cart_details() {
+   
+    fetch("/?section_id=cart-drawyer").then((response) => response.text() ).then((cartData) => {
+      var cart_html = $(cartData);
+      var cart_items = $(".product_items_subwrapper", cart_html);
+      var cart_count = $(".cart-drawer__count", cart_html);
+      var cart_subtotal = $(".cart-drawer__total-amount", cart_html);
+      {% comment %} var cartData2 = JSON.parse(cart_items); {% endcomment %}
+      $(".cart-drawer__content").replaceWith(cart_items);
+      $('.cart-drawer__count').replaceWith(cart_count);
+      $('.cart-drawer__total-amount').replaceWith(cart_subtotal);
+   
+      $('body').addClass('drawer-open');
+    });
+  };
+</script>
 <!-- justin-area end -->
 {% schema %}
     {
