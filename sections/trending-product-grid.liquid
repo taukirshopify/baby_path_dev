@@ -9,27 +9,32 @@
               <div class="col-md-3">
                 <div class="collection_item">
                   <a class="product-items" href="{{ product.url }}">
-                        <img
-                          class="product-item-img"
-                          src="{{ product.featured_image | img_url: 'medium' }}"
-                          alt="{{ product.title }}">
-                        <div class="product-item-p-text">
-                          <form method="post" action="/cart/add" class="add_to_cart_form">
-                            <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-                            <input type="submit" class="addcart__buttonwrap theme-btn shape-btn bg-black" value="Add to cart">
-                          </form> 
-                          <p class="product-item-text">{{ product.title }}</p>
-                          
-                          <p class="product-item-text product_price">
-                            {% if product.compare_at_price > product.price %}
-                            <span class="sale-price">{{ product.price | money }}</span>
-                            <span class="regular-price compare_at_price"><del>{{ product.compare_at_price | money }}</del></span>
-                            {% else %}
-                              <span class="regular-price">{{ product.price | money }}</span>
-                            {% endif %}
-                          </p>
-                        </div>
-                      </a>
+                    <div class="product_image_wrapper">
+                      <img
+                      class="product-item-img firstImage"
+                      src="{{ product.featured_image | img_url: 'medium' }}"
+                      alt="{{ product.title }}">
+                      {% if product.images[1] %}
+                      <img class="product-item-img secondImage" src="{{ product.images[1] | product_img_url: 'medium' }}" alt="{{ product.title }}">
+                    {% endif %}
+                    </div>
+                      <div class="product-item-p-text">
+                        <form method="post" action="/cart/add" class="add_to_cart_form">
+                          <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+                          <input type="submit" class="addcart__buttonwrap theme-btn shape-btn bg-black" value="Add to cart">
+                        </form> 
+                        <p class="product-item-text">{{ product.title }}</p>
+                        
+                        <p class="product-item-text product_price">
+                          {% if product.compare_at_price > product.price %}
+                          <span class="sale-price">{{ product.price | money }}</span>
+                          <span class="regular-price compare_at_price"><del>{{ product.compare_at_price | money }}</del></span>
+                          {% else %}
+                            <span class="regular-price">{{ product.price | money }}</span>
+                          {% endif %}
+                        </p>
+                      </div>
+                    </a>
                 </div>
               </div>
             </div>
