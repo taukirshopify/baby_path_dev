@@ -204,6 +204,52 @@ input.addcart__buttonwrap {
     overflow-y: auto;
     width: 100%;
 }
+span.cart-drawer__total-amount span {
+    color: #fff !important;
+}
+.main-card-remove {
+    font-size: 34px;
+}
+.product-option {
+    display: flex;
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    color: #000000;
+    line-height: 21px;
+}
+.color-remove a i {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    text-decoration-line: underline;
+    color: #000000;
+}
+.main-cart-img img {
+    width: 150px;
+    height: 176px;
+    object-fit: cover;
+    object-position: top;
+}
+.main-card-sizing-counte {
+    padding-top: 12px;
+    max-width: 246px;
+    width: 100%;
+}
+.main-card-wraper-flax {
+    width: 100%;
+}
+.color-remove {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 12px;
+    margin-top: -18px;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;
