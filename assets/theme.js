@@ -1,14 +1,7 @@
 ;(function($) {
     "use strict";
     // niceSelect============
-    // $(document).ready(function() {
-    //     $('select').niceSelect();
-    //       $("html").niceScroll();	
-    //       $(".list").niceScroll();
-    //       $('.xyz').on('click',function(){
-    //           event();
-    //       });
-    // }); 
+
     //* Navbar Fixed  
     function navbarFixed(){
         if ( $('.fast-header-area').length ){
@@ -80,8 +73,6 @@
         $(this).parent().toggleClass('open');
     });
 
-    // $('.price').attr('data-currency', 'RUB');
-
     $('.dropdown > .list > .item').on('click', function() {
         $('.dropdown > .list > .item').removeClass('selected');
         $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').html($(this).html());
@@ -93,21 +84,6 @@
         } else {
             console.log('USD');
         }
-//         if ($(this).data("item") == "RUB") {
-//             $('.price').attr('data-currency', 'RUB');
-//             $('.currency').text('руб.');
-
-//         } else if ($(this).data("item") == "UAH") {
-//             $('.price').attr('data-currency', 'UAH');
-//             $('.currency').text('грн.');
-
-//         } else {
-//             $('.price').attr('data-currency', 'USD');
-//             $('.currency').text('долл.');
-//         }
-      
-
-      
     });
 
     $(document).on('keyup', function(evt) {
@@ -331,7 +307,7 @@
       });
       
       
-      $('.product__addtocart_wrapper').click(function(e){
+      jQuery('.product__addtocart_wrapper').click(function(e){
         e.preventDefault();
         $.ajax({
           type: 'POST',
@@ -346,7 +322,7 @@
       });
       
       
-      $('.addcart__buttonwrap').click(function(e){
+      jQuery('.addcart__buttonwrap').click(function(e){
         e.preventDefault();
         console.log('Cart Added');
         $.ajax({
