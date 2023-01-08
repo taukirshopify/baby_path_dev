@@ -47,6 +47,8 @@
 </section>
 
 <script>
+  
+
   $('.cart_icon').click(function() {
     $('body').addClass('drawer-open');
   });
@@ -83,6 +85,8 @@
   function get_cart_details() {
    
     fetch("/?section_id=cart-drawyer").then((response) => response.text() ).then((cartData) => {
+
+      console.log(cartData);
       var cart_html = $(cartData);
       var cart_items = $(".product_items_subwrapper", cart_html);
       var cart_count = $(".cart-drawer__count", cart_html);
