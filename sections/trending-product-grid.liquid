@@ -1,11 +1,11 @@
 <!-- justin-area strAT -->  
 <section class="product-area">
     <div class="product-container">
-        <ul class="product-title nav nav-tabs">
+        <ul class="product-title nav nav-tabs pb-5">
             <li><a class="product-toggle active">{{ section.settings.product_grid_name }}</a></li>
         </ul>
         <div class="tab-content">
-          <div class="collection_grid row">
+          <div class="collection_grid row pt-5">
             {% for product in collections[section.settings.product_grid_collection].products limit:8 %}
               <div class="col-md-3">
                 <div class="collection_item">
