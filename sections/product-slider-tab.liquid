@@ -27,8 +27,21 @@
                                 <form method="post" action="/cart/add" class="add_to_cart_form">
                                   <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
                                   <input type="submit" class="addcart__buttonwrap theme-btn shape-btn bg-black" value="Add to cart" />
+                                  <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants no-js">
+                                    {% for variant in product.variants %}
+                                      {% if variant.available %}
+                                        <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                                          {{ variant.title }}
+                                        </option>
+                                      {% else %}
+                                        <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+                                      {% endif %}
+                                    {% endfor %}
+                                    </select>
                                 </form> 
                                 <p class="product-item-text">{{ product.title }}</p>
+                                <p class="display_variants">
+                                </p>
                                 <p class="product-item-text product_price">
                                   {% if product.compare_at_price > product.price %}
                                   <span class="sale-price">{{ product.price | money }}</span>

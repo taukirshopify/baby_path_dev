@@ -254,6 +254,55 @@ span.cart-drawer__total-amount span {
     font-size: 34px;
     cursor: pointer;
 }
+.product__title {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+.price__sale {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+variant-radios label {
+    height: 45px;
+    width: 45px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #000;
+    font-family: 'T-Star Pro';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0px !important;
+    border-radius: 50px !important;
+    line-height: 45px !important;
+    text-align: center !important;
+    color: #000 !important;
+}
+variant-radios label[checked] {
+    height: 45px;
+    width: 45px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #000;
+    font-family: 'T-Star Pro';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 0px !important;
+    border-radius: 50px !important;
+    line-height: 45px !important;
+    text-align: center !important;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;
