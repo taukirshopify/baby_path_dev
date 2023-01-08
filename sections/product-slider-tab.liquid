@@ -1,53 +1,79 @@
  <!-- justin-area strAT --> 
+
+
+<style>
+
+  .tab-box { display:none; }
+</style>
+
  <section class="product-area product-one">
     <div class="product-container">
+
+      {% comment %} tab menu start here {% endcomment %}
+      <div class="tab-menu pb-5">
         <ul class="product-title nav nav-tabs">
             {% for block in section.blocks %}  
-            <li><a class="product-toggle {% if forloop.index == 1 %}active {% endif %}" data-bs-toggle="tab" data-bs-target="#nav-tab{{ forloop.index }}" type="button" role="tab" aria-controls="nav-home" aria-selected="{% if forloop.index == 1 %}true {% else %} false{% endif %}"  href="#nav-tab{{ forloop.index }}">{{ block.settings.tab_name }}</a></li>
+          <li><a class="product-toggle  {% if forloop.index == 1 %}active {% endif %}"  data-rel="tab-{{ section.id }}-{{ forloop.index }}" >{{ block.settings.tab_name }}</a></li>
             {% endfor %}
         </ul>
-        <div class="tab-content">
-            {% for block in section.blocks %}  
-            <div class="splide product-slider {% if forloop.index == 1 %}tab-pane active {% else %} tab-pane fade {% endif %}" id="nav-tab{{ forloop.index }}">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        {% for product in collections[block.settings.tab_collection].products %}
-                          <li class="splide__slide">
-                            <a class="product-items" href="{{ product.url }}">
-                              <div class="product_image_wrapper">
-                                <img
-                                class="product-item-img firstImage"
-                                src="{{ product.featured_image | img_url: 'medium' }}"
-                                alt="{{ product.title }}">
-                                {% if product.images[1] %}
-                                <img class="product-item-img secondImage" src="{{ product.images[1] | product_img_url: 'medium' }}" alt="{{ product.title }}">
-                              {% endif %}
-                              </div>
-                              <div class="product-item-p-text">
-                                <form method="post" action="/cart/add" class="add_to_cart_form">
-                                  <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-                                  <input type="submit" class="addcart__buttonwrap theme-btn shape-btn bg-black" value="Add to cart" />
-                                </form> 
-                                <p class="product-item-text">{{ product.title }}</p>
-                                <p class="product-item-text product_price">
-                                  {% if product.compare_at_price > product.price %}
-                                  <span class="sale-price">{{ product.price | money }}</span>
-                                  <span class="regular-price compare_at_price"><del>{{ product.compare_at_price | money }}</del></span>
-                                  {% else %}
-                                    <span class="regular-price">{{ product.price | money }}</span>
-                                  {% endif %}
-                                </p>
-                              </div>
-                            {% unless product.available %}<strong class="product__badge_soldout">sold out</strong>{% endunless %}
-                            </a>
-                          </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-            {% endfor %}
         </div>
-        
+        {% comment %} tab menu End here {% endcomment %}
+
+        <div class="tab-main-box">
+           
+                {% for block in section.blocks %}  
+                  <div class="tab-content-details tab-box" id="tab-{{ section.id }}-{{ forloop.index }}" style="{% if forloop.index == 1 %}display:block;{% endif %}" >
+
+                    <div class="splide product-slider-{{ section.id }}-{{ forloop.index }} ">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                {% for product in collections[block.settings.tab_collection].products %}
+                                  <li class="splide__slide">
+                         
+                                      <div class="collection_item">
+                                        <a class="product-items" href="{{ product.url }}">
+                                          <div class="product_image_wrapper">
+                                            <img
+                                            class="product-item-img firstImage"
+                                            src="{{ product.featured_image | img_url: 'medium' }}"
+                                            alt="{{ product.title }}">
+                                            {% if product.images[1] %}
+                                            <img class="product-item-img secondImage" src="{{ product.images[1] | product_img_url: 'medium' }}" alt="{{ product.title }}">
+                                         
+                                          {% endif %}
+                                           </a>
+                                             </div>
+                                            <div class="product-item-p-text">
+                                              <form method="post" action="/cart/add" class="add_to_cart_form">
+                                                <input type="hidden"  name="id" value="{{ product.first_available_variant.id }}" />
+                                                <input type="submit"  class="addcart__buttonwrap theme-btn shape-btn bg-black" data-id="{{ product.first_available_variant.id }}"  value="Add to cart" />
+                                              </form> 
+                                              <p class="product-item-text">{{ product.title }}</p>
+                                              <p class="product-item-text product_price">
+                                                {% if product.compare_at_price > product.price %}
+                                                <span class="sale-price">{{ product.price | money }}</span>
+                                                <span class="regular-price compare_at_price"><del>{{ product.compare_at_price | money }}</del></span>
+                                                {% else %}
+                                                  <span class="regular-price">{{ product.price | money }}</span>
+                                                {% endif %}
+                                              </p>
+                                            </div>
+                                          {% unless product.available %}<strong class="product__badge_soldout">sold out</strong>{% endunless %}
+                              
+                                      </div>
+                              
+                                  </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+
+                  </div>
+                {% endfor %}
+         
+
+          </div>
+
     </div>
 </section> 
 <!-- justin-area end -->
@@ -83,9 +109,43 @@
     }
   {% endschema %}
   
-  {% stylesheet %}
+
+  <script>
+    $( document ).ready(function() {
+
+
+      $('.tab-menu li a').on('click', function(){
+        var target = $(this).attr('data-rel');
+     $('.tab-menu li a').removeClass('active');
+        $(this).addClass('active');
+        $("#"+target).fadeIn('slow').siblings(".tab-box").hide();
+        return false;
+    });
+
+      {% for block in section.blocks %}  
+   new Splide( '.product-slider-{{ section.id }}-{{ forloop.index }}', {
+      perPage: 4,
+      gap    : '10px',
+      type: 'loop', 
+      perMove: 1,
+      pagination: false, 
+      breakpoints: {
+        1024: {
+          perPage: 3, 
+        },
+        640: {
+          perPage: 2, 
+        },
+      //   480: {
+      //     perPage: 1, 
+      //   },
+      },
+  }).mount();
+   {% endfor %}
+
+
+
+   
+   });
   
-  {% endstylesheet %}
-  
-  {% javascript %}
-  {% endjavascript %}
+  </script>

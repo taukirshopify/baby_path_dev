@@ -26,7 +26,6 @@
 </section>
 <!-- hero-area end -->
 
-
 {% schema %}
     {
       "name": "Hero Slider",
@@ -85,3 +84,20 @@
   
   {% javascript %}
   {% endjavascript %}
+
+
+<script>
+  $( document ).ready(function() {
+
+
+new Splide( '.index-slider', {
+    type  : 'fade', 
+    rewind: true,
+    arrows: false,
+    type: 'loop',
+    rewind: true,
+    autoplay: true,
+} ).mount();
+
+});
+</script>

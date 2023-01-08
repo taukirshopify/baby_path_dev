@@ -204,6 +204,105 @@ input.addcart__buttonwrap {
     overflow-y: auto;
     width: 100%;
 }
+span.cart-drawer__total-amount span {
+    color: #fff !important;
+}
+.main-card-remove {
+    font-size: 34px;
+}
+.product-option {
+    display: flex;
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    color: #000000;
+    line-height: 21px;
+}
+.color-remove a i {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    text-decoration-line: underline;
+    color: #000000;
+}
+.main-cart-img img {
+    width: 150px;
+    height: 176px;
+    object-fit: cover;
+    object-position: top;
+}
+.main-card-sizing-counte {
+    padding-top: 12px;
+    max-width: 246px;
+    width: 100%;
+}
+.main-card-wraper-flax {
+    width: 100%;
+}
+.color-remove {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 12px;
+    margin-top: -18px;
+}
+.main-card-remove {
+    font-size: 34px;
+    cursor: pointer;
+}
+.product__title {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+.price__sale {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+variant-radios label {
+    height: 45px;
+    width: 45px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #000;
+    font-family: 'T-Star Pro';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0px !important;
+    border-radius: 50px !important;
+    line-height: 45px !important;
+    text-align: center !important;
+    color: #000 !important;
+}
+variant-radios label[checked] {
+    height: 45px;
+    width: 45px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #000;
+    font-family: 'T-Star Pro';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 0px !important;
+    border-radius: 50px !important;
+    line-height: 45px !important;
+    text-align: center !important;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;

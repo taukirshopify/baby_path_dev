@@ -50,7 +50,13 @@
                 return false;
             });
         }
-    } 
+    };
+
+
+
+
+    // index hero slider
+
 
     // background-image
     function bgImg() {
@@ -111,18 +117,7 @@
             $(this).prev('ul').slideToggle(500);
             $(this).toggleClass('d-btn-active');
         });
-    } 
-    
-    // index hero slider
-    var splide1 = new Splide( '.index-slider', {
-        type  : 'fade', 
-        rewind: true,
-        arrows: false,
-        type: 'loop',
-        rewind: true,
-        autoplay: true,
-    } ); 
-    splide1.mount();
+    };
     // footer collapse======
     $('.cl-item:not(.cl-item-no-sub) > .cl-label-wrap .cl-label-title').click(function() {
         $(this).parent().parent().toggleClass('cl-item-open');
@@ -188,9 +183,11 @@
         const quantity_plus = $root.find("[data-quantity-plus]");
         var quantity_ = quantity_target.val();
         $(quantity_minus).click(function () {
+            e.preventDefault();
         quantity_target.val(--quantity_);
         });
         $(quantity_plus).click(function () {
+            e.preventDefault();
         quantity_target.val(++quantity_);
         });
     }
@@ -202,11 +199,46 @@
     $(".sidebar-card").on('click', function () {
         $(".main-card-area").addClass("active");
     });
+    $("#cartDrawyerOpener").on('click', function () {
+        $('.main-card-area').addClass('active');
+    });
     $(".main-card-remove").on('click', function () {
         $(".main-card-area").removeClass("active");
     });
 
-
+      $('.add_to_cart_form').on('submit', function(e){
+        e.preventDefault();
+        $.ajax({
+          type: 'POST',
+          url: '/cart/add.js',
+          dataType: 'json',
+          data: {
+            quantity: 1,
+            id: $(this).find('.addcart__buttonwrap').data("id")
+          },
+          success: function(data) {
+            $('.main-card-area').addClass('active');
+            get_cart_details();
+          },
+          error: function(data) {
+            console.log("No data is found");
+         }
+        });
+      });
+    
+    
+      function get_cart_details() {
+        fetch("/?section_id=cart-drawyer").then((response) => response.text() ).then((cartData) => {
+          var cart_html = $(cartData);
+          var cart_items = $(".product_items_subwrapper", cart_html);
+          var cart_count = $(".cart-drawer__count", cart_html);
+          var cart_subtotal = $(".cart-drawer__total-amount", cart_html);
+          // var cartData2 = JSON.parse(cart_items); 
+          $(".cart-drawer__content").replaceWith(cart_items);
+          $('.cart-drawer__count').replaceWith(cart_count);
+          $('.cart-drawer__total-amount').replaceWith(cart_subtotal);
+        });
+      };
 
 
 

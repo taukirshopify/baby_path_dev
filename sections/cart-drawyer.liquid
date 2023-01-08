@@ -39,19 +39,26 @@
                   </h5>
                 </div>
                 <div class="main-card-sizing-counte">
-                  <h6 class="size-xs">Size: {{ item.variant.title }}</h6>
+                  {%- for option in item.options_with_values -%}
+                    <div class="product-option">
+                      <dt>{{ option.name }}:</dt>
+                      <dd>{{ option.value }}</dd>
+                    </div>
+                  {%- endfor -%}
                   <div class="color-remove">
-                    <h6>Color: {{ item.variant.title }}</h6>
                     <a
                       href="/cart/change?line={{ forloop.index }}&amp;quantity=0"
                       class="cart-drawer__remove-url"
                       data-id="{{ item.id }}">
-                      <i class="icon-x" aria-hidden="true">X</i>
+                      <i class="icon-x" aria-hidden="true">remove</i>
                     </a>
                   </div>
                   <div class="main-cari-quantity">
                     <div class="quantity-control" data-quantity="">
-                      <button class="quantity-btn" data-quantity-minus="">
+                      <button
+                        class="quantity-btn"
+                        data-quantity-minus=""
+                        type="button">
                         <span>-</span>
                       </button>
                       <input
@@ -64,7 +71,10 @@
                         min="1"
                         aria-label="Quantity" />
 
-                      <button class="quantity-btn" data-quantity-plus="">
+                      <button
+                        class="quantity-btn"
+                        data-quantity-plus=""
+                        type="button">
                         <span>+</span>
                       </button>
                     </div>
@@ -83,6 +93,5 @@
       </div>
     </form>
   </div>
+  <div class="drawer-overlap"></div>
 </div>
-
-<div class="drawer-overlap"></div>
