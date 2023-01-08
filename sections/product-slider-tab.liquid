@@ -38,6 +38,7 @@
                                   {% endif %}
                                 </p>
                               </div>
+                            {% unless product.available %}<strong class="product__badge_soldout">sold out</strong>{% endunless %}
                             </a>
                           </li>
                         {% endfor %}

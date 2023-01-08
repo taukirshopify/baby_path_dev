@@ -43,7 +43,7 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-
+    {{ 'jquery-3.6.0.min.js' | asset_url | script_tag }}
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
 
@@ -530,23 +530,23 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    {{ 'jquery-3.6.0.min.js' | asset_url | script_tag }}
+
     {{ 'popper.min.js' | asset_url | script_tag }}
     {{ 'bootstrap.min.js' | asset_url | script_tag }}
     {{ 'splide.min.js' | asset_url | script_tag }}
-    {% comment %} {{ 'theme.js' | asset_url | script_tag }} {% endcomment %}
+    {{ 'theme.js' | asset_url | script_tag }}
 
     <script>
-      jQuery('.cart_icon').click(function() {
-        jQuery('body').addClass('drawer-open');
+      $('.cart_icon').click(function() {
+        $('body').addClass('drawer-open');
       });
 
-      jQuery('.main-card-remove,.drawer-overlap').click(function() {
-        jQuery('body').removeClass('drawer-open');
+      $('.main-card-remove,.drawer-overlap').click(function() {
+        $('body').removeClass('drawer-open');
       });
 
 
-      jQuery('.product__addtocart_wrapper').click(function(e) {
+      $('.product__addtocart_wrapper').click(function(e) {
         e.preventDefault();
         $.ajax({
           type: 'POST',
@@ -560,8 +560,7 @@
         });
       });
 
-
-      jQuery('.addcart__buttonwrap').click(function(e) {
+      $('.addcart__buttonwrap').click(function(e) {
         e.preventDefault();
         console.log('Cart Added');
         $.ajax({
@@ -575,7 +574,6 @@
           error: 'addToCartFail'
         });
       });
-
 
       function get_cart_details() {
         fetch("/?section_id=cart-drawyer").then((response) => response.text()).then((cartData) => {
