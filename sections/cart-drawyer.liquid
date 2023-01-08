@@ -2,13 +2,18 @@
 
 <!-- add bag btn card  -->
   <div class="main-card-area"> <div class="main-card-container">
+
     <form
       action="/cart"
       method="post"
       class="drawer_form"
       id="cart_form">
       <div class="main-card-title">
-        <h3>my bag (1)</h3>
+        {% if cart.item_count > 0 %}
+          {% else %}
+            <div class="empty_cart_msg">Your Cart is Empty!</div>
+        {% endif %}
+        <h3>my bag ({{ cart.item_count }})</h3>
         <button class="main-card-remove">
           ×
         </button>
