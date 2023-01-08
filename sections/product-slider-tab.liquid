@@ -24,6 +24,10 @@
                               {% endif %}
                               </div>
                               <div class="product-item-p-text">
+                                <form method="post" action="/cart/add" class="add_to_cart_form">
+                                  <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+                                  <input type="submit" class="addcart__buttonwrap theme-btn shape-btn bg-black" value="Add to cart">
+                                </form> 
                                 <p class="product-item-text">{{ product.title }}</p>
                                 <p class="product-item-text product_price">
                                   {% if product.compare_at_price > product.price %}
