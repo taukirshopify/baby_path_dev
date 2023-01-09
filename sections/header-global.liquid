@@ -101,7 +101,7 @@
           </li>
         </ul>
         <button class="menu-oparetor sidebar-menu" id="menu-opener">
-          <img src="{{'Menu Bar.svg' | asset_url  }}" alt="My cart">
+             {% render 'MenuBar-svg' %}
         </button>
       </div>
     </div>
@@ -412,5 +412,7 @@
 .minous .menu-plus{
  display: none;
 }
-
+button#menu-opener {
+  border: none;
+}
 </style>
