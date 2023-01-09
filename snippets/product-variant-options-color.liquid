@@ -58,20 +58,22 @@
         {% if option_disabled %}
           class="disabled"
         {% endif %}
-      >
+      > 
+      
+      <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" style="background: {{ value }} ">
+        {% comment %} {{ value -}} name here {% endcomment %}
+        <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+      </label>
 
-        {% if value contains ' ' %}
+        {% comment %} {% if value contains ' ' %}
             <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" style="background: {{ value }} ">
                 {% comment %} {{ value -}} name here {% endcomment %}
                 <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
               </label>
         {% else %}    
-          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" style="background: {{ value }} ">
-            {% comment %} {{ value -}} name here {% endcomment %}
-            <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
-          </label>
+         
 
-        {% endif %}
+        {% endif %} {% endcomment %}
 
     {%- elsif block.settings.picker_type == 'dropdown' -%}
       <option
