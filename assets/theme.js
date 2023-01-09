@@ -238,6 +238,7 @@
              $(".product_items_empt_subwrapper").append(cart_items);
            
             $(".main-card-btn").removeClass('d-none');
+            $(".empty_cart_msg").addClass('d-none');
 
         } else {
             $(".product_items_subwrapper").replaceWith(cart_items);
@@ -277,12 +278,14 @@
                     var i = e.item_count;
                     if( i < 1 ){
                       $('.cart-drawer__footer').addClass('hidden');
+                      
                       $('.cart-drawer__header-info').attr('hidden',true);
                       $('.cart-drawer__header').append('<div class="empty_cart_msg">Your Cart is Empty!</div>');
                     };
                     0 == i ? $(".cart-drawer__no-item").addClass("cart-drawer__no-item_visible") : $(".cart-drawer__no-item").removeClass("cart-drawer__no-item_visible"),
                         $(".cart-drawer__count").html(i),
                         $(".nav__cart-count").html(i),
+                        emptystateshow(),
                         $(".cart-drawer__total-amount").html(get_currency+ numberWithCommas(t.toFixed(2))),
                         i <= 0 && $(".my__custom_cart_drawer").addClass("no_item");
                 },
@@ -320,6 +323,7 @@
                     };
                     0 == n ? $(".cart-drawer__no-item").addClass("cart-drawer__no-item_visible") : $(".cart-drawer__no-item").removeClass("cart-drawer__no-item_visible"),
                         $(".cart-drawer__count").html(n),
+                       
                         $(".nav__cart-count").html(n),
                         $(".cart-drawer__total-amount").html(get_currency+ numberWithCommas(i.toFixed(2))),
                         jQuery.each(t, function (e, t) {
@@ -328,6 +332,8 @@
                         });
                 },
             });
+
+           
       };
       
       //Increase Button
@@ -346,3 +352,15 @@
         i < 100 ? (i += 1) : (i = 100), t.val(i),$('.minus-btn').attr('disabled',false), change_qty(t);
       });
       
+
+
+     function emptystateshow(){
+      
+         let elemnetcount =  $('.cart-drawer__count').text()
+        console.log(elemnetcount);
+
+        if(elemnetcount <= 0 && $(".product_items_empt_subwrapper")[0]){
+            $(".main-card-btn").addClass('d-none');
+            $(".empty_cart_msg").removeClass('d-none');
+        }
+     }
