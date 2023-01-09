@@ -306,6 +306,10 @@ variant-radios label[checked] {
 span.cart-drawer__total-amount {
     color: #fff;
 }
+
+.product-title .product-toggle {
+    cursor: pointer;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;
@@ -315,5 +319,17 @@ span.cart-drawer__total-amount {
     }
     .free-shop-slider {
         margin: 0px 45px;
+    }
+    .slider_content_image img {
+        width: 100%;
+        max-height: 760px;
+        object-fit: cover;
+        object-position: top;
+        height: 100svh !important;
+    }
+    button#menu-opener {
+        padding: 0;
+        background: transparent;
+        margin-top: -12px;
     }
 }

@@ -183,36 +183,11 @@
     })();
 
 
-    (function () {
-    "use strict";
-    function Guantity($root) {
-        const element = $root;
-        const quantity = $root.first("data-quantity");
-        const quantity_target = $root.find("[data-quantity-target]");
-        const quantity_minus = $root.find("[data-quantity-minus]");
-        const quantity_plus = $root.find("[data-quantity-plus]");
-        var quantity_ = quantity_target.val();
-        $(quantity_minus).click(function (e) {
-            e.preventDefault();
-            console.log(e);
-           quantity_target.val(--quantity_);
-        });
-        $(quantity_plus).click(function (e) {
-            e.preventDefault();
-            console.log(e);
-        quantity_target.val(++quantity_);
-        });
-    }
-    $.fn.Guantity = jQueryPlugin("Guantity", Guantity);
-    $("[data-quantity]").Guantity();
-    })();
-
-
     // sidebar_menu All Page/
     $(".sidebar-card").on('click', function () {
         $(".main-card-area").addClass("active");
     });
-    $("#cartDrawyerOpener").on('click', function () {
+    $("#cartDrawyerOpener,a#cartDrawyerOpener").on('click', function () {
         $('.main-card-area').addClass('active');
     });
     $(".main-card-remove").on('click', function () {
