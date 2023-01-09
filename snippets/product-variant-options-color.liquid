@@ -60,20 +60,21 @@
         {% endif %}
       > 
       
+
+       {% if value contains ' ' %}
+
+            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" style="background: var(--{{ value | remove:" " }});  ">
+                       
+                <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+              </label>
+        {% else %}    
+         
       <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" style="background: {{ value }} ">
         {% comment %} {{ value -}} name here {% endcomment %}
         <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
       </label>
 
-        {% comment %} {% if value contains ' ' %}
-            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" style="background: {{ value }} ">
-                {% comment %} {{ value -}} name here {% endcomment %}
-                <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
-              </label>
-        {% else %}    
-         
-
-        {% endif %} {% endcomment %}
+        {% endif %} 
 
     {%- elsif block.settings.picker_type == 'dropdown' -%}
       <option
@@ -91,3 +92,6 @@
     {%- endif -%}
   {%- endfor -%}
   
+
+
+
