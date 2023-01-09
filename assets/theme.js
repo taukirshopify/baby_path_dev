@@ -191,11 +191,11 @@
         const quantity_minus = $root.find("[data-quantity-minus]");
         const quantity_plus = $root.find("[data-quantity-plus]");
         var quantity_ = quantity_target.val();
-        $(quantity_minus).click(function () {
+        $(quantity_minus).click(function (e) {
             e.preventDefault();
         quantity_target.val(--quantity_);
         });
-        $(quantity_plus).click(function () {
+        $(quantity_plus).click(function (e) {
             e.preventDefault();
         quantity_target.val(++quantity_);
         });
@@ -250,4 +250,40 @@
       };
 
 
+      function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      };
 
+
+      $(document).on("click", ".cart-drawer__remove-url", function (e) {
+        e.preventDefault();
+        var variant_id = $(this).attr('data-id');
+        console.log(variant_id);
+        var data = { updates: {} };
+        data.updates[variant_id] = '0';
+            jQuery.ajax({
+                type: "POST",
+                url: "/cart/update.js",
+                data: data,
+                dataType: "json",
+                success: function (e) {
+                    
+                    console.log(e), console.log(e.items_subtotal_price), (product_total_price = e.items_subtotal_price);
+                    e.items;
+                    var t = e.total_price;
+                    t /= 100;
+                    var i = e.item_count;
+                    if( i < 1 ){
+                      $('.cart-drawer__footer').addClass('hidden');
+                      $('.cart-drawer__header-info').attr('hidden',true);
+                      $('.cart-drawer__header').append('<div class="empty_cart_msg">Your Cart is Empty!</div>');
+                    };
+                    0 == i ? $(".cart-drawer__no-item").addClass("cart-drawer__no-item_visible") : $(".cart-drawer__no-item").removeClass("cart-drawer__no-item_visible"),
+                        $(".cart-drawer__count").html(i),
+                        $(".nav__cart-count").html(i),
+                        $(".cart-drawer__total-amount").html(get_currency+ numberWithCommas(t.toFixed(2))),
+                        i <= 0 && $(".my__custom_cart_drawer").addClass("no_item");
+                },
+            }),
+            $(this).parent().parent().parent().parent().remove();
+      });

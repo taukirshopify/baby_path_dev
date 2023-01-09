@@ -1,7 +1,10 @@
-{% comment %} {%- render 'cart-drawer' -%} {% endcomment %}
+<script>
+  var get_currency = "{{ cart.currency.symbol }}";
+</script>
 
 <!-- add bag btn card  -->
-  <div class="main-card-area"> <div class="main-card-container">
+<div class="main-card-area">
+  <div class="main-card-container">
     <form
       action="/cart"
       method="post"
