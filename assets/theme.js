@@ -155,6 +155,7 @@
     bgImg();  
 })(jQuery);
 
+<<<<<<< HEAD
 
 
 (function () {
@@ -208,6 +209,8 @@
     })();
 
 
+=======
+>>>>>>> 5b38e696bdf28f7dfd0bbbcde6de9edfd2e4d931
     // sidebar_menu All Page/
     $(".sidebar-card").on('click', function () {
         $(".main-card-area").addClass("active");
