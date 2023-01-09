@@ -218,9 +218,14 @@
       function get_cart_details() {
         fetch("/?section_id=cart-drawyer").then((response) => response.text() ).then((cartData) => {
           var cart_html = $(cartData);
+
+     
           var cart_items = $(".product_items_subwrapper", cart_html);
+          console.log(cart_items);
           var cart_count = $(".cart-drawer__count", cart_html);
+          console.log(cart_count);
           var cart_subtotal = $(".cart-drawer__total-amount", cart_html);
+          console.log(cart_count);
           // var cartData2 = JSON.parse(cart_items); 
           $(".cart-drawer__content").replaceWith(cart_items);
           $('.cart-drawer__count').replaceWith(cart_count);

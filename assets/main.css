@@ -2254,9 +2254,7 @@ section {
 }
 
 .main-card-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  
   padding: 0 31px 25px;
 }
 .main-card-title h3 {
@@ -3394,11 +3392,17 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
   top: 0;
   right: 0;
 }
-
+.empty_cart_msg {
+  font-size: 28px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin-top: -40px;
+}
 .main-card-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
   padding: 0 31px 25px;
 }
 .main-card-title h3 {

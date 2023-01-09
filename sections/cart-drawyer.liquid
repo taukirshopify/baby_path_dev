@@ -11,10 +11,13 @@
       class="drawer_form"
       id="cart_form">
         {% comment %} last cart changes  {% endcomment %}
-      <div class="  main-git card-title">
+      <div class="main-card-title">
         {% if cart.item_count > 0 %}
-          <h3>my bag (<span class="cart-drawer__count">{{ cart.item_count }}</span>)</h3>
-                  <div class="main-card-remove"> × </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <h3>my bag (<span class="cart-drawer__count">{{ cart.item_count }}</span>)</h3>
+            <div class="main-card-remove"> × </div>
+          </div>
+          
           <div class="main-card-wraper">
             <div class="product_items_subwrapper">
               {% for item in cart.items %}
@@ -89,8 +92,8 @@
             </a>
           </div>
           {% else %}
-           <div>
-               <div class="d-flex justify-content-around align-items-center">
+           <div class="cart-empty">
+               <div class="d-flex justify-content-between align-items-center">
                   <h3>my bag (<span class="cart-drawer__count">{{ cart.item_count }}</span>)</h3>
                   <div class="main-card-remove"> × </div>
                 </div>
