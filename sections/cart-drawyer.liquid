@@ -10,7 +10,8 @@
       method="post"
       class="drawer_form"
       id="cart_form">
-      <div class="  main-card-title">
+        {% comment %} last cart changes  {% endcomment %}
+      <div class="  main-git card-title">
         {% if cart.item_count > 0 %}
           <h3>my bag (<span class="cart-drawer__count">{{ cart.item_count }}</span>)</h3>
                   <div class="main-card-remove"> × </div>
