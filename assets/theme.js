@@ -193,10 +193,12 @@
         var quantity_ = quantity_target.val();
         $(quantity_minus).click(function (e) {
             e.preventDefault();
-        quantity_target.val(--quantity_);
+            console.log(e);
+           quantity_target.val(--quantity_);
         });
         $(quantity_plus).click(function (e) {
             e.preventDefault();
+            console.log(e);
         quantity_target.val(++quantity_);
         });
     }

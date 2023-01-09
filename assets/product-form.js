@@ -46,8 +46,18 @@ if (!customElements.get('product-form')) {
             soldOutMessage.classList.remove('hidden');
             this.error = true;
             return;
-          } else if (!this.cart) {
-            window.location = window.routes.cart_url;
+          } else  {
+            fetch("/?section_id=cart-drawyer").then((response) => response.text() ).then((cartData) => {
+              var cart_html = $(cartData);
+              var cart_items = $(".product_items_subwrapper", cart_html);
+              var cart_count = $(".cart-drawer__count", cart_html);
+              var cart_subtotal = $(".cart-drawer__total-amount", cart_html);
+              // var cartData2 = JSON.parse(cart_items); 
+              $(".cart-drawer__content").replaceWith(cart_items);
+              $('.cart-drawer__count').replaceWith(cart_count);
+              $('.cart-drawer__total-amount').replaceWith(cart_subtotal);
+              $('.main-card-area').addClass('active');
+            });
             return;
           }
 
