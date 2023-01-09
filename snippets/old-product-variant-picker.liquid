@@ -20,18 +20,13 @@
       {{ block.shopify_attributes }}
     >
       {%- for option in product.options_with_values -%}
-      {% if option.name == "Color" or  option.name == "color" %}
-        
-         <fieldset class="js product-form__input varinatcolor">
-          <legend class="form__label">{{ option.name }}</legend>
-          {% render 'product-variant-options-color', product: product, option: option, block: block %}
-        </fieldset>
-         {% else %}
-         <fieldset class="js product-form__input">
+      {% if option.name == "Color" %}
+         "this is color"
+      {% endif %}
+        <fieldset class="js product-form__input">
           <legend class="form__label">{{ option.name }}</legend>
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
-      {% endif %}
 
       {%- endfor -%}
       <script type="application/json">

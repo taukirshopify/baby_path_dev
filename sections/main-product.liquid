@@ -2015,3 +2015,32 @@
   ]
 }
 {% endschema %}
+
+
+
+
+<style>
+  .product-form__input.varinatcolor input[type='radio']:disabled + label, .product-form__input.varinatcolor input[type='radio'].disabled + label{
+   position: relative;
+  }
+
+  .product-form__input.varinatcolor input[type='radio']:disabled + label, .product-form__input.varinatcolor input[type='radio'].disabled + label::before {
+    position: absolute;
+    width: 97%;
+    height: 2px;
+    background: #fff;
+    top: 50%;
+    right: 0;
+    content: "";
+    left: 0;
+    z-index: 10;
+    transform: rotate(45deg);
+}
+
+.product-form__input.varinatcolor input[type='radio']:checked + label {
+  color: #fff !important;
+  border: 2px solid #fff;
+  outline: 1px solid black;
+  z-index: 100;
+}
+</style>
