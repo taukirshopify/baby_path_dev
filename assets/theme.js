@@ -234,6 +234,8 @@
       };
 
 
+
+      //Cart Remove Button Function
       $(document).on("click", ".cart-drawer__remove-url", function (e) {
         e.preventDefault();
         var variant_id = $(this).attr('data-id');
@@ -269,7 +271,7 @@
 
 
 
-
+      //Update Quantity
       function change_qty(e) {
   
         var o = $(e).attr("data-id"),
@@ -307,12 +309,15 @@
             });
       };
       
+      //Increase Button
       $(document).on("click", ".minus-btn", function (e) {
         e.preventDefault();
         var t = $(this).closest("div").find("input"),
             i = parseInt(t.val());
         1 < i ? --i : ((i = 1), $(this).attr('disabled',true)), t.val(i), change_qty(t);
       });
+
+      //Decrease Button
       $(document).on("click", ".plus-btn", function (e) {
         e.preventDefault();
         var t = $(this).closest("div").find("input"),
