@@ -57,7 +57,7 @@
                     </a>
                   </div>
                   <div class="main-cari-quantity">
-                    <div class="quantity-control" data-quantity="">
+                    <div class="quantity-control cart-drawer__qty" data-quantity="">
                       <button
                         class="quantity-btn"
                         data-quantity-minus=""
@@ -66,19 +66,18 @@
                       </button>
                       <input
                         type="number"
-                        class="quantity-input"
+                        class="quantity-input cart-drawer__qty-input"
                         data-id="{{ item.key }}"
                         name="updates[]"
                         id="updates_{{ item.key }}"
                         value="{{ item.quantity }}"
                         min="1"
                         aria-label="Quantity" />
-
                       <button
-                        class="quantity-btn"
-                        data-quantity-plus=""
-                        type="button">
-                        <span>+</span>
+                        class="plus-btn cart-drawer__qty-btn quantity-btn"
+                        type="button"
+                        name="button">
+                        <i class="icon-plus">+</i>
                       </button>
                     </div>
                   </div>

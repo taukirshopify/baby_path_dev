@@ -303,6 +303,9 @@ variant-radios label[checked] {
     line-height: 45px !important;
     text-align: center !important;
 }
+span.cart-drawer__total-amount {
+    color: #fff;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;
