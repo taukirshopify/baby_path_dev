@@ -310,6 +310,18 @@ span.cart-drawer__total-amount {
 .product-title .product-toggle {
     cursor: pointer;
 }
+.popup-search-box form input:focus-visible {
+    box-shadow: none !important;
+}
+
+.popup-search-box button.searchClose {
+    font-size: 24px;
+    border-radius: 50%;
+    line-height: 0px !important;
+}
+.popup-search-box button.searchClose:hover {
+    color: #000 !important;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;
