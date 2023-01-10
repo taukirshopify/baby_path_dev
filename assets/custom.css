@@ -366,7 +366,7 @@ h2.totals__subtotal {
     color: #000000;
 }
 .totals {
-    justify-content: space-between;
+    justify-content: space-between !important;
 }
 
 small.tax-note.caption-large.rte {
