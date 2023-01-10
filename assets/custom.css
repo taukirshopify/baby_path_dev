@@ -322,6 +322,93 @@ span.cart-drawer__total-amount {
 .popup-search-box button.searchClose:hover {
     color: #000 !important;
 }
+
+button#checkout {
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 12px 12px 16px 12px;
+}
+button#update {
+    margin-top: 0;
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 130%;
+    text-transform: uppercase;
+    border: 1px solid #000;
+    background: #fff;
+    color: #000;
+}
+p.totals__subtotal-value {
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 130%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+h2.totals__subtotal {
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 22px !important;
+    line-height: 130%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+.totals {
+    justify-content: space-between;
+}
+
+small.tax-note.caption-large.rte {
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: 18px;
+    margin-bottom: 120px;
+}
+.payment_icons {
+    margin-top: 20px;
+}
+.cart__footer {
+    padding-bottom: 140px !important;
+}
+td.cart-item__totals.cart_item_product_price * {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 130%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+td.cart-item__totals.right.small-hide * {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 130%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+td.cart-item__totals.right.small-hide * {
+    text-align: right !important;
+    margin-top: 0px;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;
