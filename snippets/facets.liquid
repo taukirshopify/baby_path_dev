@@ -28,10 +28,12 @@
 <div class="container">
   <div class="row">
 
-    <div class="col-md-4 col-11">
+    <div class="col-md-4 col-9">
   
   
-      <h2> {{- collection.title | escape -}}</h2>
+   <div class="collection-ttile">
+    <h2> {{- collection.title | escape -}}</h2>
+   </div>
   
     </div>
   
@@ -250,14 +252,14 @@
     </div>
   
     </div>
-    <div class="col-1">
+    <div class="col-3">
   
       <menu-drawer class="mobile-facets__wrapper{% if filter_type == 'horizontal' or filter_type == 'vertical' %} medium-hide large-up-hide{% endif %}" data-breakpoint="mobile">
         <details class="mobile-facets__disclosure disclosure-has-popup">
           <summary class="mobile-facets__open-wrapper focus-offset">
             <span class="mobile-facets__open{% if filter_type == 'drawer' and enable_filtering == false %} medium-hide large-up-hide{% endif %}">
               {% render 'botharrow' %}
-  
+               <p class="sort">Short</p>
             
             </span>
             <span tabindex="0" class="mobile-facets__close mobile-facets__close--no-js">{%- render 'icon-close' -%}</span>
@@ -559,4 +561,22 @@
   align-items: center;
   justify-content: center;
 }
+
+.collection-ttile h2{
+  font-family: 'T-Star Pro';
+font-style: normal;
+font-weight: 900;
+font-size: 24px;
+line-height: 130%;
+/* or 31px */
+
+text-transform: uppercase;
+
+color: #000000;
+}
+menu-drawer.mobile-facets__wrapper.medium-hide.large-up-hide {
+  position: relative;
+  z-index: 9999999;
+}
+
 </style>
