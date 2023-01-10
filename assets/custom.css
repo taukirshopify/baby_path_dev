@@ -382,7 +382,7 @@ small.tax-note.caption-large.rte {
     margin-bottom: 120px;
 }
 .payment_icons {
-    margin-top: 20px;
+    margin-top: 20px !important;
 }
 .cart__footer {
     padding-bottom: 140px !important;
