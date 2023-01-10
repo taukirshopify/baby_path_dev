@@ -409,6 +409,9 @@ td.cart-item__totals.right.small-hide * {
     text-align: right !important;
     margin-top: 0px;
 }
+.title-wrapper-with-link {
+    margin-bottom: 50px !important;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;
