@@ -2266,16 +2266,7 @@ section {
   line-height: 130%;
   text-transform: uppercase;
 }
-.main-card-title a {
-  display: block;
-  color: #000;
-  font-size: 22px;
-  font-weight: 400;
-  padding: 3px;
-}
-.main-card-title a i:hover {
-  color: #48a0f1;
-}
+
 
 
 
@@ -3409,7 +3400,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
 .main-card-title a {
   display: block;
   color: #000;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
   padding: 3px;
 }

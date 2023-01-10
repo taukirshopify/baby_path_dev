@@ -19,6 +19,7 @@
           </div>
           
           <div class="main-card-wraper">
+            <div class="empty_cart_msg d-none">Your Cart is Empty!</div>
             <div class="product_items_subwrapper">
               {% for item in cart.items %}
                 <div class="main-card-wraper-items" data-id="{{ item.key }}">
