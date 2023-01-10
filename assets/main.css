@@ -386,9 +386,9 @@ theme.
     display: block;
   }
 
-  .dropdown-btn {
+  /* .dropdown-btn {
     height: 34px !important;
-  }
+  } */
 
   .fast-header-menu .dropdown-pges-ul li a {
     font-family: 'T-Star Pro';
