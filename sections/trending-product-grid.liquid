@@ -8,37 +8,7 @@
           <div class="collection_grid row pt-4">
             {% for product in collections[section.settings.product_grid_collection].products limit:8 %}
               <div class="col-md-3">
-                <div class="collection_item">
-                  <a class="product-items" href="{{ product.url }}">
-                    <div class="product_image_wrapper">
-                      <img
-                      class="product-item-img firstImage"
-                      src="{{ product.featured_image | img_url: 'medium' }}"
-                      alt="{{ product.title }}">
-                      {% if product.images[1] %}
-                      <img class="product-item-img secondImage" src="{{ product.images[1] | product_img_url: 'medium' }}" alt="{{ product.title }}">
-                   
-                    {% endif %}
-                     </a>
-                       </div>
-                      <div class="product-item-p-text">
-                        <form method="post" action="/cart/add" class="add_to_cart_form">
-                          <input type="hidden"  name="id" value="{{ product.first_available_variant.id }}" />
-                          <input type="submit"  class="addcart__buttonwrap theme-btn shape-btn bg-black" data-id="{{ product.first_available_variant.id }}"  value="Add to cart" />
-                        </form> 
-                        <p class="product-item-text">{{ product.title }}</p>
-                        <p class="product-item-text product_price">
-                          {% if product.compare_at_price > product.price %}
-                          <span class="sale-price">{{ product.price | money }}</span>
-                          <span class="regular-price compare_at_price"><del>{{ product.compare_at_price | money }}</del></span>
-                          {% else %}
-                            <span class="regular-price">{{ product.price | money }}</span>
-                          {% endif %}
-                        </p>
-                      </div>
-                    {% unless product.available %}<strong class="product__badge_soldout">sold out</strong>{% endunless %}
-        
-                </div>
+                 {% include 'proudct-grid-item' %}
               </div>
               {% endfor %}
             </div>

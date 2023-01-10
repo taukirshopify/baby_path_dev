@@ -244,7 +244,9 @@
 <!-- footer-area end-->  
 
     <div div class="popup-search-box d-none d-lg-block" id="popupfooter">
-        <button class="searchClose border-theme text-theme">+</button>
+        <button class="searchClose border-theme text-theme">
+           {% include 'search-crose' %}
+        </button>
       <div class="all-serach-wrpper">
         <predictive-search>
           <form action="/search" method="get" role="search" class="custome-serach-new">
