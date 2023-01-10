@@ -677,7 +677,7 @@ theme.
     position: absolute;
     right: 0;
     left: auto;
-    top: 6px;
+    top: -1px;
     opacity: 1;
     display: block !important;
   }
@@ -733,6 +733,7 @@ theme.
     opacity: 1;
     transition: .4s;
     background: #fff;
+    overflow: scroll;
   }
   .sidebar-menus .remove-one {
     color: #000;
@@ -757,12 +758,17 @@ theme.
     display: inline-block;
     width: 100% !important;
     position: relative;
+    border-bottom: 1px solid #000;
+  }
+  .sidebar-menus .header-menu-item li ul li {
+
+    border:none;
   }
   .sidebar-menus .header-menu-item li a {
     display: block;
     transition: 0.5s;
     text-align-last: start;
-    border-bottom: 1px solid #000;
+    
     width: 100%;
     padding: 10px 0;
     font-family: 'T-Star Pro';
@@ -781,7 +787,7 @@ theme.
   }
   .sidebar-menus .header-menu-item li ul li a {
     display: inline-block;
-    padding: 12px 0;
+    padding: 8px 0;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -800,11 +806,19 @@ theme.
     text-transform: uppercase;
   }
 
+
+
   .mobile-menu ul li ul {
     display: none;
     position: unset;
+    border-left: 1px solid #000;
+    margin: 10px 10px;
   }
+  .mobile-menu ul li ul li ul {
 
+    border: none;
+
+  }
   .dropdown-btn.d-btn-active .fa-plus::before {
     content: "\f068";
   }
