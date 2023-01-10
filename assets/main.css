@@ -37,7 +37,7 @@ theme.
 .fast-header-area.navbar-fixed {
   position: fixed;
   width: 100%;
-  top: -70px;
+  top: -74px;
   left: 0;
   right: 0;
   z-index: 99999;
@@ -3570,4 +3570,13 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
   .main-card-btn {
     margin: 20px auto;
   }
+}
+
+.main-card-container .main-card-btn{
+   color: #fff;
+   font-size: 26px;
+   padding: 2px 0 7px;
+}
+.main-card-title span{
+  font-size: 26px;
 }
