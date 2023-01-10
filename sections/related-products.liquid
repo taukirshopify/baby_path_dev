@@ -1,11 +1,10 @@
 <link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
-<link
-  rel="stylesheet"
-  href="{{ 'section-related-products.css' | asset_url }}"
-  media="print"
-  onload="this.media='all'"
->
+<link rel="stylesheet" href="{{ 'section-product-recommendations.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-price.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'section-product-recommendations.css' | asset_url | stylesheet_tag }}</noscript>
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -21,21 +20,16 @@
   }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient no-js-hidden">
-  <product-recommendations
-    class="related-products page-width section-{{ section.id }}-padding isolate"
-    data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}"
-  >
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <product-recommendations class="product-recommendations page-width section-{{ section.id }}-padding isolate" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=10">
+    <div class=" splide" id="image-carousel">
     {% if recommendations.performed and recommendations.products_count > 0 %}
-      <h2 class="related-products__heading {{ section.settings.heading_size }}">
-        {{ section.settings.heading | escape }}
-      </h2>
-      <ul
-        class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
-        role="list"
-      >
+      <h2 class="product-recommendations__heading {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
+      <div class="grid product-grid{% if section.settings.columns_desktop == 1 %} grid--full-width{% else %} grid--{{ section.settings.columns_desktop }}-col-desktop{% endif %} grid--{{ section.settings.columns_mobile }}-col-tablet-down" role="list">
+  <div class="splide__track">
+      <ul class="splide__list">
         {% for recommendation in recommendations.products %}
-          <li class="grid__item">
+          <li class="grid__item splide__slide">
             {% render 'card-product',
               card_product: recommendation,
               media_aspect_ratio: section.settings.image_ratio,
@@ -46,9 +40,98 @@
           </li>
         {% endfor %}
       </ul>
+    </div>
+      </div>
+      <div class="splide__arrows splide__arrows--ltr">
+        <button
+          class="splide__arrow splide__arrow--prev"
+          type="button"
+          aria-label="Previous slide"
+          aria-controls="splide01-track"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="40" height="40" viewBox="0 0 32 32">
+            <title>gallery-next15x</title>
+            <path fill="none" stroke="#000" stroke-width="1.8" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M9.75 4.010l12.51 12.51-12.48 12.47"></path>
+            </svg>
+        </button>
+        <button
+          class="splide__arrow splide__arrow--next"
+          type="button"
+          aria-label="Next slide"
+          aria-controls="splide01-track"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="40" height="40" viewBox="0 0 32 32">
+            <title>gallery-next15x</title>
+            <path fill="none" stroke="#000" stroke-width="1.8" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M9.75 4.010l12.51 12.51-12.48 12.47"></path>
+            </svg>
+        </button>
+      </div>
     {% endif %}
+    <div>
   </product-recommendations>
 </div>
+
+{% javascript %}
+  class ProductRecommendations extends HTMLElement {
+    constructor() {
+      super();
+
+      const handleIntersection = (entries, observer) => {
+        if (!entries[0].isIntersecting) return;
+        observer.unobserve(this);
+
+        fetch(this.dataset.url)
+          .then(response => response.text())
+          .then(text => {
+            const html = document.createElement('div');
+            html.innerHTML = text;
+            const recommendations = html.querySelector('product-recommendations');
+
+            if (recommendations && recommendations.innerHTML.trim().length) {
+              this.innerHTML = recommendations.innerHTML;
+            }
+
+            if (html.querySelector('.grid__item')) {
+              this.classList.add('product-recommendations--loaded');
+            }
+            let splide = new Splide( '#image-carousel', {
+              pagination : false,
+              paginationKeyboard:false,
+              type   : 'loop',
+              drag   : 'free',
+              perPage: 4,
+              perMove: 3,
+              rewindSpeed: 100,
+              
+              pagination:  true,
+              paginationKeyboard:true,
+              rewindByDrag:true,
+              breakpoints: {
+                  1020: {
+                      perPage: 3,
+                      perMove: 2,
+                  },
+                  640: {
+                      perPage: 2,
+                      perMove: 1,
+                  }
+                }
+            } );
+            
+            splide.mount(); 
+
+          })
+          .catch(e => {
+            console.error(e);
+          });
+      }
+
+      new IntersectionObserver(handleIntersection.bind(this), {rootMargin: '0px 0px 200px 0px'}).observe(this);
+    }
+  }
+
+  customElements.define('product-recommendations', ProductRecommendations);
+{% endjavascript %}
 
 {% schema %}
 {
