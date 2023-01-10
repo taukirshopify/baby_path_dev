@@ -2277,15 +2277,7 @@ section {
   color: #48a0f1;
 }
 
-.main-card-wraper {
-  border-top: 1px solid #000000;
-  padding: 22px 31px 42px;
-}
 
-.main-card-wraper-items {
-  display: flex;
-  align-items: flex-start;
-}
 
 .main-cart-img {
   display: block;
@@ -3427,7 +3419,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
 
 .main-card-wraper {
   border-top: 1px solid #000000;
-  padding: 22px 31px 42px;
+  padding: 10px  0;
 }
 
 .main-card-wraper-items {
