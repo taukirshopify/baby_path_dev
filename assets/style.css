@@ -46,9 +46,12 @@ color: #FFFFFF;
 .button, .shopify-challenge__button, .customer button {
 
     padding: 10px 3rem;
+    line-height: 1;
    
 }
-
+.customer .customer {
+    border: 1px solid #000;
+}
 @media only screen and (max-width: 600px)  {
 
 .collection-ttile{
@@ -70,4 +73,8 @@ button#menu-opener svg {
 }
 .minous .menu-minous {
     display: block;
+}
+
+.customer h1 {
+  font-size: 5svh;
 }
