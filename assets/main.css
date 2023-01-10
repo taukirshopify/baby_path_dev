@@ -3580,3 +3580,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
 .main-card-title span{
   font-size: 26px;
 }
+
+.main-logo {
+  max-width: 170px;
+}
