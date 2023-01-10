@@ -312,6 +312,7 @@ span.cart-drawer__total-amount {
 }
 .popup-search-box form input:focus-visible {
     box-shadow: none !important;
+    outline: none !important;
 }
 
 .popup-search-box button.searchClose {
@@ -411,6 +412,29 @@ td.cart-item__totals.right.small-hide * {
 }
 .title-wrapper-with-link {
     margin-bottom: 50px !important;
+}
+quantity-input.quantity {
+    border: 1px solid #000;
+    position: relative;
+    height: 45px;
+    width: 90px;
+    padding-right: 30px;
+    box-shadow: none !important;
+    outline: none !important;
+}
+button.quantity__button {
+    position: absolute;
+    right: -1px;
+    border: 1px solid #000;
+    padding: 0;
+    height: 23.5px;
+    padding: 0 5px;
+    line-height: 18px;
+    border-radius: 0;
+    width: 31px;
+    border-top: 0px;
+    cursor: pointer !important;
+    z-index: 111;
 }
 @media screen and (max-width:767px){
    .hideMobile{

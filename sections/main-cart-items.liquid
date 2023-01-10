@@ -335,7 +335,7 @@ cart-remove-button .button {
                             <span class="visually-hidden">
                               {{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}
                             </span>
-                            <img src="{{ 'Vector (4).svg' | asset_url }}">
+                            {% render 'icon-minus' %}
                           </button>
                           <input
                             class="quantity__input"
@@ -351,7 +351,7 @@ cart-remove-button .button {
                             <span class="visually-hidden">
                               {{- 'products.product.quantity.increase' | t: product: item.product.title | escape -}}
                             </span>
-                            <img src="{{ 'Vector (5).svg' | asset_url }}">
+                            {% render 'icon-plus' %}
                           </button>
                         </quantity-input>
 
