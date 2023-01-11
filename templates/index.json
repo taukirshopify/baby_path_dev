@@ -259,13 +259,22 @@
             "collection_name": "test 3",
             "collection_url": ""
           }
+        },
+        "66022d9a-e306-4d18-b044-97208885409e": {
+          "type": "slide",
+          "settings": {
+            "collection_image": "shopify:\/\/shop_images\/featured-gift-3_d8a7ce3b-6815-4b8f-b803-874d0819fa5c.png",
+            "collection_name": "",
+            "collection_url": ""
+          }
         }
       },
       "block_order": [
         "e8585a02-ccf6-4c2c-a92a-0eeedc14edda",
         "484a1b21-91ea-48b6-95c6-68f129c44641",
         "a28ffa8b-4d94-4e2b-b2db-6d099bf127e8",
-        "1b2326ca-31d9-4217-97b7-1218f3adfb0c"
+        "1b2326ca-31d9-4217-97b7-1218f3adfb0c",
+        "66022d9a-e306-4d18-b044-97208885409e"
       ],
       "settings": {
         "section_title": "BELIEVE THE HYPE\nOUR COLLECTIONS HAVE OVER 26,000 FIVE STAR\nREVIEWS, AND COUNTING!"
