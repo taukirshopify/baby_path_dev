@@ -436,6 +436,28 @@ button.quantity__button {
     cursor: pointer !important;
     z-index: 111;
 }
+h1.main-page-title.page-title.h0 {
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 130%;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+.rte * {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #000000;
+}
+
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;
