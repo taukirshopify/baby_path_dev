@@ -1,18 +1,18 @@
 <div class="collection_item">
-  <a class="product-items" href="{{ product.url }}">
+  <a class="product-items" href="{{ item.url }}">
     <div class="product_image_wrapper ">
       <img
         class="product-item-img firstImage"
-        src="{{ product.featured_image | img_url: 'medium' }}"
-        alt="{{ product.title }}">
-      {% if product.images[1] %}
+        src="{{ item.featured_image | img_url: 'medium' }}"
+        alt="{{ item.title }}">
+      {% if item.images[1] %}
         <img
           class="product-item-img secondImage"
-          src="{{ product.images[1] | product_img_url: 'medium' }}"
-          alt="{{ product.title }}">
+          src="{{ item.images[1] | product_img_url: 'medium' }}"
+          alt="{{ item.title }}">
 
       {% endif %}
-      {% if product.compare_at_price > product.price %}
+      {% if item.compare_at_price > item.price %}
         <div class="proudct-sale">
           On sale
         </div>
@@ -21,7 +21,7 @@
     </a>
   </div>
   <div class="product-item-p-text">
-    {% if product.available %}
+    {% if item.available %}
       <form
         method="post"
         action="/cart/add"
@@ -29,26 +29,26 @@
         <input
           type="hidden"
           name="id"
-          value="{{ product.first_available_variant.id }}" />
+          value="{{ item.first_available_variant.id }}" />
         <input
           type="submit"
           class="addcart__buttonwrap theme-btn shape-btn bg-black"
-          data-id="{{ product.first_available_variant.id }}"
+          data-id="{{ item.first_available_variant.id }}"
           value="Add to cart" />
       </form>
 
     {% else %}
       <a href="#" class="sold-item-cart">sold out</a>
     {% endif %}
-    <p class="product-item-text">{{ product.title }}</p>
+    <p class="product-item-text">{{ item.title }}</p>
     <p class="product-item-text product_price">
-      {% if product.compare_at_price > product.price %}
-        <span class="sale-price">{{ product.price | money }}</span>
+      {% if item.compare_at_price > item.price %}
+        <span class="sale-price">{{ item.price | money }}</span>
         <span class="regular-price compare_at_price">
-          <del>{{ product.compare_at_price | money }}</del>
+          <del>{{ item.compare_at_price | money }}</del>
         </span>
       {% else %}
-        <span class="regular-price">{{ product.price | money }}</span>
+        <span class="regular-price">{{ item.price | money }}</span>
       {% endif %}
     </p>
   </div>
