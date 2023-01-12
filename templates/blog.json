@@ -10,15 +10,6 @@
     "1d15eb91-07c9-468b-b8a2-79a37cdc818d": {
       "type": "main-blogtab",
       "blocks": {
-        "ef507e20-74e0-45f1-8b40-c45d3043a1bb": {
-          "type": "blog",
-          "settings": {
-            "h1": "ALL",
-            "blog": "news",
-            "button": "View More",
-            "blogurl": ""
-          }
-        },
         "9d254c4a-90d6-49a6-ba73-4455a9c765f5": {
           "type": "blog",
           "settings": {
@@ -27,11 +18,20 @@
             "button": "View More",
             "blogurl": ""
           }
+        },
+        "ef507e20-74e0-45f1-8b40-c45d3043a1bb": {
+          "type": "blog",
+          "settings": {
+            "h1": "ALL",
+            "blog": "news",
+            "button": "View More",
+            "blogurl": ""
+          }
         }
       },
       "block_order": [
-        "ef507e20-74e0-45f1-8b40-c45d3043a1bb",
-        "9d254c4a-90d6-49a6-ba73-4455a9c765f5"
+        "9d254c4a-90d6-49a6-ba73-4455a9c765f5",
+        "ef507e20-74e0-45f1-8b40-c45d3043a1bb"
       ],
       "settings": {
         "h1": "Aka NEWS"
