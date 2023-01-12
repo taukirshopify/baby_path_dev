@@ -19,7 +19,11 @@
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}
       px;
     }
-
+    @media(max-width:767px) {
+      section#MainProduct-template--17415146733857__main {
+        padding-top: 30px;
+      }
+    }
     @media screen and (min-width: 750px) {
       .section-{{ section.id }}-padding {
         padding-top: {{ section.settings.padding_top }}
@@ -553,13 +557,13 @@
 
 
 
-      const hiddenInput = document.querySelector('#                     {{ product_form_id }} input[name="id"]');
+      const hiddenInput = document.querySelector('#                          {{ product_form_id }} input[name="id"]');
       const noScriptInputWrapper = document.createElement('div');
-      const variantSwitcher = document.querySelector('variant-radios[data-section="                     {{ section.id }} "]') || document.querySelector('variant-selects[data-section="                     {{ section.id }} "]');
-      noScriptInputWrapper.innerHTML = document.querySelector('.product-form__noscript-wrapper-                     {{ section.id }}').textContent;
+      const variantSwitcher = document.querySelector('variant-radios[data-section="                          {{ section.id }} "]') || document.querySelector('variant-selects[data-section="                          {{ section.id }} "]');
+      noScriptInputWrapper.innerHTML = document.querySelector('.product-form__noscript-wrapper-                          {{ section.id }}').textContent;
       variantSwitcher.outerHTML = noScriptInputWrapper.outerHTML;
 
-      document.querySelector('#Variants-                     {{ section.id }}').addEventListener('change', function(event) {
+      document.querySelector('#Variants-                          {{ section.id }}').addEventListener('change', function(event) {
         hiddenInput.value = event.currentTarget.value;
       });
     });
@@ -576,8 +580,8 @@
   <script type="application/ld+json">
     {
     "@context": "http://schema.org/",
-                                                                                          "@type": "Product",
-                                                                                          "name": {{ product.title | json }},
+                                                                                                              "@type": "Product",
+                                                                                                              "name": {{ product.title | json }},
     "url": {{ request.origin | append: product.url | json }},
     {% if seo_media -%}
       "image": [
@@ -590,7 +594,7 @@
     {%- endif %}
     "brand": {
     "@type": "Brand",
-                                                                                            "name": {{ product.vendor | json }}
+                                                                                                                "name": {{ product.vendor | json }}
     },
     "offers": [
     {%- for variant in product.variants -%}
