@@ -457,7 +457,28 @@ h1.main-page-title.page-title.h0 {
     line-height: 130%;
     color: #000000;
 }
+.alternative-collection-grid .featured-collection-btn p {
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+}
 
+.alternative-collection-grid .featured-collection-btn {
+    position: relative;
+}
+.alternative-collection-area {
+    padding-bottom: 30px;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;
