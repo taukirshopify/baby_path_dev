@@ -699,9 +699,7 @@ h2.related-products__heading.h0 {
     padding-right: 0px;
 }
 
-section#MainProduct-template--17415146733857__main {
-    padding-top: 90px;
-}
+
 input.quantity__input {
     outline: none !important;
     box-shadow: none !important;
@@ -844,7 +842,7 @@ p.usp_title img {
         width: 100%;
     }
     .product__info-wrapper {
-        padding: 0 0 0 0rem;
+        padding: 0 0 0 0rem !important;
     }
     .product__info-wrapper {
         padding: 0 0 0 0rem;
@@ -862,6 +860,6 @@ p.usp_title img {
     }
 
     .product__info-container {
-        max-width: 100%;
+        max-width: 100% !important;
     }
 }
