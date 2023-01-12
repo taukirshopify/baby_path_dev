@@ -12,7 +12,9 @@
                     <div class="customers-item-text">
                         <div class="customers-star">
                             <h6>{{ block.settings.customer_name }}</h6>
-                            <img src="{{ "customers-say-star.png" | asset_img_url }}" alt="">
+                              <div class="5star-svg">
+                                 {% render '5starsvg' %}
+                              </div>
                         </div> 
                         <p>“{{ block.settings.customer_review_text }}”</p>
                         <a class="customers-item-btn" href="{{ block.settings.customer_shop_url }}">SHOP THIS STYLE</a>
@@ -77,3 +79,6 @@
   
   {% javascript %}
   {% endjavascript %}
+
+
+

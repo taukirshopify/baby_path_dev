@@ -1375,7 +1375,7 @@ section {
 
 .customers-area-wraper {
   display: grid;
-  gap: 20px;
+  gap: 13px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-flow: dense;
   margin-top: 10px;
@@ -1411,14 +1411,17 @@ section {
   margin-bottom: 6px;
 }
 .customers-star h6 {
+  font-family: 'Arial';
+  font-style: normal;
   font-weight: 400;
-  font-size: 13.3675px;
+  font-size: 15px;
   line-height: 15px;
-  margin-right: 10px;
-  color: #000;
+  margin-top: 2px;
+   margin-right: 5px;
+  color: #000000;
 }
-.customers-star img {
-  height: 18px;
+.customers-star svg {
+  height: 15px;
   width: auto;
 }
 
@@ -3574,13 +3577,24 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
 
 .main-card-container .main-card-btn{
    color: #fff;
-   font-size: 26px;
+
    padding: 2px 0 7px;
 }
-.main-card-title span{
-  font-size: 26px;
+.main-card-title ,.main-card-title span{
+  font-family: 'T-Star Pro';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 130%;
 }
-
+.main-card-wraper a{
+  font-family: 'T-Star Pro';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 130%;
+  text-decoration: none;
+}
 .main-logo {
   max-width: 170px;
 }
