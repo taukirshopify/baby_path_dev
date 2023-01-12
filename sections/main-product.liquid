@@ -345,20 +345,24 @@
                 </span>
               </p>
             {%- endif -%}
-            {%- when 'usp_slider' -%}
+            {%- when 'usp_slide' -%}
             {{ block.shopify_attributes }}
             <div class="usp_inline_item">
-              <p class="usp_title">
+              <div class="usp_icon">
                 <img src="{{ block.settings.usp_inline_image | img_url: 'master' }}">
-                <span>{{ block.settings.usp_inline_title }}</span>
-                <img
-                  src="{{ 'bi_info-circle.svg' | asset_url }}"
-                  class="tooltip"
-                  title="{{ block.settings.usp_inline_tooltiptext }}">
-              </p>
-              {% if block.settings.usp_inline_text != blank %}
-                <p class="usp_title">{{ block.settings.usp_inline_text }}</p>
-              {% endif %}
+              </div>
+              <div class="usp_content_wrap">
+                <p class="usp_title">
+                  <span>{{ block.settings.usp_inline_title }}</span>
+                  <img
+                    src="{{ 'bi_info-circle.svg' | asset_url }}"
+                    class="tooltip"
+                    title="{{ block.settings.usp_inline_tooltiptext }}">
+                </p>
+                {% if block.settings.usp_inline_text != blank %}
+                  <p class="usp_text">{{ block.settings.usp_inline_text }}</p>
+                {% endif %}
+              </div>
             </div>
             {%- when 'complementary' -%}
             <product-recommendations class="complementary-products quick-add-hidden no-js-hidden{% if block.settings.make_collapsible_row %} is-accordion{% endif %}{% if block.settings.enable_quick_add %} complementary-products-contains-quick-add{% endif %}" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ block.settings.product_list_limit }}&intent=complementary">
@@ -549,13 +553,13 @@
 
 
 
-      const hiddenInput = document.querySelector('#           {{ product_form_id }} input[name="id"]');
+      const hiddenInput = document.querySelector('#                     {{ product_form_id }} input[name="id"]');
       const noScriptInputWrapper = document.createElement('div');
-      const variantSwitcher = document.querySelector('variant-radios[data-section="           {{ section.id }} "]') || document.querySelector('variant-selects[data-section="           {{ section.id }} "]');
-      noScriptInputWrapper.innerHTML = document.querySelector('.product-form__noscript-wrapper-           {{ section.id }}').textContent;
+      const variantSwitcher = document.querySelector('variant-radios[data-section="                     {{ section.id }} "]') || document.querySelector('variant-selects[data-section="                     {{ section.id }} "]');
+      noScriptInputWrapper.innerHTML = document.querySelector('.product-form__noscript-wrapper-                     {{ section.id }}').textContent;
       variantSwitcher.outerHTML = noScriptInputWrapper.outerHTML;
 
-      document.querySelector('#Variants-           {{ section.id }}').addEventListener('change', function(event) {
+      document.querySelector('#Variants-                     {{ section.id }}').addEventListener('change', function(event) {
         hiddenInput.value = event.currentTarget.value;
       });
     });
@@ -572,8 +576,8 @@
   <script type="application/ld+json">
     {
     "@context": "http://schema.org/",
-                                                  "@type": "Product",
-                                                  "name": {{ product.title | json }},
+                                                                                          "@type": "Product",
+                                                                                          "name": {{ product.title | json }},
     "url": {{ request.origin | append: product.url | json }},
     {% if seo_media -%}
       "image": [
@@ -586,7 +590,7 @@
     {%- endif %}
     "brand": {
     "@type": "Brand",
-                                                    "name": {{ product.vendor | json }}
+                                                                                            "name": {{ product.vendor | json }}
     },
     "offers": [
     {%- for variant in product.variants -%}
