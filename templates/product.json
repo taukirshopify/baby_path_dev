@@ -103,6 +103,39 @@
         "padding_bottom": 12
       }
     },
+    "5edb8150-cd43-4a29-86ff-c03f6a80ad80": {
+      "type": "usp",
+      "blocks": {
+        "c1b87b81-e837-4c13-8832-6c6bd8c2349b": {
+          "type": "slide",
+          "settings": {
+            "usp_image": "shopify:\/\/shop_images\/Frame_186.png",
+            "usp_title": "Free & express shipping available"
+          }
+        },
+        "17086dcf-aee0-4b36-8bea-9ab82a900f7d": {
+          "type": "slide",
+          "settings": {
+            "usp_image": "shopify:\/\/shop_images\/Group.png",
+            "usp_title": "hassle-free returns"
+          }
+        },
+        "81d24718-927f-47e6-b053-b83279d5a6fb": {
+          "type": "slide",
+          "settings": {
+            "usp_image": "shopify:\/\/shop_images\/Vector.png",
+            "usp_title": "100% secure checkout"
+          }
+        }
+      },
+      "block_order": [
+        "c1b87b81-e837-4c13-8832-6c6bd8c2349b",
+        "17086dcf-aee0-4b36-8bea-9ab82a900f7d",
+        "81d24718-927f-47e6-b053-b83279d5a6fb"
+      ],
+      "settings": {
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -123,6 +156,7 @@
   },
   "order": [
     "main",
+    "5edb8150-cd43-4a29-86ff-c03f6a80ad80",
     "related-products"
   ]
 }
