@@ -762,7 +762,18 @@ p.usp_title img {
 .product__text.subtitle {
     border-top: 1px solid rgb(0 0 0 / 50%);
 }
-
+.rte img {
+    width: 100%;
+    margin: 15px 0px;
+}
+.rte p {
+    margin-bottom: 15px;
+}
+.rte h4 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 600;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;
@@ -828,6 +839,17 @@ p.usp_title img {
         border-radius: 5px;
         height: 54px;
         padding-top: 8px;
+    }
+    h1.main-page-title.page-title.h0 {
+        font-size: 32px;
+    }
+    .rte h4 {
+        margin-bottom: 15px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .rte {
+        padding-bottom: 30px;
     }
 }
 
