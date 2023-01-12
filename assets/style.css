@@ -78,3 +78,38 @@ button#menu-opener svg {
 .customer h1 {
   font-size: 5svh;
 }
+
+.product quantity-input.quantity {
+    border: 1px solid #000;
+    height: 40px;
+    width: auto;
+    padding-right: 0px;
+    box-shadow: none !important;
+    outline: none !important;
+    display: inline-flex;
+}
+
+.product  button.quantity__button {
+    height: 101%;
+    position: unset;
+}
+
+.product  button.quantity__button:first-child {
+    border-right:1px solid #000;
+  }
+.product  button.quantity__button:last-child {
+    border-left:1px solid #000;
+  }
+
+
+  .product  .button, .shopify-challenge__button, .customer button {
+    padding: 14px 3rem;
+    line-height: 1;
+}
+
+.product-form__submit{
+    background: #000;
+}
+.product-form__submit span{
+    color: #fff;
+}

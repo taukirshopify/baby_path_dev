@@ -62,7 +62,7 @@ span.regular-price.compare_at_price del {
 }
 .belive-items img {
     width: 100%;
-    height: 565px;
+    height: 50svh;
     display: block;
     object-fit: cover;
     object-position: top;
@@ -425,7 +425,7 @@ quantity-input.quantity {
 button.quantity__button {
     position: absolute;
     right: -1px;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     padding: 0;
     height: 23.5px;
     padding: 0 5px;
