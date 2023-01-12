@@ -702,6 +702,10 @@ h2.related-products__heading.h0 {
 section#MainProduct-template--17415146733857__main {
     padding-top: 90px;
 }
+input.quantity__input {
+    outline: none !important;
+    box-shadow: none !important;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;
