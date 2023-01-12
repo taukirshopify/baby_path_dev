@@ -618,22 +618,85 @@ fieldset.product-form__input .form__label {
 }
 .product quantity-input.quantity {
     border: 1px solid #000;
-    height: 52px;
+    height: 52px !important;
     width: auto;
     padding-right: 0px;
     box-shadow: none !important;
     outline: none !important;
     display: inline-flex;
-    width: 100%;
+    width: 100% !important;
 }
 label.form__label {
     font-family: 'T-Star Pro';
     font-style: normal;
     font-weight: 900;
     font-size: 20px;
-    line-height: 100%;
+    line-height: 100%  !important;
     text-transform: uppercase;
     color: #000000;
+}
+p.product__text.subtitle {
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #000000;
+}
+h2.h4.accordion__title {
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #000000;
+}
+.product-form__input {
+    max-width: 44rem !important;
+}
+.usp_content {
+    background: #EDEDED;
+    border-radius: 5px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+}
+.usp_content img {
+    width: 20px;
+    margin-right: 20px;
+}
+.usp_content p {
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.9078px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #000000;
+}
+h2.related-products__heading.h0 {
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 63.375px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 15px;
+}
+.usp.container {
+    margin-top: 35px;
+    margin-bottom: 40px;
+}
+.product-form__buttons button {
+    margin-bottom: 16px;
+}
+.related-products {
+    display: block;
+    padding-left: 0;
+    padding-right: 0px;
 }
 @media screen and (max-width:767px){
    .hideMobile{
