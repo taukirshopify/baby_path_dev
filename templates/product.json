@@ -44,6 +44,19 @@
             "show_dynamic_checkout": true
           }
         },
+        "4e0df19c-66cc-435a-a78e-09b334bfebe1": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": ""
+          }
+        },
+        "bc850ca8-f26e-462a-94f5-6b9cb150c689": {
+          "type": "text",
+          "settings": {
+            "text": "Details",
+            "text_style": "subtitle"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -52,8 +65,8 @@
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Materials",
-            "icon": "leather",
+            "heading": "Fit & fabric",
+            "icon": "none",
             "content": "",
             "page": ""
           }
@@ -62,25 +75,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
+            "icon": "none",
             "content": "",
             "page": ""
           }
@@ -100,11 +95,11 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "4e0df19c-66cc-435a-a78e-09b334bfebe1",
+        "bc850ca8-f26e-462a-94f5-6b9cb150c689",
         "description",
         "collapsible-row-0",
         "collapsible-row-1",
-        "collapsible-row-2",
-        "collapsible-row-3",
         "share"
       ],
       "settings": {
