@@ -756,6 +756,15 @@ p.usp_title img {
 .product__accordion .accordion__content {
     padding: 0 0rem;
 }
+.price--on-sale .price-item--regular {
+    text-decoration: line-through;
+    color: rgba(var(--color-foreground),.75);
+    font-size: 2.3rem;
+}
+.product__text.subtitle {
+    border-top: 1px solid rgb(0 0 0 / 50%);
+}
+
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;
@@ -777,5 +786,82 @@ p.usp_title img {
         padding: 0;
         background: transparent;
         margin-top: -7px;
+    }
+
+    /*Product Page*/
+    .row.usp_row {
+        gap: 15px;
+    }
+    .related-products__heading.h0 {
+        font-size: 36.375px;
+    }
+    label.form__label {
+        font-size: 18px;
+    }
+    p.product__text.subtitle, h2.h4.accordion__title {
+        font-size: 30px;
+    }
+    .usp_content {
+        padding: 18px;
+    }
+    .usp_content p {
+        font-size: 16.9078px;
+    }
+    .product__text.subtitle {
+        border-top: 1px solid rgb(0 0 0 / 50%);
+        margin-top: 35px;
+        padding-top: 45px;
+    }
+    p.usp_title {
+        font-size: 16.9078px;
+    }
+    .usp_text {
+        font-size: 16.9078px;
+    }
+    .product-form__buttons button {
+        font-family: T-Star Pro;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 22px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #fff;
+        background: #000000;
+        border-radius: 5px;
+        height: 54px;
+        padding-top: 8px;
+    }
+}
+
+@media screen and (max-width:991px) and (min-width:768px){
+    .row.usp_row .col-md-4 {
+        width: 100%;
+    }
+    .row.usp_row {
+        gap: 15px;
+    }
+    .grid__item.product__media-wrapper {
+        width: 100%;
+    }
+    .product__info-wrapper {
+        padding: 0 0 0 0rem;
+    }
+    .product__info-wrapper {
+        padding: 0 0 0 0rem;
+        margin-top: 25px;
+    }
+    h2.related-products__heading.h0 {
+        font-family: T-Star Pro;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 36.375px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #000;
+        margin-bottom: 15px;
+    }
+
+    .product__info-container {
+        max-width: 100%;
     }
 }
