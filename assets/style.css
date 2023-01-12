@@ -113,3 +113,9 @@ button#menu-opener svg {
 .product-form__submit span{
     color: #fff;
 }
+
+ul.header-sigin-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
