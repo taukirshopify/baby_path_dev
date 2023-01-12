@@ -37,9 +37,9 @@
             <!-- Single item -->
             <div class="tab-pane fade show active" id="nav-one-{{ forloop.index }}-{{section.id}}" role="tabpanel" aria-labelledby="nav-one-tab-{{ forloop.index }}-{{section.id}}">
                 <div class="row gy-40">
-                    {% assign tabblogs = blogs[item.settings.blog] %}
+
                     
-                    {% for article in tabblogs.articles %} 
+                    {% for article in blogs[item.settings.blog].articles %} 
     
                      
 
@@ -82,9 +82,9 @@
             <div class="tab-pane fade" id="nav-two-{{ forloop.index }}-{{section.id}}" role="tabpanel-{{ forloop.index }}-{{section.id}}" aria-labelledby="nav-two-tab-{{ forloop.index }}-{{section.id}}">
                 <div class="row gy-40">
 
-                    {% assign tabblogs = blogs[item.settings.blog] %}
+ 
                     
-                    {% for article in tabblogs.articles %} 
+                    {% for article in blogs[item.settings.blog].articles %} 
     
                      
 
@@ -172,19 +172,6 @@
                         "type": "blog",
                         "id": "blog",
                         "label": "Please shear you blog"
-                     },
-                     {
-                        "type": "text",
-                        "id": "button",
-                        "label": "View More",
-                        "default": "View More",
-                   
-                        "placeholder": "View More"
-                     },
-                     {
-                        "type": "url",
-                        "id": "blogurl",
-                        "label": "Blog"
                      }
                 ]
             }
