@@ -1,13 +1,6 @@
 <section class="space-bottom overflow-hidden">
     <div class="container">
-        <div class="border-bottom">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-auto">
-                    <h2 class="sec-title">{{ section.settings.h1 }}</h2>
-                </div>
-   
-            </div>
-        </div>
+
         <div class="row mt-30 mt-lg-5 align-items-center justify-content-between">
             <div class="col-auto">
                 <div class="sec-btn">
@@ -16,14 +9,14 @@
 
                         {% for item in section.blocks %} 
 
-                            {% if forloop.index == 1 %}
-                                        
-                                
-                                <button class="tab-btn active" id="nav-one-tab-{{ forloop.index }}-{{section.id}}" data-bs-toggle="tab" data-bs-target="#nav-one-{{ forloop.index }}-{{section.id}}" type="button" role="tab" aria-controls="nav-one-{{ forloop.index }}-{{section.id}}" aria-selected="true">{{ item.settings.h1 }}</button>
-                            
-                                {% else %}
-                                <button class="tab-btn" id="nav-two-tab-{{ forloop.index }}-{{section.id}}" data-bs-toggle="tab" data-bs-target="#nav-two-{{ forloop.index }}-{{section.id}}" type="button" role="tab" aria-controls="nav-two-{{ forloop.index }}-{{section.id}}" aria-selected="false">{{ item.settings.h1 }}</button>
-                            {% endif %}
+                        {% if forloop.index == 1 %}
+                                    
+                               
+                            <button class="tab-btn active" id="nav-one-tab-{{ forloop.index }}-{{section.id}}" data-bs-toggle="tab" data-bs-target="#nav-one-{{ forloop.index }}-{{section.id}}" type="button" role="tab" aria-controls="nav-one-{{ forloop.index }}-{{section.id}}" aria-selected="true">{{ item.settings.h1 }}</button>
+                        
+                            {% else %}
+                            <button class="tab-btn" id="nav-two-tab-{{ forloop.index }}-{{section.id}}" data-bs-toggle="tab" data-bs-target="#nav-two-{{ forloop.index }}-{{section.id}}" type="button" role="tab" aria-controls="nav-two-{{ forloop.index }}-{{section.id}}" aria-selected="false">{{ item.settings.h1 }}</button>
+                        {% endif %}
 
                         {% endfor %}
 
@@ -38,13 +31,13 @@
         </div>
         <div class="tab-content blog-tab-area">
             {% for item in section.blocks %} 
-            {% assign blogs = blogs[item.settings.blog] %}
+
             {% if forloop.index == 1 %}
                         
             <!-- Single item -->
             <div class="tab-pane fade show active" id="nav-one-{{ forloop.index }}-{{section.id}}" role="tabpanel" aria-labelledby="nav-one-tab-{{ forloop.index }}-{{section.id}}">
                 <div class="row gy-40">
-                   
+                    {% assign blogs = blogs[item.settings.blog] %}
                     
                     {% for article in blogs.articles %} 
     
@@ -82,18 +75,18 @@
 
                   {% endfor %}
                 </div>
-              
+   
             </div>
             {% else %}
             <!-- Single item -->
             <div class="tab-pane fade" id="nav-two-{{ forloop.index }}-{{section.id}}" role="tabpanel-{{ forloop.index }}-{{section.id}}" aria-labelledby="nav-two-tab-{{ forloop.index }}-{{section.id}}">
                 <div class="row gy-40">
-                   
-                
+
+                    {% assign blogs = blogs[item.settings.blog] %}
                     
                     {% for article in blogs.articles %} 
     
-                     <h2>this is 2nd tab</h2>
+                     
 
                         <div class="col-6 col-lg-4">
                             <div class="blog-card">
@@ -205,9 +198,3 @@
     }
  {% endschema %}
  
-
-
-
-
-
-
