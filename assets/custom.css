@@ -842,7 +842,7 @@ p.usp_title img {
         width: 100%;
     }
     .product__info-wrapper {
-        padding: 0 0 0 0rem;
+        padding: 0 0 0 0rem !important;
     }
     .product__info-wrapper {
         padding: 0 0 0 0rem;
@@ -860,6 +860,6 @@ p.usp_title img {
     }
 
     .product__info-container {
-        max-width: 100%;
+        max-width: 100% !important;
     }
 }
