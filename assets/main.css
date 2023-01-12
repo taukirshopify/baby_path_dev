@@ -2731,6 +2731,27 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
   transition: all 300ms linear 0s;
 }
 
+.featured-collection-area{
+  padding: 30px 0;
+}
+
+.featured-collection-wraper::-webkit-scrollbar {
+  display: none;
+}
+ .customers-area-wraper::-webkit-scrollbar  {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+ .customers-area-wraper {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.featured-collection-wraper  {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 /*----------------------------------------------------*/
 @media (max-width: 1500px) {
   .belive-wraper {
@@ -3062,6 +3083,8 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
     content: "\f068";
   }
 }
+
+
 @media (max-width: 771px) {
   .featured-collection-items img {
     height: 350px;
@@ -3164,9 +3187,9 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
     display: none;
   }
 
-  .featured-collection-area {
+  /* .featured-collection-area {
     display: none;
-  }
+  } */
 
   .featured-gift-area {
     display: block;
