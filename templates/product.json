@@ -44,6 +44,15 @@
             "show_dynamic_checkout": true
           }
         },
+        "32662724-486d-46f1-9609-1e7cc7e4edd0": {
+          "type": "usp_slide",
+          "settings": {
+            "usp_inline_image": "shopify:\/\/shop_images\/material-symbols_alarm-outline-rounded.png",
+            "usp_inline_title": "Get it by thu, Dec 25 with Rush Shipping",
+            "usp_inline_tooltiptext": "Get it by thu, Dec 25 with Rush Shipping",
+            "usp_inline_text": ""
+          }
+        },
         "bc850ca8-f26e-462a-94f5-6b9cb150c689": {
           "type": "text",
           "settings": {
@@ -73,6 +82,15 @@
             "content": "<p><strong>SHIPPING<\/strong><br\/>This velvet jacket features a zip-front closure, Baby Phat embroidered chest logo, long sleeves, a funnel neck, and exposed seams.<br\/>- © 2022 BABY PHAT HOLDING COMPANY, LLC. Used Under License<\/p>",
             "page": ""
           }
+        },
+        "d685d488-b472-44e9-bf6f-e30007fffeaf": {
+          "type": "usp_slide",
+          "settings": {
+            "usp_inline_image": "shopify:\/\/shop_images\/Frame_186.png",
+            "usp_inline_title": "Free Shipping *",
+            "usp_inline_tooltiptext": "Free Shipping  always",
+            "usp_inline_text": "Estimated Delivery: Saturday, December 27"
+          }
         }
       },
       "block_order": [
@@ -83,10 +101,12 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "32662724-486d-46f1-9609-1e7cc7e4edd0",
         "bc850ca8-f26e-462a-94f5-6b9cb150c689",
         "description",
         "collapsible-row-0",
-        "collapsible-row-1"
+        "collapsible-row-1",
+        "d685d488-b472-44e9-bf6f-e30007fffeaf"
       ],
       "settings": {
         "enable_sticky_info": true,
