@@ -44,12 +44,6 @@
             "show_dynamic_checkout": true
           }
         },
-        "4e0df19c-66cc-435a-a78e-09b334bfebe1": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": ""
-          }
-        },
         "bc850ca8-f26e-462a-94f5-6b9cb150c689": {
           "type": "text",
           "settings": {
@@ -67,7 +61,7 @@
           "settings": {
             "heading": "Fit & fabric",
             "icon": "none",
-            "content": "",
+            "content": "<p>FIT FABRIC<br\/>This velvet jacket features a zip-front closure, Baby Phat embroidered chest logo, long sleeves, a funnel neck, and exposed seams.<br\/>- © 2022 BABY PHAT HOLDING COMPANY, LLC. Used Under License<\/p>",
             "page": ""
           }
         },
@@ -76,14 +70,8 @@
           "settings": {
             "heading": "Shipping & Returns",
             "icon": "none",
-            "content": "",
+            "content": "<p><strong>SHIPPING<\/strong><br\/>This velvet jacket features a zip-front closure, Baby Phat embroidered chest logo, long sleeves, a funnel neck, and exposed seams.<br\/>- © 2022 BABY PHAT HOLDING COMPANY, LLC. Used Under License<\/p>",
             "page": ""
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
           }
         }
       },
@@ -95,12 +83,10 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "4e0df19c-66cc-435a-a78e-09b334bfebe1",
         "bc850ca8-f26e-462a-94f5-6b9cb150c689",
         "description",
         "collapsible-row-0",
-        "collapsible-row-1",
-        "share"
+        "collapsible-row-1"
       ],
       "settings": {
         "enable_sticky_info": true,
