@@ -14,7 +14,7 @@
           "type": "blog",
           "settings": {
             "h1": "ALL",
-            "blog": "bolg-2",
+            "blog": "news",
             "button": "View More",
             "blogurl": ""
           }
@@ -27,11 +27,21 @@
             "button": "View Morea",
             "blogurl": ""
           }
+        },
+        "75c0a734-c61e-4725-b745-01852ed1fa04": {
+          "type": "blog",
+          "settings": {
+            "h1": "ALL",
+            "blog": "",
+            "button": "View More",
+            "blogurl": ""
+          }
         }
       },
       "block_order": [
         "a20de188-41dd-4956-abbd-3697cac253e6",
-        "0f2be13d-9904-4657-a630-b3dfc6f41f1a"
+        "0f2be13d-9904-4657-a630-b3dfc6f41f1a",
+        "75c0a734-c61e-4725-b745-01852ed1fa04"
       ],
       "settings": {
         "h1": "Aka NEWS"
