@@ -3,12 +3,12 @@
     <div class="product_image_wrapper ">
       <img
         class="product-item-img firstImage"
-        src="{{ item.featured_image | img_url: 'medium' }}"
+        src="{{ item.featured_image | img_url: 'master' }}"
         alt="{{ item.title }}">
       {% if item.images[1] %}
         <img
           class="product-item-img secondImage"
-          src="{{ item.images[1] | product_img_url: 'medium' }}"
+          src="{{ item.images[1] | product_img_url: 'master' }}"
           alt="{{ item.title }}">
 
       {% endif %}

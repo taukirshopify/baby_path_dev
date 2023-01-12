@@ -118,111 +118,25 @@
     <div class="header-menu-item mobile-menu">
       <ul>
 
+
+        {% for link in section.settings.header_menu.links %}
+
+
+
         <li class="dropdown">
-          <a href="javascprit:void(0)">relf</a>
+          <a href="{{ link.url }}">{{ link.title }}</a>
+          {% if link.links.size > 0 %}
           <ul>
-            <li>
-              <a href="javascprit:void(0)">dfglsfg</a>
-            </li>
-          </ul>
-          <div class="dropdown-btn">
-
-
-            <div class="menu-plus">
-              {% render 'plus-svg' %}
-            </div>
-            <div class="menu-minous">
-
-
-              {% render 'minus-svg' %}
-
-            </div>
-
-          </div>
-        </li>
-        <li class="dropdown">
-          <a href="javascprit:void(0)">gifts</a>
-          <ul>
-            <li>
-              <a href="javascprit:void(0)">gifts</a>
-            </li>
-            <li>
-              <a href="javascprit:void(0)">gifts</a>
-            </li>
-            <li>
-              <a href="javascprit:void(0)">gifts</a>
-            </li>
-          </ul>
-          <div class="dropdown-btn">
-
-
-            <div class="menu-plus">
-              {% render 'plus-svg' %}
-            </div>
-            <div class="menu-minous">
-
-
-              {% render 'minus-svg' %}
-
-            </div>
-
-          </div>
-        </li>
-        <li class="dropdown">
-          <a href="javascprit:void(0)">best sellers</a>
-          <ul>
-            <li>
-              <a href="javascprit:void(0)">best sellers</a>
-            </li>
-          </ul>
-          <div class="dropdown-btn">
-
-
-            <div class="menu-plus">
-              {% render 'plus-svg' %}
-            </div>
-            <div class="menu-minous">
-
-
-              {% render 'minus-svg' %}
-
-            </div>
-
-          </div>
-        </li>
-        <li class="dropdown">
-          <a href="javascprit:void(0)">accessories</a>
-          <ul>
+            {% for child_link in link.links %}
             <li class="dropdown">
-              <a class="featured" href="javascprit:void(0)">featured</a>
+              <a class="featured" href="{{ child_link.url }}">{{ child_link.title }}</a>
+              {% if child_link.links.size > 0 %}
               <ul>
+                {% for grandchild_link in child_link.links %}
                 <li>
-                  <a href="javascprit:void(0)">jacket</a>
+                  <a href="{{ grandchild_link.url }})">{{ grandchild_link.title }}</a>
                 </li>
-                <li>
-                  <a href="javascprit:void(0)">shirts &amp; shorts pajama</a>
-                </li>
-                <li>
-                  <a href="javascprit:void(0)">flare pants</a>
-                </li>
-                <li>
-                  <a href="javascprit:void(0)">bodysuit</a>
-                </li>
-                <li>
-                  <a href="javascprit:void(0)">cargo pents</a>
-                </li>
-                <li>
-                  <a href="javascprit:void(0)">jersey</a>
-                </li>
-                <li>
-                  <a href="javascprit:void(0)">braletty</a>
-                </li>
-                <li>
-                  <a href="javascprit:void(0)">mini skirts</a>
-                </li>
-                <li>
-                  <a href="javascprit:void(0)">joggers</a>
-                </li>
+              {% endfor %}
               </ul>
               <div class="dropdown-btn">
 
@@ -231,92 +145,38 @@
                   {% render 'plus-svg' %}
                 </div>
                 <div class="menu-minous">
-
-
                   {% render 'minus-svg' %}
 
                 </div>
 
               </div>
+            {% endif %}
             </li>
+	      
+
+          {% endfor %}
           </ul>
-          <div class="dropdown-btn">
+            <div class="dropdown-btn">
 
 
-            <div class="menu-plus">
-              {% render 'plus-svg' %}
-            </div>
-            <div class="menu-minous">
+              <div class="menu-plus">
+                {% render 'plus-svg' %}
+              </div>
+              <div class="menu-minous">
 
 
-              {% render 'minus-svg' %}
+                {% render 'minus-svg' %}
 
-            </div>
-
-          </div>
-        </li>
-        <li>
-          <a href="javascprit:void(0)">shirts</a>
-        </li>
-        <li>
-          <a href="javascprit:void(0)">outerwear</a>
-        </li>
-        <li>
-          <a href="javascprit:void(0)">bottoms</a>
-        </li>
-        <li class="dropdown">
-          <a href="javascprit:void(0)">best sellers</a>
-          <ul>
-            <li>
-              <a href="javascprit:void(0)">collaborations</a>
-            </li>
-          </ul>
-          <div class="dropdown-btn">
-
-
-            <div class="menu-plus">
-              {% render 'plus-svg' %}
-            </div>
-            <div class="menu-minous">
-
-
-              {% render 'minus-svg' %}
+              </div>
 
             </div>
-
-          </div>
+          {% endif %}
         </li>
-        <li>
-          <a href="#">sale</a>
-        </li>
-        <li class="dropdown">
-          <a href="javascprit:void(0)">more</a>
-          <ul>
-            <li>
-              <a href="javascprit:void(0)">more</a>
-            </li>
-            <li>
-              <a href="javascprit:void(0)">more</a>
-            </li>
-            <li>
-              <a href="javascprit:void(0)">more</a>
-            </li>
-          </ul>
-          <div class="dropdown-btn">
 
 
-            <div class="menu-plus">
-              {% render 'plus-svg' %}
-            </div>
-            <div class="menu-minous">
+      {% endfor %}
 
 
-              {% render 'minus-svg' %}
-
-            </div>
-
-          </div>
-        </li>
       </ul>
     </div>
     <div class="mobile-menu-logins">
