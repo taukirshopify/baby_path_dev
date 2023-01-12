@@ -616,6 +616,25 @@ fieldset.product-form__input .form__label {
 .price__container {
     letter-spacing: normal;
 }
+.product quantity-input.quantity {
+    border: 1px solid #000;
+    height: 52px;
+    width: auto;
+    padding-right: 0px;
+    box-shadow: none !important;
+    outline: none !important;
+    display: inline-flex;
+    width: 100%;
+}
+label.form__label {
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #000000;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;
