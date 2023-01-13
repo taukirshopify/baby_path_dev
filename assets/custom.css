@@ -774,6 +774,140 @@ p.usp_title img {
     font-size: 22px;
     font-weight: 600;
 }
+
+.hero-area {
+    top: -50px;
+}
+.header-sigin-btn li .search-option .navigation-bar button {
+    transform: translateY(2px);
+}
+.product.product--large {
+    padding-top: 90px;
+}
+.product__info-wrapper.grid__item {
+    padding-top: 0px !important;
+}
+h2.product-recommendations__heading {
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 15px;
+
+}
+.product-recommendations .splide__arrows.splide__arrows--ltr {
+    display: none;
+}
+.product-recommendations .splide__arrows.splide__arrows--ltr {
+    display: none;
+}
+.color-remove {
+    margin-top: -36px;
+}
+
+ul.footer-socil-item 
+ li:nth-child(4) {
+    transform: translateY(-5px);
+}
+.belive-title {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+
+/*Account Page*/
+#recover, #login ,.customer h1{
+    scroll-margin-top: 20rem;
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #000000;
+}
+.field__input, .customer .field input {
+    flex-grow: 1;
+    text-align: left;
+    padding: 1.5rem;
+    margin: var(--inputs-border-width);
+    transition: box-shadow var(--duration-short) ease;
+    border-bottom: 1px solid;
+    font-weight: 600;
+}
+.customer button {
+    margin: 4rem 0 1.5rem;
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.underlined-link, .customer a {
+    font-weight: 600 !important;
+}
+.customer {
+    padding-top: 70px !important;
+}
+.login p {
+    margin: 1.5rem 0;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+
+.field__label, .customer .field label {
+    font-weight: 600;
+}
+.shopify-challenge__container .shopify-challenge__message, .shopify-challenge__container .shopify-challenge__errors {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+input.shopify-challenge__button.btn {
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #000;
+    margin-top: 15px;
+}
+.template-404.page-width.page-margin.center a.button {
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #000;
+}
+.template-404.page-width.page-margin.center p {
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #000000;
+}
+.template-404.page-width.page-margin.center h1 {
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #000000;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;
@@ -883,5 +1017,12 @@ p.usp_title img {
 
     .product__info-container {
         max-width: 100% !important;
+    }
+}
+
+
+@media screen and (max-width:1024px) and (min-width:768px){
+    .panties-area .f-hero-container {
+        padding: 430px 0px 40px 40px;
     }
 }
