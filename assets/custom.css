@@ -933,6 +933,45 @@ h2#predictive-search-products {
 .main-card-container .main-card-btn {
     font-size: 28px;
 }
+li.social_pinterest_link {
+    display: none;
+}
+
+.header_mobile_url .cl-label-wrap a {
+    display: block;
+    color: #fff !important;
+    font-size: 16px;
+    border-bottom: 1px solid #fff;
+    padding: 10px 0px;
+}
+
+.header_mobile_url .cl-label-wrap {
+    display: flex;
+    padding-top: 0px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-bottom: 20px !important;
+}
+.header_mobile_url .mm-help .f-help-m {
+    margin-bottom: 10px;
+    background: #000;
+}
+.mm-help {
+    display: block !important;
+    margin-top: 40px;
+}
+.header_mobile_url .cl-label-wrap a:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+.announcement-bar__message {
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;
