@@ -180,9 +180,10 @@
       </ul>
     </div>
     <div class="mobile-menu-logins">
-      <a href="javascprit:void(0)">login</a>
-      <p>currency:</p>
-      <p class="d-flex align-items-center">shopping Bag
+      <a href="/account">login</a>
+      <p>currency:<span>{{ cart.currency.symbol }}</span>
+      </p>
+      <p class="d-flex align-items-center" id="cartDrawyerOpener">shopping Bag
         <span>
           <img src="{{ 'Shoppingbagblack.svg' | asset_url }}">
         </span>

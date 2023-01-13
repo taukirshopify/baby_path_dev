@@ -187,12 +187,20 @@
     $(".sidebar-card").on('click', function () {
         $(".main-card-area").addClass("active");
     });
-    $("#cartDrawyerOpener,a#cartDrawyerOpener").on('click', function () {
+    $("#cartDrawyerOpener,a#cartDrawyerOpener,p#cartDrawyerOpener").on('click', function () {
         $('.main-card-area').addClass('active');
     });
     $(".main-card-remove").on('click', function () {
         $(".main-card-area").removeClass("active");
     });
+
+
+    $("button.quantity__button").on('click', function () {
+        setTimeout(function() {
+            $( "#update" ).trigger( "click" );
+         }, 500);
+    });
+
 
       $('.add_to_cart_form').on('submit', function(e){
         e.preventDefault();
