@@ -210,9 +210,7 @@
         "settings": {
           "header_logo_desktop": "shopify:\/\/shop_images\/header-logo.png",
           "header_logo_mobile": "shopify:\/\/shop_images\/logo-991.png",
-          "header_menu": "main-menu",
-          "footer_second_menu": "footer-menu-2",
-          "footer_privacy_menu": "privacy-menu"
+          "header_menu": "main-menu"
         }
       },
       "footer-global": {
