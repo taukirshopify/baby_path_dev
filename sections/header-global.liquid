@@ -196,7 +196,7 @@
         <ul class="ftps-ul">
           <li class="cl-item cl-item-no-sub">
             <div class="cl-label-wrap">
-              {% for link in section.settings.footer_privacy_menu.links %}
+              {% for link in section.settings.header_privacy_menu.links %}
                 <a href="{{ link.url }}">{{ link.title }}</a>
               {% endfor %}
 
@@ -211,7 +211,7 @@
         <ul class="ftps-ul">
           <li class="cl-item cl-item-no-sub">
             <div class="cl-label-wrap">
-              {% for link in section.settings.footer_second_menu.links %}
+              {% for link in section.settings.header_second_menu.links %}
                 <a href="{{ link.url }}">{{ link.title }}</a>
               {% endfor %}
             </div>
@@ -244,11 +244,11 @@
       },
       {
         "type": "link_list",
-        "id": "footer_second_menu",
+        "id": "header_second_menu",
         "label": "Header Mobile Second Menu"
       }, {
         "type": "link_list",
-        "id": "footer_privacy_menu",
+        "id": "header_privacy_menu",
         "label": "Header Mobile Privacy Menu"
       }
     ]
