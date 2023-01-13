@@ -123,20 +123,38 @@
 
 
 
-        <li class="dropdown">
-          <a href="{{ link.url }}">{{ link.title }}</a>
-          {% if link.links.size > 0 %}
-          <ul>
-            {% for child_link in link.links %}
-            <li class="dropdown">
-              <a class="featured" href="{{ child_link.url }}">{{ child_link.title }}</a>
-              {% if child_link.links.size > 0 %}
+          <li class="dropdown">
+            <a href="{{ link.url }}">{{ link.title }}</a>
+            {% if link.links.size > 0 %}
               <ul>
-                {% for grandchild_link in child_link.links %}
-                <li>
-                  <a href="{{ grandchild_link.url }})">{{ grandchild_link.title }}</a>
-                </li>
-              {% endfor %}
+                {% for child_link in link.links %}
+                  <li class="dropdown">
+                    <a class="featured" href="{{ child_link.url }}">{{ child_link.title }}</a>
+                    {% if child_link.links.size > 0 %}
+                      <ul>
+                        {% for grandchild_link in child_link.links %}
+                          <li>
+                            <a href="{{ grandchild_link.url }})">{{ grandchild_link.title }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                      <div class="dropdown-btn">
+
+
+                        <div class="menu-plus">
+                          {% render 'plus-svg' %}
+                        </div>
+                        <div class="menu-minous">
+                          {% render 'minus-svg' %}
+
+                        </div>
+
+                      </div>
+                    {% endif %}
+                  </li>
+
+
+                {% endfor %}
               </ul>
               <div class="dropdown-btn">
 
@@ -145,36 +163,18 @@
                   {% render 'plus-svg' %}
                 </div>
                 <div class="menu-minous">
+
+
                   {% render 'minus-svg' %}
 
                 </div>
 
               </div>
             {% endif %}
-            </li>
-	      
-
-          {% endfor %}
-          </ul>
-            <div class="dropdown-btn">
+          </li>
 
 
-              <div class="menu-plus">
-                {% render 'plus-svg' %}
-              </div>
-              <div class="menu-minous">
-
-
-                {% render 'minus-svg' %}
-
-              </div>
-
-            </div>
-          {% endif %}
-        </li>
-
-
-      {% endfor %}
+        {% endfor %}
 
 
       </ul>
@@ -192,24 +192,14 @@
       <li class="cl-item f-help-m">
         <div class="cl-label-wrap">
           <span class="cl-label-title">HELP</span>
-          <span class="cl-label-tools">
-            <a href="javascprit:void(0)">
-              <img src="{{ 'iconplus.svg' | asset_url }}">
-            </a>
-          </span>
         </div>
         <ul class="ftps-ul">
           <li class="cl-item cl-item-no-sub">
             <div class="cl-label-wrap">
-              <a href="javascprit:void(0)" class="cl-label-title ftps-a">return policy</a>
-              <a href="javascprit:void(0)" class="cl-label-title ftps-a">start a return</a>
-              <a href="javascprit:void(0)" class="cl-label-title ftps-a">track order</a>
-              <a href="javascprit:void(0)" class="cl-label-title ftps-a">size guides</a>
-              <a href="javascprit:void(0)" class="cl-label-title ftps-a">bra calculator</a>
-              <a href="javascprit:void(0)" class="cl-label-title ftps-a">ordering</a>
-              <a href="javascprit:void(0)" class="cl-label-title ftps-a">shipping</a>
-              <a href="javascprit:void(0)" class="cl-label-title ftps-a">FAQs</a>
-              <a href="javascprit:void(0)" class="cl-label-title ftps-a">careers</a>
+              {% for link in section.settings.footer_privacy_menu.links %}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              {% endfor %}
+
             </div>
           </li>
         </ul>
@@ -217,21 +207,13 @@
       <li class="cl-item f-help-m">
         <div class="cl-label-wrap">
           <span class="cl-label-title">MORE</span>
-          <span class="cl-label-tools">
-            <a href="javascprit:void(0)">
-              <img src="{{ 'iconplus.svg' | asset_url }}">
-            </a>
-          </span>
         </div>
         <ul class="ftps-ul">
           <li class="cl-item cl-item-no-sub">
             <div class="cl-label-wrap">
-              <a href="javascprit:void(0)" class="cl-label-title ftps-a">about</a>
-              <a href="javascprit:void(0)" class="cl-label-title ftps-a">influencers</a>
-              <a href="javascprit:void(0)" class="cl-label-title ftps-a">stockists</a>
-              <a href="javascprit:void(0)" class="cl-label-title ftps-a">resources</a>
-              <a href="javascprit:void(0)" class="cl-label-title ftps-a">e-gift card</a>
-              <a href="javascprit:void(0)" class="cl-label-title ftps-a">contact us</a>
+              {% for link in section.settings.footer_second_menu.links %}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              {% endfor %}
             </div>
           </li>
         </ul>
@@ -249,14 +231,25 @@
         "type": "image_picker",
         "id": "header_logo_desktop",
         "label": "Desktop Logo"
-      }, {
+      },
+      {
         "type": "image_picker",
         "id": "header_logo_mobile",
         "label": "Mobile Logo"
-      }, {
+      },
+      {
         "type": "link_list",
         "id": "header_menu",
         "label": "Header Menu"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_second_menu",
+        "label": "Header Mobile Second Menu"
+      }, {
+        "type": "link_list",
+        "id": "footer_privacy_menu",
+        "label": "Header Mobile Privacy Menu"
       }
     ]
   }
