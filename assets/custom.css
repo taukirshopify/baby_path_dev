@@ -1061,6 +1061,9 @@ button.shopify-payment-button__button.shopify-payment-button__button--unbranded 
     line-height: 18px;
     color: #FFFFFF;
 }
+input.addcart__buttonwrap {
+    padding-top: 8px;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;
