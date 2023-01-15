@@ -1221,7 +1221,25 @@ button.shopify-payment-button__button.shopify-payment-button__button--unbranded 
     .accordion details[open] > summary .icon-caret {
         transform: rotate(180deg) scale(2);
     }
-
+    .main-card-wraper-flax {
+        width: 100%;
+        max-width: calc(100% - 163px) !important;
+    }
+    .main-card-wraper-items h3 a {
+        font-size: 16px;
+        white-space: normal;
+        height: 44px;
+    }
+    .main-cari-quantity .quantity-control {
+        padding: 4px 15px;
+    }
+    .main-card-title {
+        padding: 0 25px 25px;
+    }
+    .main-card-container .main-card-btn {
+        font-size: 24px;
+        padding: 5px;
+    }
 }
 
 @media screen and (max-width:991px) and (min-width:768px){
