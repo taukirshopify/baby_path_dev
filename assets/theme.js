@@ -136,7 +136,6 @@
     })
     
     $('.cl-item').each(function(){
-        console.log ($(this).find('> ul').length);
         if ( $(this).find('> ul').length === 0 ) {
             $(this).addClass('cl-item-no-sub');
         }
