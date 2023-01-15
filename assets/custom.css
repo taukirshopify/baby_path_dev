@@ -1244,6 +1244,38 @@ button.shopify-payment-button__button.shopify-payment-button__button--unbranded 
         padding: 7px;
         padding-top: 5px;
     }
+    button#update {
+        margin-top: 10px;
+    }
+    small.tax-note.caption-large.rte {
+        margin-bottom: 35px;
+    }
+    .container.cart_container h1.title.title--primary {
+        font-size: 32px;
+    }
+    .container.cart_container .title-wrapper-with-link {
+        align-items: center;
+    }
+    .cart-item__name {
+        text-decoration: none;
+        display: block;
+        font-family: 'T-Star Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #000000;
+    }
+    td.cart-item__totals.cart_item_product_price * {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 130%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #000000;
+    }
 }
 
 @media screen and (max-width:991px) and (min-width:768px){
