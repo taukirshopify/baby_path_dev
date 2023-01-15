@@ -1240,6 +1240,10 @@ button.shopify-payment-button__button.shopify-payment-button__button--unbranded 
         font-size: 24px;
         padding: 5px;
     }
+    input.addcart__buttonwrap {
+        padding: 7px;
+        padding-top: 5px;
+    }
 }
 
 @media screen and (max-width:991px) and (min-width:768px){
