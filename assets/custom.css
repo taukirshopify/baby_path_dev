@@ -1053,6 +1053,14 @@ h2.product-recommendations__heading {
 button.shopify-payment-button__button.shopify-payment-button__button--unbranded {
     padding-bottom: 5px;
 }
+.announcement-bar__message {
+    font-family: 'T-Star Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
 @media screen and (max-width:767px){
    .hideMobile{
         display: none;
@@ -1275,6 +1283,9 @@ button.shopify-payment-button__button.shopify-payment-button__button--unbranded 
         text-align: center;
         text-transform: uppercase;
         color: #000000;
+    }
+    .cart__footer {
+        padding-bottom: 50px !important;
     }
 }
 
