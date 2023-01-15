@@ -1219,7 +1219,7 @@ button.shopify-payment-button__button.shopify-payment-button__button--unbranded 
         font-size: 32px;
     }
     .accordion details[open] > summary .icon-caret {
-        transform: rotate(180deg) scale(2);
+        transform: rotate(180deg) scale(2) !important;
     }
     .main-card-wraper-flax {
         width: 100%;
