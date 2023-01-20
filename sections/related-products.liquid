@@ -49,6 +49,103 @@
     {% endif %}
   </product-recommendations>
 </div>
+<<<<<<< HEAD
+=======
+</div>
+<style>
+  .remomended-space {
+    margin: 0 8px;
+}
+.splide__arrow--prev{
+left: 20px;
+
+}
+.splide__arrow--next {
+  right: 20px;
+}
+.splide__arrow {
+ 
+  top:100%;
+  transform: translateY(-50%);
+
+  z-index: 1;
+}
+.splide__pagination {
+  bottom: -11px;
+}
+.splide__pagination__page {
+  background: #ddd;
+
+}
+.splide__pagination__page.is-active {
+
+  background: #000;
+  transform: scale(1);
+  z-index: 1;
+}
+</style>
+{% javascript %}
+  class ProductRecommendations extends HTMLElement {
+    constructor() {
+      super();
+
+      const handleIntersection = (entries, observer) => {
+        if (!entries[0].isIntersecting) return;
+        observer.unobserve(this);
+
+        fetch(this.dataset.url)
+          .then(response => response.text())
+          .then(text => {
+            const html = document.createElement('div');
+            html.innerHTML = text;
+            const recommendations = html.querySelector('product-recommendations');
+
+            if (recommendations && recommendations.innerHTML.trim().length) {
+              this.innerHTML = recommendations.innerHTML;
+            }
+
+            if (html.querySelector('.grid__item')) {
+              this.classList.add('product-recommendations--loaded');
+            }
+            let splide = new Splide( '#image-carousel', {
+              pagination : false,
+              paginationKeyboard:false,
+            
+              drag   : 'free',
+              perPage: 4,
+              perMove: 3,
+              rewindSpeed: 100,
+              
+              pagination:  true,
+              paginationKeyboard:true,
+              rewindByDrag:true,
+              breakpoints: {
+                  1020: {
+                      perPage: 3,
+                      perMove: 2,
+                  },
+                  640: {
+                      perPage: 2,
+                      perMove: 1,
+                  }
+                }
+            } );
+            
+            splide.mount(); 
+
+          })
+          .catch(e => {
+            console.error(e);
+          });
+      }
+
+      new IntersectionObserver(handleIntersection.bind(this), {rootMargin: '0px 0px 200px 0px'}).observe(this);
+    }
+  }
+
+  customElements.define('product-recommendations', ProductRecommendations);
+{% endjavascript %}
+>>>>>>> 79789ade5063b05fc52043607f79ec71ee8eb1ed
 
 {% schema %}
 {
