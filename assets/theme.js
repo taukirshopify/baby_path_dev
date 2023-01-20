@@ -363,10 +363,7 @@
 
      function emptystateshow(){
       
-         let elemnetcount =  $('.cart-drawer__count').text()
-        // console.log(elemnetcount);
-        // console.log("this is caled");
-
+         let elemnetcount =  $('.cart-drawer__count').text();
         if(elemnetcount <= 0 && $(".product_items_empt_subwrapper")[0]){
             
             $(".empty_cart_msg").removeClass('d-none');
