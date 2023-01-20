@@ -22,6 +22,8 @@
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient no-js-hidden">
+  <div class="container">
+   <div class="row">
   <product-recommendations
     class="related-products page-width section-{{ section.id }}-padding isolate"
     data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}"
@@ -36,21 +38,23 @@
       >
         {% for recommendation in recommendations.products %}
           <li class="grid__item">
-            {% render 'card-product',
-              card_product: recommendation,
-              media_aspect_ratio: section.settings.image_ratio,
-              show_secondary_image: section.settings.show_secondary_image,
-              show_vendor: section.settings.show_vendor,
-              show_rating: section.settings.show_rating
-            %}
+            <div class="product_item">
+            <a class="justin-items" href="{{ recommendation.url }}">
+                <img class="justin-item-img" src="{{ recommendation.featured_image | img_url: 'medium' }}" alt="{{ recommendation.title }}">
+                <div class="justin-item-p-text">
+                    <p class="justin-item-text">{{ recommendation.title }}</p>
+                    <p class="justin-item-text">{{ recommendation.price | money }}</p>   
+                </div> 
+            </a>
+</div>
           </li>
         {% endfor %}
       </ul>
     {% endif %}
   </product-recommendations>
+  </div>
+  </div>
 </div>
-<<<<<<< HEAD
-=======
 </div>
 <style>
   .remomended-space {
@@ -145,7 +149,6 @@ left: 20px;
 
   customElements.define('product-recommendations', ProductRecommendations);
 {% endjavascript %}
->>>>>>> 79789ade5063b05fc52043607f79ec71ee8eb1ed
 
 {% schema %}
 {
